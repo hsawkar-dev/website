@@ -1,22 +1,17 @@
 # ─────────────────────────────────────────────────────────────────────────────
-# Sveltia CMS configuration for hsawkar-dev.github.io/website
+# Decap CMS configuration for hsawkar-dev.github.io/website
 #
-# SETUP REQUIRED:
-#   1. Go to: github.com → Settings → Developer Settings → OAuth Apps → New
-#   2. Fill in:
-#        Application name : Dr. Sawkar Website Admin
-#        Homepage URL     : https://hsawkar-dev.github.io/website/
-#        Callback URL     : https://hsawkar-dev.github.io/website/admin/
-#   3. Click Register Application
-#   4. Copy the "Client ID" and paste it below as app_id
+# OAuth is handled by api.decap.dev (no backend server needed).
+#
+# SETUP REQUIRED (one-time, in your GitHub OAuth App settings):
+#   Authorization callback URL → https://api.decap.dev/callback
 # ─────────────────────────────────────────────────────────────────────────────
 
 backend:
   name: github
   repo: hsawkar-dev/website
   branch: main
-  auth_type: pkce
-  app_id: Ov23liD9dB4o7rnjitNy
+  base_url: https://api.decap.dev
 
 media_folder: images/uploads
 public_folder: images/uploads
