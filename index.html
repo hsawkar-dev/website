@@ -39,7 +39,7 @@
   </div>
   <div class="mobile-menu-footer">
     <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">Request Appointment</a>
-    <p style="text-align:center; margin-top:12px; font-size:0.82rem; color:var(--text-light);">(714) 835-8175</p>
+    <p style="text-align:center; margin-top:12px; font-size:0.82rem; color:var(--text-light);"><span data-cms="phone">(714) 835-8175</span></p>
   </div>
 </div>
 
@@ -316,8 +316,10 @@
   <div class="container">
     <div class="grid-2">
       <div class="about-image-wrap">
-        <div class="about-image-frame">
-          <div class="about-image-placeholder" style="padding:40px;">
+        <div class="about-image-frame" style="position:relative; overflow:hidden;">
+          <img data-cms="doctor-photo" src="" alt="Dr. Hari Sawkar, MD"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center;display:none;">
+          <div class="about-image-placeholder" data-cms="doctor-photo-placeholder" style="padding:40px; position:relative; z-index:1;">
             <svg fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" width="80" height="80" style="margin:0 auto 16px; color:var(--seafoam);">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
             </svg>
@@ -632,8 +634,8 @@
       <div class="footer-col">
         <h5>Contact</h5>
         <ul class="footer-links">
-          <li><a href="tel:7148358175">(714) 835-8175</a></li>
-          <li><a href="contact.html">1310 W. Stewart Dr.<br>Suite 607<br>Orange, CA 92868</a></li>
+          <li><a href="tel:7148358175" data-cms="phone-link">(714) 835-8175</a></li>
+          <li><a href="contact.html" data-cms="address">1310 W. Stewart Dr.<br>Suite 607<br>Orange, CA 92868</a></li>
         </ul>
         <div style="margin-top:20px;">
           <p style="font-size:0.78rem; color:rgba(255,255,255,0.4); max-width:none;">Providence St. Joseph Hospital<br>Pavilion Surgery Center</p>
@@ -650,5 +652,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+  <script src="js/cms-content.js" defer></script>
 </body>
 </html>

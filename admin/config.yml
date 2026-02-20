@@ -1,0 +1,87 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Sveltia CMS configuration for hsawkar-dev.github.io/website
+#
+# SETUP REQUIRED:
+#   1. Go to: github.com → Settings → Developer Settings → OAuth Apps → New
+#   2. Fill in:
+#        Application name : Dr. Sawkar Website Admin
+#        Homepage URL     : https://hsawkar-dev.github.io/website/
+#        Callback URL     : https://hsawkar-dev.github.io/website/admin/
+#   3. Click Register Application
+#   4. Copy the "Client ID" and paste it below as app_id
+# ─────────────────────────────────────────────────────────────────────────────
+
+backend:
+  name: github
+  repo: hsawkar-dev/website
+  branch: main
+  auth_type: pkce
+  app_id: YOUR_GITHUB_OAUTH_APP_CLIENT_ID   # ← paste your Client ID here
+
+media_folder: images/uploads
+public_folder: images/uploads
+
+collections:
+  - name: settings
+    label: "Site Settings"
+    description: "Edit contact info, office hours, and the doctor photo."
+    files:
+
+      # ── Contact & Practice Info ───────────────────────────────────────────
+      - name: practice
+        label: "Contact & Practice Info"
+        file: data/practice.json
+        extension: json
+        format: json
+        fields:
+          - label: "Phone Number"
+            name: phone
+            widget: string
+            hint: "Format: (714) 835-8175"
+
+          - label: "Address — Street"
+            name: address_line1
+            widget: string
+            hint: "e.g. 1310 W. Stewart Dr."
+
+          - label: "Address — Suite"
+            name: address_line2
+            widget: string
+            hint: "e.g. Suite 607"
+
+          - label: "City, State, ZIP"
+            name: city
+            widget: string
+            hint: "e.g. Orange, CA 92868"
+
+          - label: "Office Hours"
+            name: hours
+            widget: string
+            hint: "e.g. Monday – Friday: 8:00 AM – 5:00 PM"
+
+          - label: "Hours Note"
+            name: hours_note
+            widget: string
+            required: false
+            hint: "Short note shown below hours, e.g. Same-day appointments available"
+
+      # ── Doctor Photo ──────────────────────────────────────────────────────
+      - name: doctor
+        label: "Doctor Photo"
+        file: data/doctor.json
+        extension: json
+        format: json
+        fields:
+          - label: "Photo"
+            name: photo
+            widget: image
+            required: false
+            hint: >
+              Upload a professional headshot. Appears on the homepage and About
+              page. Best results: portrait orientation, at least 800×1000 px.
+
+          - label: "Photo Caption / Alt Text"
+            name: photo_alt
+            widget: string
+            default: "Dr. Hari Sawkar, MD"
+            hint: "Brief description of the photo (for screen readers)"
