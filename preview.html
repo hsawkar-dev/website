@@ -1,0 +1,2148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Hari Sawkar, MD — Urologist | Orange County, CA</title>
+  <meta name="description" content="Board-certified urologist in Orange County, CA specializing in minimally invasive procedures for prostate, kidney, and urological conditions. Chief of Urology at Providence St. Joseph Hospital." />
+  <style>
+/* =============================================
+   Dr. Hari Sawkar MD — California Coastal Design
+   ============================================= */
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* --- CSS Variables --- */
+:root {
+  --ocean-deep:    #0B3D6B;
+  --ocean-mid:     #1A6FA8;
+  --ocean-bright:  #2E9BD6;
+  --seafoam:       #4BBFB8;
+  --seafoam-light: #A8E0DC;
+  --sand:          #F7F4EF;
+  --sand-dark:     #EDE8DF;
+  --mist:          #EBF6FA;
+  --white:         #FFFFFF;
+  --text-dark:     #12263A;
+  --text-mid:      #3D5A73;
+  --text-light:    #6B8FA6;
+  --coral:         #E8735A;
+  --gold:          #C9A84C;
+
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-sans:  'Inter', system-ui, sans-serif;
+
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  24px;
+  --radius-xl:  40px;
+
+  --shadow-sm:  0 2px 8px rgba(11, 61, 107, 0.08);
+  --shadow-md:  0 8px 32px rgba(11, 61, 107, 0.12);
+  --shadow-lg:  0 16px 48px rgba(11, 61, 107, 0.18);
+
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --nav-height: 80px;
+}
+
+/* --- Reset --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-dark);
+  background: var(--white);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a  { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+/* --- Typography --- */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  line-height: 1.2;
+  color: var(--text-dark);
+}
+
+h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
+h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
+h4 { font-size: 1.15rem; font-family: var(--font-sans); font-weight: 600; }
+
+p  { color: var(--text-mid); max-width: 68ch; }
+
+.lead {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: var(--text-mid);
+}
+
+/* --- Layout --- */
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section { padding: 96px 0; }
+.section--sm { padding: 64px 0; }
+.section--lg { padding: 120px 0; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+/* --- Buttons --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: var(--transition);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--ocean-deep);
+  color: var(--white);
+  border-color: var(--ocean-deep);
+}
+.btn-primary:hover {
+  background: var(--ocean-mid);
+  border-color: var(--ocean-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(11, 61, 107, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--ocean-deep);
+  border-color: var(--ocean-deep);
+}
+.btn-secondary:hover {
+  background: var(--ocean-deep);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.btn-seafoam {
+  background: var(--seafoam);
+  color: var(--white);
+  border-color: var(--seafoam);
+}
+.btn-seafoam:hover {
+  background: #3AADA6;
+  border-color: #3AADA6;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(75, 191, 184, 0.35);
+}
+
+.btn-white {
+  background: var(--white);
+  color: var(--ocean-deep);
+  border-color: var(--white);
+}
+.btn-white:hover {
+  background: var(--sand);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255,255,255,0.3);
+}
+
+.btn-lg {
+  padding: 18px 42px;
+  font-size: 1.05rem;
+}
+
+/* --- Navigation --- */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+  background: transparent;
+}
+
+.nav.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 1px 24px rgba(11, 61, 107, 0.1);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.nav-logo-name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--white);
+  transition: var(--transition);
+}
+
+.nav-logo-tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--seafoam-light);
+  transition: var(--transition);
+}
+
+.nav.scrolled .nav-logo-name { color: var(--ocean-deep); }
+.nav.scrolled .nav-logo-tag  { color: var(--seafoam); }
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.02em;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--seafoam);
+  transform: scaleX(0);
+  transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after { transform: scaleX(1); }
+
+.nav.scrolled .nav-link { color: var(--text-dark); }
+.nav-link:hover { color: var(--seafoam); }
+.nav.scrolled .nav-link:hover { color: var(--ocean-mid); }
+
+.nav-cta {
+  background: var(--seafoam);
+  color: var(--white) !important;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.nav-cta:hover {
+  background: var(--ocean-deep);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-cta::after { display: none !important; }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+.nav.scrolled .hamburger span { background: var(--ocean-deep); }
+
+/* --- Hero --- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    var(--ocean-deep) 0%,
+    #0E4F8B 40%,
+    #1568A8 70%,
+    #1A7BB8 100%
+  );
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* Abstract ocean wave shapes */
+.hero-wave-1 {
+  position: absolute;
+  bottom: -5%;
+  left: -10%;
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(ellipse at center, rgba(75,191,184,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatWave 8s ease-in-out infinite;
+}
+
+.hero-wave-2 {
+  position: absolute;
+  top: -20%;
+  right: -15%;
+  width: 70%;
+  height: 90%;
+  background: radial-gradient(ellipse at center, rgba(168,224,220,0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatWave 10s ease-in-out infinite reverse;
+}
+
+.hero-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@keyframes floatWave {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%       { transform: translateY(-30px) scale(1.05); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: var(--nav-height);
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--seafoam);
+  margin-bottom: 24px;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: var(--seafoam);
+}
+
+.hero h1 { color: var(--white); margin-bottom: 24px; }
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.78);
+  margin-bottom: 40px;
+  max-width: 56ch;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 64px;
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 40px;
+}
+
+.hero-stat-value {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.hero-stat-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--seafoam-light);
+}
+
+.hero-wave-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.hero-wave-bottom svg { display: block; width: 100%; height: auto; }
+
+/* --- Section Labels --- */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--seafoam);
+  margin-bottom: 16px;
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--seafoam);
+}
+
+.section-header {
+  margin-bottom: 56px;
+}
+
+.section-header h2 { margin-bottom: 16px; }
+
+/* --- Cards --- */
+.card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 1px solid rgba(11, 61, 107, 0.06);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: var(--mist);
+}
+
+.card-icon svg { width: 28px; height: 28px; }
+
+/* --- Service Cards --- */
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(11, 61, 107, 0.06);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-6px);
+}
+
+.service-card-header {
+  padding: 32px 32px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.service-card-icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--mist), #d5eef8);
+}
+
+.service-card-icon svg {
+  width: 26px;
+  height: 26px;
+  color: var(--ocean-mid);
+}
+
+.service-card-body {
+  padding: 20px 32px 32px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card-body h3 {
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.service-card-body p {
+  font-size: 0.93rem;
+  color: var(--text-mid);
+  flex: 1;
+  max-width: none;
+}
+
+.service-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ocean-mid);
+  transition: var(--transition);
+}
+
+.service-card-link:hover { color: var(--seafoam); gap: 10px; }
+
+/* --- Feature Strip --- */
+.feature-strip {
+  background: linear-gradient(135deg, var(--ocean-deep), #0E5C9A);
+  padding: 64px 0;
+}
+
+.feature-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+.feature-item-icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 16px;
+  background: rgba(75, 191, 184, 0.15);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-item-icon svg { width: 26px; height: 26px; color: var(--seafoam); }
+
+.feature-item h4 {
+  color: var(--white);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.feature-item p {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.88rem;
+  max-width: none;
+}
+
+/* --- About Preview --- */
+.about-image-wrap {
+  position: relative;
+}
+
+.about-image-frame {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  background: linear-gradient(135deg, var(--mist) 0%, var(--seafoam-light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-image-placeholder {
+  text-align: center;
+  color: var(--text-light);
+}
+
+.about-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-md);
+  min-width: 180px;
+}
+
+.about-badge-value {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--ocean-deep);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.about-badge-label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-light);
+  letter-spacing: 0.05em;
+}
+
+.credentials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+.credential-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: var(--sand);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--seafoam);
+}
+
+.credential-item svg {
+  width: 20px;
+  height: 20px;
+  color: var(--seafoam);
+  flex-shrink: 0;
+}
+
+.credential-item p {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  font-weight: 500;
+  max-width: none;
+}
+
+.credential-item p span {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--text-light);
+  margin-top: 2px;
+}
+
+/* --- Technology Highlight --- */
+.tech-highlight {
+  background: var(--sand);
+  border-radius: var(--radius-xl);
+  padding: 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--white);
+  border: 1px solid var(--seafoam-light);
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--seafoam);
+  margin: 4px;
+}
+
+.tech-tags { margin: 24px 0; }
+
+.tech-visual {
+  background: linear-gradient(135deg, var(--ocean-deep), var(--ocean-bright));
+  border-radius: var(--radius-lg);
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(75,191,184,0.3) 0%, transparent 60%);
+}
+
+.tech-visual-content {
+  text-align: center;
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+}
+
+.tech-visual-icon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.tech-visual-label {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.tech-visual-sub {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+}
+
+/* --- Procedure Pages --- */
+.procedure-hero {
+  background: linear-gradient(135deg, var(--ocean-deep), var(--ocean-bright));
+  padding: 160px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.procedure-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 60px;
+  background: var(--white);
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+.procedure-hero h1 { color: var(--white); margin-bottom: 16px; }
+.procedure-hero .lead { color: rgba(255,255,255,0.82); max-width: 60ch; }
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.badge svg { width: 14px; height: 14px; }
+
+/* --- Accordion (FAQ) --- */
+.accordion { border-top: 1px solid var(--sand-dark); }
+
+.accordion-item {
+  border-bottom: 1px solid var(--sand-dark);
+}
+
+.accordion-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+  gap: 16px;
+  transition: var(--transition);
+}
+
+.accordion-btn:hover { color: var(--ocean-mid); }
+
+.accordion-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  background: var(--sand);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.accordion-icon svg {
+  width: 14px;
+  height: 14px;
+  color: var(--ocean-mid);
+  transition: var(--transition);
+}
+
+.accordion-item.open .accordion-icon {
+  background: var(--seafoam);
+}
+
+.accordion-item.open .accordion-icon svg {
+  color: var(--white);
+  transform: rotate(45deg);
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-item.open .accordion-body { max-height: 400px; }
+
+.accordion-body p {
+  padding-bottom: 24px;
+  font-size: 0.95rem;
+  max-width: none;
+}
+
+/* --- Testimonials --- */
+.testimonial-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(11, 61, 107, 0.06);
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+  color: var(--gold);
+}
+
+.stars svg { width: 18px; height: 18px; }
+
+.testimonial-text {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text-mid);
+  font-style: italic;
+  margin-bottom: 24px;
+  max-width: none;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--seafoam-light), var(--mist));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--ocean-deep);
+}
+
+.testimonial-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.testimonial-role {
+  font-size: 0.78rem;
+  color: var(--text-light);
+}
+
+/* --- CTA Banner --- */
+.cta-banner {
+  background: linear-gradient(135deg, var(--ocean-deep) 0%, #0E5C9A 50%, var(--ocean-bright) 100%);
+  padding: 96px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -20%;
+  width: 80%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(75,191,184,0.12) 0%, transparent 60%);
+}
+
+.cta-banner h2 { color: var(--white); margin-bottom: 16px; }
+.cta-banner p  { color: rgba(255,255,255,0.75); margin: 0 auto 40px; font-size: 1.1rem; }
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cta-note {
+  margin-top: 20px;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.55);
+}
+
+/* --- Contact Section --- */
+.contact-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  box-shadow: var(--shadow-md);
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-info-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.contact-info-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  background: var(--mist);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-info-icon svg {
+  width: 20px;
+  height: 20px;
+  color: var(--ocean-mid);
+}
+
+.contact-info-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+.contact-info-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.contact-info-value a {
+  color: var(--ocean-mid);
+  transition: var(--transition);
+}
+
+.contact-info-value a:hover { color: var(--seafoam); }
+
+/* --- Map Placeholder --- */
+.map-placeholder {
+  background: linear-gradient(135deg, var(--mist), var(--seafoam-light));
+  border-radius: var(--radius-md);
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--seafoam-light);
+}
+
+.map-placeholder-inner {
+  text-align: center;
+  color: var(--text-light);
+}
+
+.map-placeholder-inner svg {
+  width: 40px;
+  height: 40px;
+  color: var(--seafoam);
+  margin: 0 auto 12px;
+}
+
+/* --- Form --- */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1.5px solid var(--sand-dark);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background: var(--white);
+  transition: var(--transition);
+  outline: none;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--seafoam);
+  box-shadow: 0 0 0 3px rgba(75, 191, 184, 0.15);
+}
+
+.form-textarea { resize: vertical; min-height: 120px; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* --- Footer --- */
+.footer {
+  background: var(--text-dark);
+  color: rgba(255,255,255,0.7);
+  padding: 64px 0 32px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.footer-brand-name {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.footer-brand-tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--seafoam);
+  margin-bottom: 16px;
+}
+
+.footer-brand p {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  max-width: 280px;
+  color: rgba(255,255,255,0.55);
+}
+
+.footer-col h5 {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--seafoam);
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.6);
+  transition: var(--transition);
+}
+
+.footer-links a:hover { color: var(--white); padding-left: 4px; }
+
+.footer-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+  margin-bottom: 32px;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-bottom p { font-size: 0.82rem; color: rgba(255,255,255,0.4); max-width: none; }
+
+.footer-disclaimer {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  margin-top: 12px;
+  max-width: 600px;
+}
+
+/* --- Excellence Badge --- */
+.excellence-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05));
+  border: 1px solid rgba(201,168,76,0.35);
+  border-radius: var(--radius-md);
+  padding: 16px 24px;
+  margin: 32px 0;
+}
+
+.excellence-badge svg {
+  width: 28px;
+  height: 28px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.excellence-badge-text strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 2px;
+}
+
+.excellence-badge-text span {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+/* --- Process Steps --- */
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.steps-list::before {
+  content: '';
+  position: absolute;
+  left: 21px;
+  top: 24px;
+  bottom: 24px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--seafoam), var(--ocean-bright));
+}
+
+.step-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px 0;
+  position: relative;
+}
+
+.step-number {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--ocean-deep);
+  color: var(--white);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  box-shadow: 0 0 0 4px var(--white);
+}
+
+.step-content h4 {
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.step-content p {
+  font-size: 0.9rem;
+  max-width: 52ch;
+}
+
+/* --- Comparison Table --- */
+.comparison-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.comparison-table th {
+  background: var(--ocean-deep);
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 18px 24px;
+  text-align: left;
+}
+
+.comparison-table th:first-child { border-radius: var(--radius-sm) 0 0 0; }
+.comparison-table th:last-child  { border-radius: 0 var(--radius-sm) 0 0; }
+
+.comparison-table td {
+  padding: 16px 24px;
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  border-bottom: 1px solid var(--sand-dark);
+  background: var(--white);
+}
+
+.comparison-table tr:nth-child(even) td { background: var(--sand); }
+
+.comparison-table tr:last-child td { border-bottom: none; }
+.comparison-table tr:last-child td:first-child { border-radius: 0 0 0 var(--radius-sm); }
+.comparison-table tr:last-child td:last-child  { border-radius: 0 0 var(--radius-sm) 0; }
+
+.check { color: var(--seafoam); font-weight: 700; }
+.cross { color: #D94F4F; }
+
+/* --- Mobile Nav Drawer --- */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: min(340px, 100vw);
+  height: 100vh;
+  background: var(--white);
+  z-index: 2000;
+  padding: 32px;
+  box-shadow: -16px 0 48px rgba(11, 61, 107, 0.15);
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu.open { right: 0; }
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.mobile-menu-close {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: var(--sand);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.mobile-menu-links a {
+  display: block;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: var(--transition);
+}
+
+.mobile-menu-links a:hover {
+  background: var(--mist);
+  color: var(--ocean-mid);
+}
+
+.mobile-menu-footer {
+  padding-top: 24px;
+  border-top: 1px solid var(--sand-dark);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1500;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
+.overlay.active { opacity: 1; pointer-events: all; }
+
+/* --- Utility Classes --- */
+.text-center { text-align: center; }
+.text-seafoam { color: var(--seafoam); }
+.text-ocean   { color: var(--ocean-mid); }
+.bg-sand      { background: var(--sand); }
+.bg-mist      { background: var(--mist); }
+.mb-0  { margin-bottom: 0; }
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+.mt-32 { margin-top: 32px; }
+.mt-48 { margin-top: 48px; }
+
+/* --- Animations --- */
+.fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-up:nth-child(2) { transition-delay: 0.1s; }
+.fade-up:nth-child(3) { transition-delay: 0.2s; }
+.fade-up:nth-child(4) { transition-delay: 0.3s; }
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .tech-highlight { padding: 48px; }
+  .feature-strip-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+}
+
+@media (max-width: 768px) {
+  :root { --nav-height: 68px; }
+
+  .section     { padding: 72px 0; }
+  .section--lg { padding: 80px 0; }
+
+  .grid-2 { grid-template-columns: 1fr; gap: 32px; }
+  .grid-3 { grid-template-columns: 1fr; gap: 24px; }
+  .grid-4 { grid-template-columns: 1fr; }
+
+  .nav-menu  { display: none; }
+  .hamburger { display: flex; }
+
+  .hero { min-height: 90vh; }
+  .hero-stats { gap: 32px; }
+
+  .tech-highlight {
+    grid-template-columns: 1fr;
+    padding: 32px;
+    gap: 32px;
+  }
+
+  .feature-strip-grid { grid-template-columns: 1fr 1fr; }
+
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+
+  .contact-card { padding: 32px 24px; }
+  .form-row { grid-template-columns: 1fr; }
+
+  .about-badge { position: static; margin-top: 20px; }
+
+  .cta-banner { padding: 64px 0; }
+
+  .comparison-table th,
+  .comparison-table td { padding: 12px 16px; font-size: 0.85rem; }
+}
+
+@media (max-width: 480px) {
+  .hero-actions { flex-direction: column; }
+  .btn-lg { width: 100%; justify-content: center; }
+  .feature-strip-grid { grid-template-columns: 1fr; }
+  .badge-row { flex-direction: column; }
+}
+
+</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+<!-- ===== MOBILE OVERLAY ===== -->
+<div class="overlay" id="overlay" onclick="closeMobileMenu()"></div>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-header">
+    <div class="nav-logo">
+      <span class="nav-logo-name" style="color: var(--ocean-deep);">Dr. Hari Sawkar</span>
+      <span class="nav-logo-tag" style="color: var(--seafoam);">MD — Urologist</span>
+    </div>
+    <button class="mobile-menu-close" onclick="closeMobileMenu()">
+      <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Dr. Sawkar</a>
+    <a href="services.html">Services</a>
+    <a href="urolift.html">UroLift</a>
+    <a href="no-scalpel-vasectomy.html">No-Scalpel Vasectomy</a>
+    <a href="kidney-stones.html">Kidney Stones</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="mobile-menu-footer">
+    <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center;">Request Appointment</a>
+    <p style="text-align:center; margin-top:12px; font-size:0.82rem; color:var(--text-light);">(714) 835-8175</p>
+  </div>
+</div>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-name">Dr. Hari Sawkar</span>
+      <span class="nav-logo-tag">MD — Urologist</span>
+    </a>
+    <div class="nav-menu">
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="urolift.html" class="nav-link">UroLift</a>
+      <a href="no-scalpel-vasectomy.html" class="nav-link">Vasectomy</a>
+      <a href="kidney-stones.html" class="nav-link">Kidney Stones</a>
+      <a href="contact.html" class="nav-link nav-cta">Request Appointment</a>
+    </div>
+    <button class="hamburger" onclick="openMobileMenu()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-dots"></div>
+    <div class="hero-wave-1"></div>
+    <div class="hero-wave-2"></div>
+  </div>
+
+  <div class="container hero-content">
+    <div style="max-width: 780px;">
+      <div class="hero-eyebrow">Orange County's Minimally Invasive Urology</div>
+      <h1>Precision Care.<br>Minimal Downtime.<br>Better Outcomes.</h1>
+      <p class="hero-subtitle">
+        Board-certified urologist Dr. Hari Sawkar brings biomedical engineering expertise and cutting-edge technology to men's and women's urologic health — from robotic surgery to office-based procedures that get you back to life faster.
+      </p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn btn-seafoam btn-lg">Request an Appointment</a>
+        <a href="services.html" class="btn btn-white btn-lg">Explore Treatments</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-value">8+</div>
+          <div class="hero-stat-label">Years in Practice</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">CoE</div>
+          <div class="hero-stat-label">UroLift Center of Excellence</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">Chief</div>
+          <div class="hero-stat-label">of Urology, St. Joseph Hospital</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">Da&nbsp;Vinci</div>
+          <div class="hero-stat-label">Robotic Surgery Expert</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-wave-bottom">
+    <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="white"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ===== FEATURE STRIP ===== -->
+<section class="feature-strip">
+  <div class="container">
+    <div class="feature-strip-grid">
+      <div class="feature-item fade-up">
+        <div class="feature-item-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918"/>
+          </svg>
+        </div>
+        <h4>Same & Next-Day Appointments</h4>
+        <p>Urgent urologic concerns seen promptly without long waits.</p>
+      </div>
+      <div class="feature-item fade-up">
+        <div class="feature-item-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1 1 .03 2.7-1.31 2.7h-15.8c-1.34 0-2.31-1.7-1.31-2.7L5 14.5"/>
+          </svg>
+        </div>
+        <h4>Minimally Invasive First</h4>
+        <p>Office-based and robotic procedures with shorter recovery times.</p>
+      </div>
+      <div class="feature-item fade-up">
+        <div class="feature-item-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h4>Telehealth Available</h4>
+        <p>Convenient virtual consultations from anywhere in California.</p>
+      </div>
+      <div class="feature-item fade-up">
+        <div class="feature-item-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/>
+          </svg>
+        </div>
+        <h4>UroLift Center of Excellence</h4>
+        <p>Nationally recognized for superior BPH outcomes and expertise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section bg-sand">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Expert Care</div>
+      <h2>Minimally Invasive<br>Urology Solutions</h2>
+      <p class="lead">Combining the latest technology with precision training from USC and Northwestern, Dr. Sawkar offers comprehensive urologic care with a focus on getting you better — with less pain and faster recovery.</p>
+    </div>
+    <div class="grid-3">
+      <!-- BPH -->
+      <div class="service-card fade-up">
+        <div class="service-card-header">
+          <div class="service-card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/>
+            </svg>
+          </div>
+          <div></div>
+        </div>
+        <div class="service-card-body">
+          <h3>Enlarged Prostate (BPH)</h3>
+          <p>Cutting-edge treatments including UroLift, Aquablation, and Rezūm — no hormones, no catheters, minimal downtime.</p>
+          <a href="urolift.html" class="service-card-link">
+            Learn about UroLift
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </a>
+        </div>
+      </div>
+      <!-- Prostate Cancer -->
+      <div class="service-card fade-up">
+        <div class="service-card-header">
+          <div class="service-card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082"/>
+            </svg>
+          </div>
+          <div></div>
+        </div>
+        <div class="service-card-body">
+          <h3>Prostate Cancer</h3>
+          <p>Da Vinci robotic-assisted radical prostatectomy with precise, nerve-sparing technique for optimal recovery of function.</p>
+          <a href="services.html#prostate-cancer" class="service-card-link">
+            Learn more
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </a>
+        </div>
+      </div>
+      <!-- Kidney Cancer -->
+      <div class="service-card fade-up">
+        <div class="service-card-header">
+          <div class="service-card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3"/>
+            </svg>
+          </div>
+          <div></div>
+        </div>
+        <div class="service-card-body">
+          <h3>Kidney Cancer</h3>
+          <p>Robotic partial nephrectomy preserving kidney function. Expert laparoscopic approach minimizing blood loss and recovery.</p>
+          <a href="services.html#kidney-cancer" class="service-card-link">
+            Learn more
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </a>
+        </div>
+      </div>
+      <!-- Kidney Stones -->
+      <div class="service-card fade-up">
+        <div class="service-card-header">
+          <div class="service-card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
+            </svg>
+          </div>
+          <div></div>
+        </div>
+        <div class="service-card-body">
+          <h3>Kidney Stones</h3>
+          <p>Lithotripsy, ureteroscopy, and laser stone fragmentation. Most procedures done outpatient with same-day discharge.</p>
+          <a href="kidney-stones.html" class="service-card-link">
+            Explore options
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </a>
+        </div>
+      </div>
+      <!-- Vasectomy -->
+      <div class="service-card fade-up">
+        <div class="service-card-header">
+          <div class="service-card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+            </svg>
+          </div>
+          <div></div>
+        </div>
+        <div class="service-card-body">
+          <h3>No-Scalpel Vasectomy</h3>
+          <p>In-office procedure with no stitches, minimal discomfort, and rapid return to normal activity. Simple all-in cash pricing available.</p>
+          <a href="no-scalpel-vasectomy.html" class="service-card-link">
+            Learn more
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </a>
+        </div>
+      </div>
+      <!-- ED & Male Health -->
+      <div class="service-card fade-up">
+        <div class="service-card-header">
+          <div class="service-card-icon">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z"/>
+            </svg>
+          </div>
+          <div></div>
+        </div>
+        <div class="service-card-body">
+          <h3>Erectile Dysfunction & Male Health</h3>
+          <p>Advanced treatments for ED including penile implants, shockwave therapy, and comprehensive male sexual health management.</p>
+          <a href="services.html#ed" class="service-card-link">
+            Learn more
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:48px;">
+      <a href="services.html" class="btn btn-primary">View All Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT PREVIEW ===== -->
+<section class="section">
+  <div class="container">
+    <div class="grid-2">
+      <div class="about-image-wrap">
+        <div class="about-image-frame">
+          <div class="about-image-placeholder" style="padding:40px;">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" width="80" height="80" style="margin:0 auto 16px; color:var(--seafoam);">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
+            </svg>
+            <p style="color:var(--text-light); font-size:0.9rem;">Photo of Dr. Sawkar</p>
+          </div>
+        </div>
+        <div class="about-badge">
+          <div class="about-badge-value">Chief</div>
+          <div class="about-badge-label">of Urology<br>St. Joseph Hospital, Orange</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-label">Meet Your Surgeon</div>
+        <h2>Engineering Precision. Clinical Excellence.</h2>
+        <p class="lead" style="margin:20px 0;">
+          Dr. Hari Sawkar brings a rare combination of biomedical engineering rigor and clinical expertise to urologic care — training that began at George Washington University and was refined through Northwestern Medical School and USC residency.
+        </p>
+
+        <div class="credentials-list">
+          <div class="credential-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/>
+            </svg>
+            <p>BS, Biomedical Engineering — <em>Magna Cum Laude</em><span>George Washington University</span></p>
+          </div>
+          <div class="credential-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z"/>
+            </svg>
+            <p>MD — Northwestern University Feinberg School of Medicine<span>Class of 2013</span></p>
+          </div>
+          <div class="credential-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/>
+            </svg>
+            <p>Urology Residency — University of Southern California<span>USC / LA General Medical Center, 2013–2018</span></p>
+          </div>
+          <div class="credential-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <p>Board Certified — American Board of Urology<span>American Urological Association Member</span></p>
+          </div>
+        </div>
+
+        <a href="about.html" class="btn btn-primary mt-24">More About Dr. Sawkar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TECHNOLOGY HIGHLIGHT ===== -->
+<section class="section bg-sand">
+  <div class="container">
+    <div class="tech-highlight">
+      <div>
+        <div class="section-label">Cutting-Edge Technology</div>
+        <h2>The Right Tool for Every Patient</h2>
+        <p class="lead" style="margin: 20px 0;">
+          Dr. Sawkar invests in the latest urologic technologies so that you have access to the most effective and least invasive options available — whether that's an in-office procedure or a precision robotic surgery.
+        </p>
+        <div class="tech-tags">
+          <span class="tech-tag">Da Vinci Robotic Surgery</span>
+          <span class="tech-tag">UroLift System</span>
+          <span class="tech-tag">Aquablation</span>
+          <span class="tech-tag">Rezūm Water Vapor Therapy</span>
+          <span class="tech-tag">Holmium Laser Lithotripsy</span>
+          <span class="tech-tag">Lithotripsy (ESWL)</span>
+          <span class="tech-tag">Ureteroscopy</span>
+          <span class="tech-tag">Inflatable Penile Implants</span>
+        </div>
+        <a href="services.html" class="btn btn-primary mt-24">Explore All Treatments</a>
+      </div>
+      <div class="tech-visual">
+        <div class="tech-visual-content">
+          <div class="tech-visual-icon">⚕</div>
+          <div class="tech-visual-label">Da Vinci Robotic System</div>
+          <div class="tech-visual-sub">Precision beyond the human hand</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== UROLIFT SPOTLIGHT ===== -->
+<section class="section">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <div class="section-label">Featured Procedure</div>
+        <h2>UroLift — No Cutting, No Drugs, No Catheter</h2>
+        <p class="lead" style="margin: 20px 0;">
+          The UroLift System is an FDA-cleared, office-based solution for men suffering from lower urinary tract symptoms due to an enlarged prostate (BPH). Small implants lift and hold the prostate tissue away from the urethra — restoring flow within minutes.
+        </p>
+
+        <div class="excellence-badge">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0"/>
+          </svg>
+          <div class="excellence-badge-text">
+            <strong>UroLift Center of Excellence</strong>
+            <span>Nationally recognized for superior patient outcomes</span>
+          </div>
+        </div>
+
+        <ul style="margin: 24px 0; display:flex; flex-direction:column; gap:12px;">
+          <li style="display:flex;align-items:center;gap:10px;font-size:0.95rem;color:var(--text-mid);">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="var(--seafoam)" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            Performed in-office, typically under 1 hour
+          </li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:0.95rem;color:var(--text-mid);">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="var(--seafoam)" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            No general anesthesia required for most patients
+          </li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:0.95rem;color:var(--text-mid);">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="var(--seafoam)" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            Preserves sexual function
+          </li>
+          <li style="display:flex;align-items:center;gap:10px;font-size:0.95rem;color:var(--text-mid);">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="var(--seafoam)" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            Most men return to normal activity within days
+          </li>
+        </ul>
+        <a href="urolift.html" class="btn btn-primary">Learn About UroLift</a>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div class="card" style="border-left:4px solid var(--seafoam);">
+          <h4 style="margin-bottom:8px; color:var(--ocean-deep);">Rapid Symptom Relief</h4>
+          <p style="font-size:0.92rem; max-width:none;">Clinical studies show significant improvement in urinary symptoms within 2 weeks of the procedure.</p>
+        </div>
+        <div class="card" style="border-left:4px solid var(--ocean-mid);">
+          <h4 style="margin-bottom:8px; color:var(--ocean-deep);">No Ongoing Medications</h4>
+          <p style="font-size:0.92rem; max-width:none;">Unlike alpha-blockers and 5-alpha reductase inhibitors, UroLift addresses the mechanical obstruction directly.</p>
+        </div>
+        <div class="card" style="border-left:4px solid var(--gold);">
+          <h4 style="margin-bottom:8px; color:var(--ocean-deep);">Proven Long-Term Results</h4>
+          <p style="font-size:0.92rem; max-width:none;">5-year durability data showing sustained improvement in urinary flow and quality of life.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section bg-sand">
+  <div class="container">
+    <div class="section-header text-center">
+      <div class="section-label" style="justify-content:center;">Patient Experiences</div>
+      <h2>What Patients Are Saying</h2>
+    </div>
+    <div class="grid-3">
+      <div class="testimonial-card fade-up">
+        <div class="stars">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-text">"Dr. Sawkar is exceptional. The UroLift procedure changed my life — I was back to normal within a week and haven't needed medication since. He took time to explain every step."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">R</div>
+          <div>
+            <div class="testimonial-name">Robert M.</div>
+            <div class="testimonial-role">UroLift Patient</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <div class="stars">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-text">"I had a kidney stone that needed laser surgery. Dr. Sawkar was calm, efficient, and incredibly knowledgeable. The procedure was outpatient and I was home by the afternoon. Highly recommend."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">D</div>
+          <div>
+            <div class="testimonial-name">David K.</div>
+            <div class="testimonial-role">Kidney Stone Patient</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <div class="stars">
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-text">"The no-scalpel vasectomy was painless, quick, and the whole process was explained perfectly. Dr. Sawkar's professionalism and calm demeanor made it easy. Back to work in 2 days."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">J</div>
+          <div>
+            <div class="testimonial-name">James T.</div>
+            <div class="testimonial-role">Vasectomy Patient</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BANNER ===== -->
+<section class="cta-banner">
+  <div class="container" style="position:relative; z-index:1;">
+    <h2>Ready to Reclaim Your Quality of Life?</h2>
+    <p>Same-day and next-day appointments available for urgent concerns. Telehealth consultations across California.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-white btn-lg">Request an Appointment</a>
+      <a href="tel:7148358175" class="btn btn-seafoam btn-lg">Call (714) 835-8175</a>
+    </div>
+    <p class="cta-note">Accepting new patients · Most major insurance plans accepted · Telehealth available</p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">Dr. Hari Sawkar, MD</div>
+        <div class="footer-brand-tag">Board-Certified Urologist</div>
+        <p>Chief of Urology at Providence St. Joseph Hospital, Orange. Specializing in minimally invasive urologic solutions for men and women throughout Orange County, California.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul class="footer-links">
+          <li><a href="urolift.html">UroLift (BPH)</a></li>
+          <li><a href="services.html#prostate-cancer">Prostate Cancer</a></li>
+          <li><a href="services.html#kidney-cancer">Kidney Cancer</a></li>
+          <li><a href="kidney-stones.html">Kidney Stones</a></li>
+          <li><a href="no-scalpel-vasectomy.html">No-Scalpel Vasectomy</a></li>
+          <li><a href="services.html#ed">Erectile Dysfunction</a></li>
+          <li><a href="services.html#incontinence">Urinary Incontinence</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Practice</h5>
+        <ul class="footer-links">
+          <li><a href="about.html">About Dr. Sawkar</a></li>
+          <li><a href="contact.html">Contact & Location</a></li>
+          <li><a href="contact.html#appointments">Appointments</a></li>
+          <li><a href="contact.html#telehealth">Telehealth</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul class="footer-links">
+          <li><a href="tel:7148358175">(714) 835-8175</a></li>
+          <li><a href="contact.html">1310 W. Stewart Dr.<br>Suite 607<br>Orange, CA 92868</a></li>
+        </ul>
+        <div style="margin-top:20px;">
+          <p style="font-size:0.78rem; color:rgba(255,255,255,0.4); max-width:none;">Providence St. Joseph Hospital<br>Adventist Health Simi Valley</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>© 2025 Hari Sawkar MD. All rights reserved.</p>
+      <p>Orange County, California</p>
+    </div>
+    <p class="footer-disclaimer">The information provided on this website is for educational purposes only and does not constitute medical advice. Please consult with Dr. Sawkar or a qualified healthcare provider for diagnosis and treatment of medical conditions.</p>
+  </div>
+</footer>
+
+<script>
+/* =============================================
+   Dr. Hari Sawkar MD — Main JavaScript
+   ============================================= */
+
+// ===== NAV SCROLL BEHAVIOR =====
+const nav = document.getElementById('nav');
+
+// If nav doesn't have 'scrolled' class already (home page transparent nav),
+// add scroll listener
+if (nav && !nav.classList.contains('scrolled')) {
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 50) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+}
+
+// ===== MOBILE MENU =====
+function openMobileMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('overlay');
+  if (menu) menu.classList.add('open');
+  if (overlay) overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu() {
+  const menu = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('overlay');
+  if (menu) menu.classList.remove('open');
+  if (overlay) overlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Close mobile menu on Escape key
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closeMobileMenu();
+});
+
+// ===== ACCORDION =====
+function toggleAccordion(btn) {
+  const item = btn.closest('.accordion-item');
+  const isOpen = item.classList.contains('open');
+
+  // Close all other open accordion items
+  document.querySelectorAll('.accordion-item.open').forEach(function (openItem) {
+    if (openItem !== item) {
+      openItem.classList.remove('open');
+    }
+  });
+
+  // Toggle current item
+  item.classList.toggle('open', !isOpen);
+}
+
+// ===== SCROLL ANIMATIONS (Intersection Observer) =====
+const fadeEls = document.querySelectorAll('.fade-up');
+
+if (fadeEls.length > 0) {
+  const observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px',
+    }
+  );
+
+  fadeEls.forEach(function (el) {
+    observer.observe(el);
+  });
+}
+
+// ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+  anchor.addEventListener('click', function (e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const navHeight = parseInt(
+        getComputedStyle(document.documentElement).getPropertyValue('--nav-height')
+      ) || 80;
+      const targetY = target.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+      window.scrollTo({ top: targetY, behavior: 'smooth' });
+    }
+  });
+});
+
+// ===== CONTACT FORM HANDLER =====
+function handleFormSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const successMsg = document.getElementById('formSuccess');
+
+  // In a real implementation, you would POST to a backend API here.
+  // For now, we show a success message.
+  if (successMsg) {
+    form.style.display = 'none';
+    successMsg.style.display = 'block';
+  }
+
+  // Scroll to success message
+  if (successMsg) {
+    successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}
+
+// ===== ACTIVE NAV LINK (highlight current page) =====
+(function () {
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-link, .mobile-menu-links a').forEach(function (link) {
+    const href = link.getAttribute('href');
+    if (href && href.split('#')[0] === currentPath) {
+      link.classList.add('active');
+    }
+  });
+})();
+
+// ===== PHONE NUMBER FORMATTING =====
+const phoneInputs = document.querySelectorAll('input[type="tel"]');
+phoneInputs.forEach(function (input) {
+  input.addEventListener('input', function () {
+    let val = input.value.replace(/\D/g, '');
+    if (val.length >= 10) {
+      val = val.substring(0, 10);
+      val = '(' + val.substring(0, 3) + ') ' + val.substring(3, 6) + '-' + val.substring(6);
+    }
+    input.value = val;
+  });
+});
+
+</script>
+</body>
+</html>
