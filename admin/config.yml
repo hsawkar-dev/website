@@ -16,7 +16,7 @@ backend:
   repo: hsawkar-dev/website
   branch: main
   auth_type: pkce
-  app_id: YOUR_GITHUB_OAUTH_APP_CLIENT_ID   # ← paste your Client ID here
+  app_id: Ov23liD9dB4o7rnjitNy
 
 media_folder: images/uploads
 public_folder: images/uploads
