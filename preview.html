@@ -1472,10 +1472,11 @@ p  { color: var(--text-mid); max-width: 68ch; }
     <a href="index.html">Home</a>
     <a href="about.html">About Dr. Sawkar</a>
     <a href="services.html">Services</a>
+    <div class="mobile-menu-group-label">BPH Treatments</div>
+    <a href="pae.html" class="mobile-menu-featured-link">PAE — Prostatic Artery Embolization</a>
     <a href="urolift.html">UroLift</a>
     <a href="rezum.html">Rezūm</a>
     <a href="aquablation.html">Aquablation</a>
-    <a href="pae.html">Prostatic Artery Embolization</a>
     <a href="no-scalpel-vasectomy.html">No-Scalpel Vasectomy</a>
     <a href="kidney-stones.html">Kidney Stones</a>
     <a href="contact.html">Contact</a>
@@ -1495,7 +1496,28 @@ p  { color: var(--text-mid); max-width: 68ch; }
     <div class="nav-menu">
       <a href="about.html" class="nav-link">About</a>
       <a href="services.html" class="nav-link">Services</a>
-      <a href="urolift.html" class="nav-link">UroLift</a>
+      <div class="nav-dropdown">
+        <button class="nav-link nav-dropdown-trigger">BPH Treatments <svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" width="11" height="11" style="margin-left:2px;vertical-align:middle;"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></button>
+        <div class="nav-dropdown-menu">
+          <a href="pae.html" class="nav-dropdown-item nav-dropdown-featured">
+            <span class="nav-dropdown-item-name">PAE <span class="nav-dropdown-badge">Featured</span></span>
+            <span class="nav-dropdown-item-desc">Prostatic Artery Embolization — no surgery</span>
+          </a>
+          <a href="urolift.html" class="nav-dropdown-item">
+            <span class="nav-dropdown-item-name">UroLift</span>
+            <span class="nav-dropdown-item-desc">No cutting, no drugs, no catheter</span>
+          </a>
+          <a href="rezum.html" class="nav-dropdown-item">
+            <span class="nav-dropdown-item-name">Rezūm</span>
+            <span class="nav-dropdown-item-desc">Water vapor therapy</span>
+          </a>
+          <a href="aquablation.html" class="nav-dropdown-item">
+            <span class="nav-dropdown-item-name">Aquablation</span>
+            <span class="nav-dropdown-item-desc">Robotic waterjet ablation</span>
+          </a>
+          <div class="nav-dropdown-footer"><a href="services.html#bph">Compare all BPH treatments →</a></div>
+        </div>
+      </div>
       <a href="no-scalpel-vasectomy.html" class="nav-link">Vasectomy</a>
       <a href="kidney-stones.html" class="nav-link">Kidney Stones</a>
       <a href="contact.html" class="nav-link nav-cta">Request Appointment</a>

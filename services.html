@@ -26,10 +26,11 @@
     <a href="index.html">Home</a>
     <a href="about.html">About Dr. Sawkar</a>
     <a href="services.html">Services</a>
+    <div class="mobile-menu-group-label">BPH Treatments</div>
+    <a href="pae.html" class="mobile-menu-featured-link">PAE — Prostatic Artery Embolization</a>
     <a href="urolift.html">UroLift</a>
     <a href="rezum.html">Rezūm</a>
     <a href="aquablation.html">Aquablation</a>
-    <a href="pae.html">Prostatic Artery Embolization</a>
     <a href="no-scalpel-vasectomy.html">No-Scalpel Vasectomy</a>
     <a href="kidney-stones.html">Kidney Stones</a>
     <a href="contact.html">Contact</a>
@@ -48,7 +49,28 @@
     <div class="nav-menu">
       <a href="about.html" class="nav-link">About</a>
       <a href="services.html" class="nav-link active">Services</a>
-      <a href="urolift.html" class="nav-link">UroLift</a>
+      <div class="nav-dropdown">
+        <button class="nav-link nav-dropdown-trigger">BPH Treatments <svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" width="11" height="11" style="margin-left:2px;vertical-align:middle;"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg></button>
+        <div class="nav-dropdown-menu">
+          <a href="pae.html" class="nav-dropdown-item nav-dropdown-featured">
+            <span class="nav-dropdown-item-name">PAE <span class="nav-dropdown-badge">Featured</span></span>
+            <span class="nav-dropdown-item-desc">Prostatic Artery Embolization — no surgery</span>
+          </a>
+          <a href="urolift.html" class="nav-dropdown-item">
+            <span class="nav-dropdown-item-name">UroLift</span>
+            <span class="nav-dropdown-item-desc">No cutting, no drugs, no catheter</span>
+          </a>
+          <a href="rezum.html" class="nav-dropdown-item">
+            <span class="nav-dropdown-item-name">Rezūm</span>
+            <span class="nav-dropdown-item-desc">Water vapor therapy</span>
+          </a>
+          <a href="aquablation.html" class="nav-dropdown-item">
+            <span class="nav-dropdown-item-name">Aquablation</span>
+            <span class="nav-dropdown-item-desc">Robotic waterjet ablation</span>
+          </a>
+          <div class="nav-dropdown-footer"><a href="services.html#bph">Compare all BPH treatments →</a></div>
+        </div>
+      </div>
       <a href="no-scalpel-vasectomy.html" class="nav-link">Vasectomy</a>
       <a href="kidney-stones.html" class="nav-link">Kidney Stones</a>
       <a href="contact.html" class="nav-link nav-cta">Request Appointment</a>
@@ -82,20 +104,27 @@
 
         <h4 style="margin-bottom:12px; color:var(--ocean-deep);">Treatment Options</h4>
         <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:32px;">
-          <div style="padding:16px 20px; background:var(--sand); border-radius:var(--radius-sm); border-left:3px solid var(--seafoam);">
+          <div style="padding:16px 20px; background:linear-gradient(135deg,#f0f8ff,#e8f4f0); border-radius:var(--radius-sm); border-left:3px solid var(--seafoam);">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+              <strong style="font-size:0.95rem; color:var(--text-dark);">PAE — Prostatic Artery Embolization</strong>
+              <span style="font-size:0.62rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:var(--seafoam);color:white;padding:2px 7px;border-radius:20px;">Featured</span>
+            </div>
+            <p style="font-size:0.88rem; margin-top:0; max-width:none;">Non-surgical, image-guided catheter procedure that shrinks the prostate by reducing its blood supply. No cuts to the prostate, no general anesthesia, same-day discharge. Ideal for large prostates. <a href="pae.html" style="color:var(--ocean-mid);">Learn more →</a></p>
+          </div>
+          <div style="padding:16px 20px; background:var(--sand); border-radius:var(--radius-sm); border-left:3px solid var(--ocean-mid);">
             <strong style="font-size:0.95rem; color:var(--text-dark);">UroLift System</strong>
             <p style="font-size:0.88rem; margin-top:4px; max-width:none;">Tiny implants lift and hold prostate tissue away from the urethra. No cutting, no heat, preserves sexual function. In-office procedure. <a href="urolift.html" style="color:var(--ocean-mid);">Learn more →</a></p>
           </div>
           <div style="padding:16px 20px; background:var(--sand); border-radius:var(--radius-sm); border-left:3px solid var(--ocean-mid);">
             <strong style="font-size:0.95rem; color:var(--text-dark);">Aquablation Therapy</strong>
-            <p style="font-size:0.88rem; margin-top:4px; max-width:none;">Robotic waterjet ablation guided by real-time ultrasound imaging. Highly precise tissue removal preserving sexual function across all prostate sizes.</p>
+            <p style="font-size:0.88rem; margin-top:4px; max-width:none;">Robotic waterjet ablation guided by real-time ultrasound imaging. Highly precise tissue removal preserving sexual function across all prostate sizes. <a href="aquablation.html" style="color:var(--ocean-mid);">Learn more →</a></p>
           </div>
           <div style="padding:16px 20px; background:var(--sand); border-radius:var(--radius-sm); border-left:3px solid var(--gold);">
             <strong style="font-size:0.95rem; color:var(--text-dark);">Rezūm Water Vapor Therapy</strong>
-            <p style="font-size:0.88rem; margin-top:4px; max-width:none;">Convective water vapor energy delivered directly into excess prostate tissue, causing cell death and shrinkage over 3 months.</p>
+            <p style="font-size:0.88rem; margin-top:4px; max-width:none;">Convective water vapor energy delivered directly into excess prostate tissue, causing cell death and shrinkage over 3 months. <a href="rezum.html" style="color:var(--ocean-mid);">Learn more →</a></p>
           </div>
         </div>
-        <a href="urolift.html" class="btn btn-primary">Explore BPH Treatments</a>
+        <a href="contact.html" class="btn btn-primary">Schedule a BPH Consultation</a>
       </div>
       <div class="card" style="background:var(--mist); border:none; padding:40px;">
         <h4 style="margin-bottom:20px; color:var(--ocean-deep);">Common BPH Symptoms</h4>
