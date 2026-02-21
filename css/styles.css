@@ -523,16 +523,16 @@ p  { color: var(--text-mid); max-width: 68ch; }
   color: var(--seafoam-light);
 }
 
-.hero-wave-bottom {
+.feature-strip-wave {
   position: absolute;
-  bottom: 0;
+  top: -79px;
   left: 0;
   right: 0;
-  overflow: hidden;
   line-height: 0;
+  z-index: 1;
 }
 
-.hero-wave-bottom svg { display: block; width: 100%; height: auto; }
+.feature-strip-wave svg { display: block; width: 100%; height: auto; }
 
 /* --- Section Labels --- */
 .section-label {
@@ -667,6 +667,7 @@ p  { color: var(--text-mid); max-width: 68ch; }
 
 /* --- Feature Strip --- */
 .feature-strip {
+  position: relative;
   background: linear-gradient(135deg, var(--ocean-deep), #0E5C9A);
   padding: 64px 0;
 }
