@@ -1511,6 +1511,7 @@ p  { color: var(--text-mid); max-width: 68ch; }
   .hamburger { display: flex; }
 
   .hero { min-height: 90vh; }
+  .hero-content { padding-bottom: 80px; }
   .hero-stats { gap: 24px; flex-wrap: wrap; }
 
   .tech-highlight {
@@ -1536,6 +1537,7 @@ p  { color: var(--text-mid); max-width: 68ch; }
 }
 
 @media (max-width: 480px) {
+  .hero-content { padding-bottom: 60px; }
   .hero-actions { flex-direction: column; }
   .btn-lg { width: 100%; justify-content: center; }
   .feature-strip-grid { grid-template-columns: 1fr; }
