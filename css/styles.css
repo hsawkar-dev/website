@@ -501,8 +501,8 @@ p  { color: var(--text-mid); max-width: 68ch; }
 
 .hero-stats {
   display: flex;
-  flex-wrap: wrap;
-  gap: 48px;
+  flex-wrap: nowrap;
+  gap: 32px;
   border-top: 1px solid rgba(255,255,255,0.15);
   padding-top: 40px;
 }
@@ -525,14 +525,14 @@ p  { color: var(--text-mid); max-width: 68ch; }
 
 .feature-strip-wave {
   position: absolute;
-  top: -79px;
+  top: -80px;
   left: 0;
   right: 0;
   line-height: 0;
   z-index: 1;
 }
 
-.feature-strip-wave svg { display: block; width: 100%; height: auto; }
+.feature-strip-wave svg { display: block; width: 100%; height: 80px; }
 
 /* --- Section Labels --- */
 .section-label {
@@ -1522,7 +1522,7 @@ p  { color: var(--text-mid); max-width: 68ch; }
   .hamburger { display: flex; }
 
   .hero { min-height: 90vh; }
-  .hero-stats { gap: 32px; }
+  .hero-stats { gap: 24px; flex-wrap: wrap; }
 
   .tech-highlight {
     grid-template-columns: 1fr;
