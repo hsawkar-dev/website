@@ -133,7 +133,13 @@
 
   <div class="hero-wave-bottom">
     <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#0B3D6B"/>
+      <defs>
+        <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#0B3D6B"/>
+          <stop offset="100%" stop-color="#0E5C9A"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="url(#waveGrad)"/>
     </svg>
   </div>
 </section>
