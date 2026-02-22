@@ -1428,6 +1428,7 @@ p  { color: var(--text-mid); max-width: 68ch; }
   flex-direction: column;
   gap: 8px;
   flex: 1;
+  overflow-y: auto;
 }
 
 .mobile-menu-links a {
