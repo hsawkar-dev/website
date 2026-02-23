@@ -852,6 +852,29 @@ p  { color: var(--text-mid); max-width: 68ch; }
   color: rgba(255,255,255,0.7);
 }
 
+.tech-visual-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.tech-visual-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 16px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.55));
+  color: rgba(255,255,255,0.85);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  z-index: 2;
+}
+
 /* --- Procedure Pages --- */
 .procedure-hero {
   background: linear-gradient(135deg, var(--ocean-deep), var(--ocean-bright));
