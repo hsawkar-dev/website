@@ -871,6 +871,24 @@ p  { color: var(--text-mid); max-width: 68ch; }
   font-size: 0.85rem;
   color: rgba(255,255,255,0.7);
 }
+.tech-visual-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.tech-visual-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 10px 16px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.55));
+  color: rgba(255,255,255,0.85);
+  font-size: 0.72rem;
+  font-weight: 500;
+  z-index: 2;
+}
 
 /* --- Procedure Pages --- */
 .procedure-hero {
@@ -1986,11 +2004,8 @@ p  { color: var(--text-mid); max-width: 68ch; }
         <a href="services.html" class="btn btn-primary mt-24">Explore All Treatments</a>
       </div>
       <div class="tech-visual">
-        <div class="tech-visual-content">
-          <div class="tech-visual-icon">⚕</div>
-          <div class="tech-visual-label">Da Vinci Robotic System</div>
-          <div class="tech-visual-sub">Precision beyond the human hand</div>
-        </div>
+        <img src="images/uploads/intuitive-da-vinci-sp-surgical-system-patient-cart-front-view-1060863-hi-res.jpg" alt="da Vinci SP Robotic Surgical System" class="tech-visual-img" />
+        <div class="tech-visual-caption">da Vinci SP Surgical System · Intuitive Surgical</div>
       </div>
     </div>
   </div>
