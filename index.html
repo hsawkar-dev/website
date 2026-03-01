@@ -8,6 +8,47 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Hari Sawkar, MD",
+    "url": "https://hsawkar-dev.github.io/website/",
+    "image": "https://hsawkar-dev.github.io/website/images/uploads/Sawkar_hari.jpg",
+    "description": "Board-certified urologist in Orange County, CA specializing in minimally invasive procedures for prostate, kidney, and urological conditions.",
+    "medicalSpecialty": "Urology",
+    "telephone": "+17149198143",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "720 N Tustin Ave, Suite 104",
+      "addressLocality": "Santa Ana",
+      "addressRegion": "CA",
+      "postalCode": "92705",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.7554,
+      "longitude": -117.8551
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Urological Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Prostatic Artery Embolization (PAE)" } },
+        { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "UroLift" } },
+        { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Aquablation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Rezūm Water Vapor Therapy" } },
+        { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "Da Vinci Robotic Surgery" } },
+        { "@type": "Offer", "itemOffered": { "@type": "MedicalProcedure", "name": "No-Scalpel Vasectomy" } }
+      ]
+    },
+    "memberOf": [
+      { "@type": "MedicalOrganization", "name": "American Urological Association" },
+      { "@type": "Hospital", "name": "Providence St. Joseph Hospital Orange" }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -309,7 +350,7 @@
         <div class="service-card-body">
           <h3>Erectile Dysfunction & Male Health</h3>
           <p>Regenerative treatments — PRP injections and low intensity shockwave therapy — that restore natural erectile function, not just manage symptoms. Penile implants also available.</p>
-          <a href="services.html#ed" class="service-card-link">
+          <a href="mens-health.html" class="service-card-link">
             Learn more
             <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
           </a>
@@ -496,34 +537,98 @@
       <div>
         <div class="section-label" style="display:flex;align-items:center;gap:10px;">
           Featured Procedure
-          <span style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;background:var(--seafoam);color:white;padding:3px 9px;border-radius:20px;">Now Offering</span>
+        </div>
+        <div class="medicare-callout">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Medicare Covered — CPT Code 37243
         </div>
         <h2>PAE — The Non-Surgical BPH Solution</h2>
         <p class="lead" style="margin: 20px 0;">
-          Prostatic Artery Embolization (PAE) shrinks an enlarged prostate by reducing its blood supply through a minimally invasive, image-guided catheter procedure. No general anesthesia. No hospital stay. Back to normal within days.
+          Prostatic Artery Embolization (PAE) shrinks an enlarged prostate without surgery — through a pinhole in the wrist. Medicare and Medicare Advantage cover the procedure. No general anesthesia. No catheter. Back to normal within days.
         </p>
 
         <ul style="margin: 0 0 28px; display:flex; flex-direction:column; gap:12px;">
           <li style="display:flex;align-items:center;gap:10px;font-size:0.95rem;color:var(--text-mid);">
             <svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="var(--seafoam)" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
-            Performed under local anesthesia — no general anesthesia required
+            No general anesthesia — local sedation only, no "going under"
           </li>
           <li style="display:flex;align-items:center;gap:10px;font-size:0.95rem;color:var(--text-mid);">
             <svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="var(--seafoam)" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
-            Outpatient procedure — go home the same day
+            Safe for men on blood thinners (Warfarin, Eliquis, Xarelto)
           </li>
           <li style="display:flex;align-items:center;gap:10px;font-size:0.95rem;color:var(--text-mid);">
             <svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="var(--seafoam)" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
-            Ideal for men who failed medications or want to avoid surgery
+            No catheter required after the procedure
           </li>
           <li style="display:flex;align-items:center;gap:10px;font-size:0.95rem;color:var(--text-mid);">
             <svg fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="var(--seafoam)" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
-            Works for very large prostates where other options may not
+            Effective for very large prostates (80cc, 100cc, and beyond)
           </li>
         </ul>
         <div style="display:flex;gap:14px;flex-wrap:wrap;">
           <a href="pae.html" class="btn btn-primary">Learn About PAE</a>
           <a href="contact.html" class="btn btn-secondary">Schedule a Consultation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAE FAQ ===== -->
+<section class="section">
+  <div class="container">
+    <div class="grid-2" style="gap:64px; align-items:start;">
+      <div>
+        <div class="section-label">PAE &amp; Medicare</div>
+        <h2>Questions Medicare Patients Ask</h2>
+        <p class="lead" style="margin:20px 0;">PAE is now covered by Medicare for qualifying BPH patients. Here are the answers to what men (and their families) ask most before scheduling a consultation.</p>
+        <a href="pae.html" class="btn btn-primary mt-24">Full PAE Information</a>
+      </div>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">
+            Does Medicare cover PAE?
+            <span class="accordion-icon"><svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg></span>
+          </button>
+          <div class="accordion-body">
+            <p>Yes. Medicare and most Medicare Advantage plans cover PAE for BPH under CPT code 37243. Our office will verify your specific benefits and handle prior authorization before your procedure — you won't have to navigate the insurance process alone.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">
+            Can I have PAE if I'm on blood thinners?
+            <span class="accordion-icon"><svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg></span>
+          </button>
+          <div class="accordion-body">
+            <p>PAE is one of the safest BPH options for men on anticoagulants such as Warfarin, Eliquis (apixaban), or Xarelto (rivaroxaban). Unlike surgery, which typically requires stopping blood thinners — a serious risk for many older patients — PAE can often be performed while continuing anticoagulation. Your care team will review your specific medications before the procedure.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">
+            Am I a candidate if I'm on Flomax or other BPH medications?
+            <span class="accordion-icon"><svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg></span>
+          </button>
+          <div class="accordion-body">
+            <p>Yes — in fact, men who are on Flomax (tamsulosin), Avodart (dutasteride), or similar medications and still have significant symptoms are often ideal PAE candidates. PAE addresses the mechanical obstruction that medications cannot fully resolve, offering lasting relief where pills have fallen short.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">
+            What if my prostate is very large (80cc or bigger)?
+            <span class="accordion-icon"><svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg></span>
+          </button>
+          <div class="accordion-body">
+            <p>PAE is actually an excellent option for very large prostates — including glands over 80cc or 100cc — where office procedures like UroLift may not be suitable. The larger the prostate, the more pronounced the shrinkage tends to be after PAE. Dr. Sawkar will obtain a prostate volume measurement to determine your candidacy.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-btn" onclick="toggleAccordion(this)">
+            Why see a urologist instead of an interventional radiologist for PAE?
+            <span class="accordion-icon"><svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/></svg></span>
+          </button>
+          <div class="accordion-body">
+            <p>As a board-certified urologist, Dr. Sawkar manages your complete BPH care — from initial diagnosis and cystoscopy through procedure coordination and long-term follow-up. IR groups who perform PAE typically do not provide urological follow-up, leaving you without a physician who can manage the full picture of your prostate health. With Dr. Sawkar, there are no hand-offs and no gaps in care.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -580,12 +685,12 @@
           <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-        <p class="testimonial-text">"The no-scalpel vasectomy was painless, quick, and the whole process was explained perfectly. Dr. Sawkar's professionalism and calm demeanor made it easy. Back to work in 2 days."</p>
+        <p class="testimonial-text">"I was 74 and on blood thinners — my cardiologist said surgery was too risky. Dr. Sawkar explained PAE and my Medicare covered it completely. I went home the same afternoon and within two months I was sleeping through the night again."</p>
         <div class="testimonial-author">
-          <div class="testimonial-avatar">J</div>
+          <div class="testimonial-avatar">G</div>
           <div>
-            <div class="testimonial-name">James T.</div>
-            <div class="testimonial-role">Vasectomy Patient</div>
+            <div class="testimonial-name">Gerald W.</div>
+            <div class="testimonial-role">PAE Patient, Medicare Beneficiary</div>
           </div>
         </div>
       </div>
@@ -626,7 +731,7 @@
           <li><a href="services.html#kidney-cancer">Kidney Cancer</a></li>
           <li><a href="kidney-stones.html">Kidney Stones</a></li>
           <li><a href="no-scalpel-vasectomy.html">No-Scalpel Vasectomy</a></li>
-          <li><a href="services.html#ed">Erectile Dysfunction</a></li>
+          <li><a href="mens-health.html">ED &amp; Men's Health</a></li>
           <li><a href="services.html#incontinence">Urinary Incontinence</a></li>
         </ul>
       </div>
