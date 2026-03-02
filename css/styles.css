@@ -103,9 +103,10 @@ p  { color: var(--text-mid); max-width: 68ch; }
   padding: 14px 32px;
   border-radius: 50px;
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
   cursor: pointer;
   border: 2px solid transparent;
   transition: var(--transition);
@@ -161,7 +162,7 @@ p  { color: var(--text-mid); max-width: 68ch; }
 
 .btn-lg {
   padding: 18px 42px;
-  font-size: 1.05rem;
+  font-size: 0.87rem;
 }
 
 /* --- Navigation --- */
@@ -511,7 +512,7 @@ p  { color: var(--text-mid); max-width: 68ch; }
 .hero-stat-value {
   font-family: var(--font-serif);
   font-size: 2.2rem;
-  color: var(--white);
+  color: var(--gold);
   line-height: 1;
   margin-bottom: 6px;
 }
@@ -533,7 +534,7 @@ p  { color: var(--text-mid); max-width: 68ch; }
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--seafoam);
+  color: var(--gold);
   margin-bottom: 16px;
 }
 
@@ -542,7 +543,7 @@ p  { color: var(--text-mid); max-width: 68ch; }
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--seafoam);
+  background: var(--gold);
 }
 
 .section-header {
@@ -564,6 +565,7 @@ p  { color: var(--text-mid); max-width: 68ch; }
 .card:hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-4px);
+  border-color: rgba(201, 168, 76, 0.22);
 }
 
 .card-icon {
@@ -698,11 +700,41 @@ p  { color: var(--text-mid); max-width: 68ch; }
   position: relative;
 }
 
+/* Gold corner accent — top-left */
+.about-image-wrap::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 76px;
+  height: 76px;
+  border-top: 2.5px solid var(--gold);
+  border-left: 2.5px solid var(--gold);
+  border-top-left-radius: 4px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Gold corner accent — bottom-right (inside badge area) */
+.about-image-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: -32px;
+  right: -12px;
+  width: 76px;
+  height: 76px;
+  border-bottom: 2.5px solid var(--gold);
+  border-right: 2.5px solid var(--gold);
+  border-bottom-right-radius: 4px;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .about-image-frame {
   border-radius: var(--radius-lg);
   overflow: hidden;
   aspect-ratio: 4/5;
-  background: linear-gradient(135deg, var(--mist) 0%, var(--seafoam-light) 100%);
+  background: linear-gradient(160deg, var(--ocean-deep) 0%, #0d5290 60%, var(--ocean-mid) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -728,6 +760,8 @@ p  { color: var(--text-mid); max-width: 68ch; }
   padding: 20px 24px;
   box-shadow: var(--shadow-md);
   min-width: 180px;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  z-index: 3;
 }
 
 .about-badge-value {
@@ -1087,7 +1121,25 @@ p  { color: var(--text-mid); max-width: 68ch; }
   padding: 36px;
   box-shadow: var(--shadow-sm);
   border: 1px solid rgba(11, 61, 107, 0.06);
+  position: relative;
+  overflow: hidden;
 }
+
+.testimonial-card::before {
+  content: '\201C';
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  font-family: var(--font-serif);
+  font-size: 9rem;
+  line-height: 1;
+  color: rgba(201, 168, 76, 0.10);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+.testimonial-card > * { position: relative; z-index: 1; }
 
 .stars {
   display: flex;
