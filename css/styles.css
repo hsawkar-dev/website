@@ -1713,4 +1713,5 @@ p  { color: var(--text-mid); max-width: 68ch; }
   .btn-lg { width: 100%; justify-content: center; }
   .feature-strip-grid { grid-template-columns: 1fr; }
   .badge-row { flex-direction: column; }
+  .btn { white-space: normal; text-align: center; }
 }
