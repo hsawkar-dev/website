@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img">
+  <title>Abstract illustration of UroLift implants widening a urinary channel</title>
+  <defs>
+    <radialGradient id="ul-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1A6FA8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0B3D6B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background glow -->
+  <circle cx="200" cy="200" r="178" fill="url(#ul-glow)"/>
+  <circle cx="200" cy="200" r="190" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.06"/>
+
+  <!-- Left channel wall: narrows inward (upper), then opens (lower) -->
+  <path d="M148 60 C145 100, 148 130, 162 160 C170 175, 170 195, 158 230 C150 260, 148 300, 150 350" fill="none" stroke="#1A6FA8" stroke-width="12" stroke-linecap="round"/>
+  <!-- Right channel wall: mirror -->
+  <path d="M252 60 C255 100, 252 130, 238 160 C230 175, 230 195, 242 230 C250 260, 252 300, 250 350" fill="none" stroke="#1A6FA8" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- Dashed flow center axis -->
+  <line x1="200" y1="55" x2="200" y2="355" stroke="#2E9BD6" stroke-width="0.75" stroke-dasharray="5 4"/>
+
+  <!-- UroLift implant 1 (left) — upper area -->
+  <path d="M162 148 L140 130" fill="none" stroke="#4BBFB8" stroke-width="1.5"/>
+  <path d="M155 142 L145 132 L148 138" fill="none" stroke="#4BBFB8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="134" cy="125" r="5.5" fill="#C9A84C"/>
+  <line x1="162" y1="148" x2="134" y2="125" stroke="#4BBFB8" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="3 2"/>
+  <!-- Tension line radiating from anchor -->
+  <line x1="134" y1="125" x2="120" y2="112" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.4"/>
+  <line x1="134" y1="125" x2="124" y2="138" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.4"/>
+  <line x1="134" y1="125" x2="118" y2="128" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.4"/>
+
+  <!-- UroLift implant 2 (right) — upper area -->
+  <path d="M238 148 L260 130" fill="none" stroke="#4BBFB8" stroke-width="1.5"/>
+  <circle cx="266" cy="125" r="5.5" fill="#C9A84C"/>
+  <line x1="238" y1="148" x2="266" y2="125" stroke="#4BBFB8" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="3 2"/>
+  <line x1="266" y1="125" x2="280" y2="112" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.4"/>
+  <line x1="266" y1="125" x2="276" y2="138" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.4"/>
+  <line x1="266" y1="125" x2="282" y2="128" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.4"/>
+
+  <!-- UroLift implant 3 (left) — lower area -->
+  <path d="M158 220 L134 202" fill="none" stroke="#4BBFB8" stroke-width="1.5"/>
+  <circle cx="128" cy="197" r="5.5" fill="#C9A84C"/>
+  <line x1="158" y1="220" x2="128" y2="197" stroke="#4BBFB8" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="3 2"/>
+
+  <!-- UroLift implant 4 (right) — lower area -->
+  <path d="M242 220 L266 202" fill="none" stroke="#4BBFB8" stroke-width="1.5"/>
+  <circle cx="272" cy="197" r="5.5" fill="#C9A84C"/>
+  <line x1="242" y1="220" x2="272" y2="197" stroke="#4BBFB8" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="3 2"/>
+
+  <!-- Downward flow arrows at the bottom of channel -->
+  <polyline points="196,308 200,320 204,308" fill="none" stroke="#4BBFB8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="190,296 200,310 210,296" fill="none" stroke="#4BBFB8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.6"/>
+</svg>

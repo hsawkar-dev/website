@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img">
+  <title>Abstract illustration of kidney stone fragmentation via shockwave and laser treatment</title>
+  <defs>
+    <radialGradient id="ks-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1A6FA8" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0B3D6B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ks-stone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2E9BD6"/>
+      <stop offset="100%" stop-color="#0B3D6B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Concentric ring background (shockwave propagation) -->
+  <circle cx="200" cy="200" r="50"  fill="none" stroke="#1A6FA8" stroke-width="0.75" stroke-opacity="0.08"/>
+  <circle cx="200" cy="200" r="90"  fill="none" stroke="#1A6FA8" stroke-width="0.75" stroke-opacity="0.07"/>
+  <circle cx="200" cy="200" r="130" fill="none" stroke="#1A6FA8" stroke-width="0.75" stroke-opacity="0.06"/>
+  <circle cx="200" cy="200" r="170" fill="none" stroke="#1A6FA8" stroke-width="0.75" stroke-opacity="0.04"/>
+
+  <!-- Background glow -->
+  <circle cx="200" cy="200" r="178" fill="url(#ks-glow)"/>
+
+  <!-- Central stone — irregular polygon -->
+  <polygon points="200,158 222,163 238,180 236,202 220,218 198,222 178,215 163,198 166,176 182,162" fill="url(#ks-stone)" stroke="#4BBFB8" stroke-width="1.5"/>
+  <!-- Inner highlight on stone -->
+  <polygon points="200,166 214,170 224,182 222,196 212,206 198,208 186,203 176,192 178,178 190,169" fill="#2E9BD6" fill-opacity="0.2"/>
+
+  <!-- Fragmentation particles (various sizes) -->
+  <!-- Medium fragments -->
+  <polygon points="140,142 150,138 156,148 148,156 138,152" fill="url(#ks-stone)" stroke="#4BBFB8" stroke-width="1.2"/>
+  <polygon points="258,134 268,130 274,142 266,150 254,146" fill="url(#ks-stone)" stroke="#4BBFB8" stroke-width="1.2"/>
+  <polygon points="130,240 140,236 146,248 136,256 124,250" fill="url(#ks-stone)" stroke="#4BBFB8" stroke-width="1.2"/>
+  <polygon points="262,252 272,248 278,260 268,268 256,262" fill="url(#ks-stone)" stroke="#4BBFB8" stroke-width="1.2"/>
+  <!-- Small fragments -->
+  <polygon points="170,112 176,109 180,116 174,120 168,117" fill="url(#ks-stone)" stroke="#4BBFB8" stroke-width="1"/>
+  <polygon points="230,108 236,105 240,112 234,118 228,114" fill="url(#ks-stone)" stroke="#4BBFB8" stroke-width="1"/>
+  <polygon points="108,178 114,175 118,182 112,187 106,183" fill="url(#ks-stone)" stroke="#4BBFB8" stroke-width="1"/>
+  <polygon points="288,170 294,167 298,174 292,179 286,175" fill="url(#ks-stone)" stroke="#4BBFB8" stroke-width="1"/>
+  <polygon points="114,220 120,217 124,224 118,229 112,225" fill="url(#ks-stone)" stroke="#4BBFB8" stroke-width="1"/>
+  <polygon points="284,224 290,221 294,228 288,233 282,229" fill="url(#ks-stone)" stroke="#4BBFB8" stroke-width="1"/>
+  <!-- Tiny dust particles -->
+  <circle cx="156" cy="160" r="3.5" fill="#2E9BD6" fill-opacity="0.7"/>
+  <circle cx="244" cy="158" r="3" fill="#2E9BD6" fill-opacity="0.7"/>
+  <circle cx="148" cy="208" r="4" fill="#2E9BD6" fill-opacity="0.7"/>
+  <circle cx="252" cy="210" r="3.5" fill="#2E9BD6" fill-opacity="0.7"/>
+  <circle cx="200" cy="108" r="2.5" fill="#2E9BD6" fill-opacity="0.6"/>
+  <circle cx="190" cy="294" r="3" fill="#2E9BD6" fill-opacity="0.6"/>
+  <circle cx="296" cy="198" r="2.5" fill="#2E9BD6" fill-opacity="0.6"/>
+  <circle cx="104" cy="196" r="2.5" fill="#2E9BD6" fill-opacity="0.6"/>
+
+  <!-- Shockwave arc segments (not full circles — partial arcs) -->
+  <path d="M130 120 Q 80 200, 130 280" fill="none" stroke="#4BBFB8" stroke-width="1.5" stroke-opacity="0.7" stroke-linecap="round"/>
+  <path d="M110 108 Q 50 200, 110 292" fill="none" stroke="#4BBFB8" stroke-width="1.2" stroke-opacity="0.5" stroke-linecap="round"/>
+  <path d="M90 95 Q 20 200, 90 305" fill="none" stroke="#4BBFB8" stroke-width="1" stroke-opacity="0.35" stroke-linecap="round"/>
+  <path d="M270 120 Q 320 200, 270 280" fill="none" stroke="#4BBFB8" stroke-width="1.5" stroke-opacity="0.6" stroke-linecap="round"/>
+  <path d="M290 108 Q 350 200, 290 292" fill="none" stroke="#4BBFB8" stroke-width="1" stroke-opacity="0.3" stroke-linecap="round"/>
+
+  <!-- Laser line — enters from lower right at 30° angle -->
+  <line x1="360" y1="330" x2="218" y2="214" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Bright laser focus point at stone contact -->
+  <circle cx="218" cy="214" r="5" fill="#C9A84C" fill-opacity="0.8"/>
+  <circle cx="218" cy="214" r="9" fill="none" stroke="#C9A84C" stroke-width="0.75" stroke-opacity="0.4"/>
+</svg>

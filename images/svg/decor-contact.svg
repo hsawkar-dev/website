@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" role="img" aria-hidden="true">
+  <title>Decorative location and communication abstract graphic</title>
+  <!-- Signal rings expanding from pin center -->
+  <circle cx="140" cy="118" r="80"  fill="none" stroke="#4BBFB8" stroke-width="0.75" stroke-opacity="0.7"/>
+  <circle cx="140" cy="118" r="110" fill="none" stroke="#4BBFB8" stroke-width="0.75" stroke-opacity="0.45"/>
+  <circle cx="140" cy="118" r="140" fill="none" stroke="#4BBFB8" stroke-width="0.75" stroke-opacity="0.25"/>
+  <!-- Location pin -->
+  <path d="M140 56 C114 56, 94 76, 94 102 C94 136, 140 178, 140 178 C140 178, 186 136, 186 102 C186 76, 166 56, 140 56 Z" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+  <!-- Small cross inside pin -->
+  <line x1="140" y1="90" x2="140" y2="114" stroke="#4BBFB8" stroke-width="1.2"/>
+  <line x1="128" y1="102" x2="152" y2="102" stroke="#4BBFB8" stroke-width="1.2"/>
+</svg>

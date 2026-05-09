@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img">
+  <title>Abstract illustration representing men's sexual and hormonal health — vitality and balance</title>
+  <defs>
+    <radialGradient id="mh-glow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#2E9BD6" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0B3D6B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Soft background glow field -->
+  <circle cx="200" cy="210" r="170" fill="url(#mh-glow)"/>
+
+  <!-- Left circle (hormonal health — navy) -->
+  <circle cx="148" cy="210" r="88" fill="#0B3D6B" stroke="#1A6FA8" stroke-width="2"/>
+  <!-- Right circle (sexual health — mid blue) -->
+  <circle cx="252" cy="210" r="88" fill="#1A6FA8" stroke="#2E9BD6" stroke-width="2"/>
+  <!-- Overlap region (intersection, brighter) -->
+  <clipPath id="mh-left-clip">
+    <circle cx="148" cy="210" r="88"/>
+  </clipPath>
+  <circle cx="252" cy="210" r="88" fill="#2E9BD6" clip-path="url(#mh-left-clip)"/>
+
+  <!-- Left circle: upward-trending line chart (hormone optimization) -->
+  <polyline points="100,238 118,224 136,232 154,210 172,195" fill="none" stroke="#4BBFB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Dots at each data point -->
+  <circle cx="100" cy="238" r="3" fill="#4BBFB8"/>
+  <circle cx="118" cy="224" r="3" fill="#4BBFB8"/>
+  <circle cx="136" cy="232" r="3" fill="#4BBFB8"/>
+  <circle cx="154" cy="210" r="3" fill="#4BBFB8"/>
+  <circle cx="172" cy="195" r="3" fill="#4BBFB8"/>
+
+  <!-- Right circle: heartbeat / pulse waveform (vitality) -->
+  <polyline points="230,210 240,210 248,192 256,228 264,200 272,210 282,210" fill="none" stroke="#4BBFB8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Gold 8-ray starburst above intersection -->
+  <g stroke="#C9A84C" stroke-width="1.2" stroke-linecap="round">
+    <line x1="200" y1="92" x2="200" y2="108"/>
+    <line x1="200" y1="92" x2="200" y2="76"/>
+    <line x1="200" y1="84" x2="211" y2="73"/>
+    <line x1="200" y1="84" x2="189" y2="73"/>
+    <line x1="200" y1="84" x2="214" y2="84"/>
+    <line x1="200" y1="84" x2="186" y2="84"/>
+    <line x1="200" y1="84" x2="211" y2="95"/>
+    <line x1="200" y1="84" x2="189" y2="95"/>
+  </g>
+  <circle cx="200" cy="84" r="5" fill="#C9A84C" fill-opacity="0.3"/>
+
+  <!-- Outer containment ring -->
+  <circle cx="200" cy="210" r="192" fill="none" stroke="#FFFFFF" stroke-width="0.75" stroke-opacity="0.05"/>
+</svg>

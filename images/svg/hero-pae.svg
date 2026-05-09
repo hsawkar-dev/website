@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img">
+  <title>Abstract schematic of prostatic artery embolization — catheter pathway illustration</title>
+  <defs>
+    <radialGradient id="pae-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1A6FA8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0B3D6B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="pae-ovoid" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#1A6FA8"/>
+      <stop offset="100%" stop-color="#0B3D6B"/>
+    </radialGradient>
+    <marker id="pae-dot" markerWidth="6" markerHeight="6" refX="3" refY="3">
+      <circle cx="3" cy="3" r="2.5" fill="#4BBFB8"/>
+    </marker>
+  </defs>
+
+  <!-- Background glow field -->
+  <circle cx="200" cy="200" r="178" fill="url(#pae-glow)"/>
+
+  <!-- Outer containment ring -->
+  <circle cx="200" cy="200" r="190" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.06"/>
+
+  <!-- Arterial branch paths -->
+  <path d="M60 340 C90 280, 130 240, 175 210" fill="none" stroke="#2E9BD6" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M80 360 C120 300, 155 260, 185 225" fill="none" stroke="#2E9BD6" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.6"/>
+  <path d="M50 310 C80 260, 120 220, 168 200" fill="none" stroke="#2E9BD6" stroke-width="1" stroke-linecap="round" stroke-opacity="0.4"/>
+  <path d="M175 210 C185 200, 188 196, 190 194" fill="none" stroke="#2E9BD6" stroke-width="1.5"/>
+  <path d="M185 225 C192 215, 193 208, 193 200" fill="none" stroke="#2E9BD6" stroke-width="1.2" stroke-opacity="0.6"/>
+
+  <!-- Catheter line (dashed, seafoam) -->
+  <path d="M30 370 C70 330, 110 290, 160 238" fill="none" stroke="#4BBFB8" stroke-width="2" stroke-linecap="round" stroke-dasharray="7 4"/>
+
+  <!-- Central ovoid (prostate, abstract) -->
+  <ellipse cx="210" cy="188" rx="54" ry="64" fill="url(#pae-ovoid)" stroke="#1A6FA8" stroke-width="2"/>
+  <!-- Inner volume highlight -->
+  <ellipse cx="204" cy="178" rx="30" ry="36" fill="#2E9BD6" fill-opacity="0.14"/>
+
+  <!-- Microsphere particles along catheter path near terminus -->
+  <circle cx="130" cy="298" r="4" fill="#4BBFB8" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.5"/>
+  <circle cx="148" cy="276" r="3.5" fill="#4BBFB8" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.5"/>
+  <circle cx="159" cy="258" r="4.5" fill="#4BBFB8" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.5"/>
+  <circle cx="163" cy="244" r="3" fill="#4BBFB8" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.5"/>
+  <circle cx="166" cy="230" r="3.5" fill="#4BBFB8" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.5"/>
+  <circle cx="155" cy="268" r="2.5" fill="#4BBFB8" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.5"/>
+  <circle cx="170" cy="250" r="2" fill="#4BBFB8" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.5"/>
+  <circle cx="143" cy="285" r="3" fill="#4BBFB8" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.5"/>
+
+  <!-- Gold crosshair / target at treatment site -->
+  <line x1="160" y1="238" x2="172" y2="238" stroke="#C9A84C" stroke-width="1.2"/>
+  <line x1="166" y1="232" x2="166" y2="244" stroke="#C9A84C" stroke-width="1.2"/>
+  <circle cx="166" cy="238" r="6" fill="none" stroke="#C9A84C" stroke-width="1"/>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img">
+  <title>Abstract illustration of Rezūm water vapor therapy for enlarged prostate</title>
+  <defs>
+    <radialGradient id="rz-glow" cx="50%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="#4BBFB8" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#0B3D6B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="rz-ovoid" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#1A6FA8"/>
+      <stop offset="100%" stop-color="#0B3D6B"/>
+    </radialGradient>
+    <filter id="rz-blur">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <linearGradient id="rz-thermo" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#4BBFB8"/>
+      <stop offset="60%" stop-color="#C9A84C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Warm background glow -->
+  <circle cx="200" cy="200" r="178" fill="url(#rz-glow)"/>
+  <circle cx="200" cy="200" r="190" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.06"/>
+
+  <!-- Insertion device — enters from bottom center at slight angle -->
+  <rect x="186" y="285" width="16" height="90" rx="8" fill="#1A6FA8" stroke="#2E9BD6" stroke-width="2" transform="rotate(-4 194 330)"/>
+  <!-- Device tip highlight -->
+  <ellipse cx="192" cy="288" rx="7" ry="4" fill="#2E9BD6" fill-opacity="0.5"/>
+
+  <!-- Steam burst rays at device tip -->
+  <g stroke="#4BBFB8" stroke-width="1.8" stroke-linecap="round" opacity="0.9">
+    <line x1="192" y1="282" x2="192" y2="258"/>
+    <line x1="192" y1="282" x2="210" y2="262"/>
+    <line x1="192" y1="282" x2="174" y2="262"/>
+    <line x1="192" y1="282" x2="220" y2="272"/>
+    <line x1="192" y1="282" x2="164" y2="272"/>
+    <line x1="192" y1="282" x2="216" y2="255"/>
+    <line x1="192" y1="282" x2="168" y2="255"/>
+    <line x1="192" y1="282" x2="205" y2="250"/>
+    <line x1="192" y1="282" x2="179" y2="250"/>
+  </g>
+
+  <!-- Vapor blobs rising (organic, blur for softness) -->
+  <g filter="url(#rz-blur)" fill="#FFFFFF">
+    <ellipse cx="192" cy="232" rx="22" ry="14" fill-opacity="0.18"/>
+    <ellipse cx="206" cy="208" rx="18" ry="12" fill-opacity="0.14"/>
+    <ellipse cx="184" cy="188" rx="14" ry="10" fill-opacity="0.12"/>
+    <ellipse cx="200" cy="168" rx="20" ry="13" fill-opacity="0.10"/>
+    <ellipse cx="188" cy="150" rx="12" ry="8" fill-opacity="0.08"/>
+  </g>
+
+  <!-- Tissue oval (prostate, abstract) -->
+  <ellipse cx="210" cy="178" rx="58" ry="52" fill="url(#rz-ovoid)" stroke="#1A6FA8" stroke-width="2"/>
+  <!-- Inner volume highlight -->
+  <ellipse cx="204" cy="168" rx="32" ry="28" fill="#2E9BD6" fill-opacity="0.12"/>
+  <!-- Dashed "pre-shrinkage" outer ring -->
+  <ellipse cx="210" cy="178" rx="76" ry="70" fill="none" stroke="#2E9BD6" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="6 4"/>
+
+  <!-- Thermometer bar (right side) -->
+  <rect x="330" y="120" width="14" height="160" rx="7" fill="#0B3D6B" stroke="#1A6FA8" stroke-width="1.5"/>
+  <rect x="332" y="186" width="10" height="92" rx="5" fill="url(#rz-thermo)"/>
+  <circle cx="337" cy="283" r="9" fill="#4BBFB8" stroke="#1A6FA8" stroke-width="1.5"/>
+  <!-- Tick marks on thermometer -->
+  <line x1="344" y1="150" x2="352" y2="150" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="344" y1="175" x2="352" y2="175" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="344" y1="200" x2="352" y2="200" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="344" y1="225" x2="352" y2="225" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="344" y1="250" x2="352" y2="250" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.4"/>
+</svg>
