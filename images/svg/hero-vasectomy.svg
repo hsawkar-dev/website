@@ -1,42 +1,99 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img">
-  <title>Abstract illustration of no-scalpel vasectomy procedure with minimal access point</title>
+  <title>Anatomical illustration of no-scalpel vasectomy showing minimal access and vas deferens severance</title>
   <defs>
-    <radialGradient id="vs-glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#1A6FA8" stop-opacity="0.14"/>
+    <radialGradient id="vs-bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1A6FA8" stop-opacity="0.18"/>
       <stop offset="100%" stop-color="#0B3D6B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="vs-vas" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4BBFB8"/>
+      <stop offset="100%" stop-color="#2E9BD6"/>
+    </linearGradient>
+    <radialGradient id="vs-clip" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#F7E5A8"/>
+      <stop offset="60%" stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#8C7430"/>
+    </radialGradient>
+    <linearGradient id="vs-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A6FA8" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0B3D6B" stop-opacity="0.85"/>
+    </linearGradient>
+    <radialGradient id="vs-access" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0B3D6B"/>
+      <stop offset="100%" stop-color="#1A6FA8" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
-  <!-- Background glow -->
-  <circle cx="200" cy="200" r="178" fill="url(#vs-glow)"/>
-  <!-- Outer containment ring (dashed) -->
-  <circle cx="200" cy="200" r="190" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.06" stroke-dasharray="8 6"/>
+  <!-- Background field -->
+  <circle cx="200" cy="200" r="190" fill="url(#vs-bg)"/>
 
-  <!-- Outer structural circle -->
-  <circle cx="200" cy="200" r="145" fill="#0B3D6B" stroke="#1A6FA8" stroke-width="2"/>
-  <!-- Inner small circle (access point) -->
-  <circle cx="200" cy="200" r="44" fill="#4BBFB8" fill-opacity="0.18" stroke="#4BBFB8" stroke-width="1.5"/>
+  <!-- Skin surface (subtle dome representing scrotal skin in cross-section) -->
+  <path d="M 60 280
+           Q 200 140, 340 280
+           Q 200 360, 60 280 Z"
+        fill="url(#vs-skin)" stroke="#1A6FA8" stroke-width="1" stroke-opacity="0.6"/>
 
-  <!-- Left vas deferens curve -->
-  <path d="M55 320 C80 280, 110 250, 148 225 C170 211, 180 210, 188 208" fill="none" stroke="#2E9BD6" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- Left vas terminus tick (severed) -->
-  <line x1="184" y1="204" x2="192" y2="213" stroke="#2E9BD6" stroke-width="2" stroke-linecap="round"/>
+  <!-- Skin texture lines (subtle) -->
+  <g stroke="#FFFFFF" stroke-width="0.4" stroke-opacity="0.15">
+    <path d="M 100 270 Q 200 200, 300 270" fill="none"/>
+    <path d="M 110 290 Q 200 230, 290 290" fill="none"/>
+  </g>
 
-  <!-- Right vas deferens curve -->
-  <path d="M345 320 C320 280, 290 250, 252 225 C230 211, 220 210, 212 208" fill="none" stroke="#2E9BD6" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- Right vas terminus tick (severed) -->
-  <line x1="208" y1="204" x2="216" y2="213" stroke="#2E9BD6" stroke-width="2" stroke-linecap="round"/>
+  <!-- Left vas deferens (rising tube) -->
+  <path d="M 130 340
+           C 140 300, 150 270, 168 240
+           C 175 230, 178 222, 180 215"
+        fill="none" stroke="url(#vs-vas)" stroke-width="6" stroke-linecap="round"/>
+  <!-- Inner highlight on left vas -->
+  <path d="M 130 340
+           C 140 300, 150 270, 168 240
+           C 175 230, 178 222, 180 215"
+        fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" stroke-opacity="0.45"/>
 
-  <!-- Gap between the two ends highlighted -->
-  <!-- Gold diamond seal at gap center -->
-  <polygon points="200,200 207,208 200,216 193,208" fill="#C9A84C"/>
+  <!-- Right vas deferens (mirror) -->
+  <path d="M 270 340
+           C 260 300, 250 270, 232 240
+           C 225 230, 222 222, 220 215"
+        fill="none" stroke="url(#vs-vas)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 270 340
+           C 260 300, 250 270, 232 240
+           C 225 230, 222 222, 220 215"
+        fill="none" stroke="#FFFFFF" stroke-width="1.4" stroke-linecap="round" stroke-opacity="0.45"/>
 
-  <!-- Keyhole entry indicator at top of inner circle -->
-  <circle cx="200" cy="160" r="8" fill="none" stroke="#4BBFB8" stroke-width="1.2" stroke-opacity="0.6"/>
-  <rect x="196" y="168" width="8" height="12" rx="2" fill="none" stroke="#4BBFB8" stroke-width="1.2" stroke-opacity="0.6"/>
+  <!-- Severance gap on left vas -->
+  <line x1="172" y1="246" x2="160" y2="248" stroke="#0B3D6B" stroke-width="6.5" stroke-linecap="round"/>
+  <!-- Sealed end (cauterized) on left side -->
+  <ellipse cx="174" cy="244" rx="3.5" ry="2.5" fill="#0B3D6B" stroke="#FFFFFF" stroke-width="0.5" transform="rotate(-30 174 244)"/>
+  <ellipse cx="160" cy="248" rx="3.5" ry="2.5" fill="#0B3D6B" stroke="#FFFFFF" stroke-width="0.5" transform="rotate(-30 160 248)"/>
 
-  <!-- Subtle radiating lines from seal -->
-  <line x1="200" y1="208" x2="200" y2="230" stroke="#C9A84C" stroke-width="0.75" stroke-opacity="0.4"/>
-  <line x1="207" y1="208" x2="218" y2="222" stroke="#C9A84C" stroke-width="0.75" stroke-opacity="0.4"/>
-  <line x1="193" y1="208" x2="182" y2="222" stroke="#C9A84C" stroke-width="0.75" stroke-opacity="0.4"/>
+  <!-- Severance gap on right vas -->
+  <line x1="228" y1="246" x2="240" y2="248" stroke="#0B3D6B" stroke-width="6.5" stroke-linecap="round"/>
+  <ellipse cx="226" cy="244" rx="3.5" ry="2.5" fill="#0B3D6B" stroke="#FFFFFF" stroke-width="0.5" transform="rotate(30 226 244)"/>
+  <ellipse cx="240" cy="248" rx="3.5" ry="2.5" fill="#0B3D6B" stroke="#FFFFFF" stroke-width="0.5" transform="rotate(30 240 248)"/>
+
+  <!-- Titanium clips at severance points (left side - upper end) -->
+  <rect x="171" y="240" width="9" height="3" rx="1" fill="url(#vs-clip)" stroke="#0B3D6B" stroke-width="0.5" transform="rotate(-32 175 241)"/>
+  <!-- Left side - lower end -->
+  <rect x="155" y="244" width="9" height="3" rx="1" fill="url(#vs-clip)" stroke="#0B3D6B" stroke-width="0.5" transform="rotate(-32 159 245)"/>
+  <!-- Right side - upper end -->
+  <rect x="220" y="240" width="9" height="3" rx="1" fill="url(#vs-clip)" stroke="#0B3D6B" stroke-width="0.5" transform="rotate(32 225 241)"/>
+  <!-- Right side - lower end -->
+  <rect x="236" y="244" width="9" height="3" rx="1" fill="url(#vs-clip)" stroke="#0B3D6B" stroke-width="0.5" transform="rotate(32 240 245)"/>
+
+  <!-- Single minimal access point at top center (no-scalpel puncture) -->
+  <circle cx="200" cy="200" r="22" fill="url(#vs-access)" opacity="0.9"/>
+  <circle cx="200" cy="200" r="14" fill="none" stroke="#C9A84C" stroke-width="1" stroke-opacity="0.7"/>
+  <circle cx="200" cy="200" r="6" fill="#C9A84C" fill-opacity="0.85"/>
+  <!-- Subtle radiating lines from access point -->
+  <g stroke="#C9A84C" stroke-width="0.5" stroke-opacity="0.5" stroke-linecap="round">
+    <line x1="200" y1="172" x2="200" y2="178"/>
+    <line x1="220" y1="180" x2="216" y2="184"/>
+    <line x1="180" y1="180" x2="184" y2="184"/>
+    <line x1="226" y1="200" x2="232" y2="200"/>
+    <line x1="174" y1="200" x2="168" y2="200"/>
+  </g>
+
+  <!-- Dotted line connecting access point to vas (showing instrument path) -->
+  <path d="M 200 214 Q 195 220, 188 224" fill="none" stroke="#C9A84C" stroke-width="0.7" stroke-opacity="0.5" stroke-dasharray="2 2"/>
+  <path d="M 200 214 Q 205 220, 212 224" fill="none" stroke="#C9A84C" stroke-width="0.7" stroke-opacity="0.5" stroke-dasharray="2 2"/>
 </svg>

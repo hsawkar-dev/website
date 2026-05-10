@@ -1,53 +1,103 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img">
-  <title>Abstract illustration of UroLift implants widening a urinary channel</title>
+  <title>Anatomical illustration of UroLift implants holding the prostate channel open</title>
   <defs>
-    <radialGradient id="ul-glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#1A6FA8" stop-opacity="0.15"/>
+    <radialGradient id="ul-bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1A6FA8" stop-opacity="0.18"/>
       <stop offset="100%" stop-color="#0B3D6B" stop-opacity="0"/>
     </radialGradient>
+    <linearGradient id="ul-bladder" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4BBFB8" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#2E9BD6" stop-opacity="0.25"/>
+    </linearGradient>
+    <linearGradient id="ul-lobe-left" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2E9BD6"/>
+      <stop offset="100%" stop-color="#0B3D6B"/>
+    </linearGradient>
+    <linearGradient id="ul-lobe-right" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2E9BD6"/>
+      <stop offset="100%" stop-color="#0B3D6B"/>
+    </linearGradient>
+    <radialGradient id="ul-anchor" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#F7E5A8"/>
+      <stop offset="50%" stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#8C7430"/>
+    </radialGradient>
+    <linearGradient id="ul-suture" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C9A84C" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#C9A84C" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#C9A84C" stop-opacity="0.4"/>
+    </linearGradient>
   </defs>
 
-  <!-- Background glow -->
-  <circle cx="200" cy="200" r="178" fill="url(#ul-glow)"/>
-  <circle cx="200" cy="200" r="190" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.06"/>
+  <!-- Background field -->
+  <circle cx="200" cy="200" r="190" fill="url(#ul-bg)"/>
 
-  <!-- Left channel wall: narrows inward (upper), then opens (lower) -->
-  <path d="M148 60 C145 100, 148 130, 162 160 C170 175, 170 195, 158 230 C150 260, 148 300, 150 350" fill="none" stroke="#1A6FA8" stroke-width="12" stroke-linecap="round"/>
-  <!-- Right channel wall: mirror -->
-  <path d="M252 60 C255 100, 252 130, 238 160 C230 175, 230 195, 242 230 C250 260, 252 300, 250 350" fill="none" stroke="#1A6FA8" stroke-width="12" stroke-linecap="round"/>
+  <!-- Bladder -->
+  <path d="M 140 80 Q 140 50, 200 50 Q 260 50, 260 80 L 258 132 Q 258 146, 244 150 L 156 150 Q 142 146, 142 132 Z"
+        fill="url(#ul-bladder)" stroke="#4BBFB8" stroke-width="1.5" stroke-opacity="0.7"/>
+  <ellipse cx="180" cy="80" rx="34" ry="14" fill="#FFFFFF" fill-opacity="0.22"/>
 
-  <!-- Dashed flow center axis -->
-  <line x1="200" y1="55" x2="200" y2="355" stroke="#2E9BD6" stroke-width="0.75" stroke-dasharray="5 4"/>
+  <!-- Bladder neck connecting to prostate -->
+  <path d="M 184 150 L 184 168 L 216 168 L 216 150" fill="#1A6FA8" fill-opacity="0.5"/>
 
-  <!-- UroLift implant 1 (left) — upper area -->
-  <path d="M162 148 L140 130" fill="none" stroke="#4BBFB8" stroke-width="1.5"/>
-  <path d="M155 142 L145 132 L148 138" fill="none" stroke="#4BBFB8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="134" cy="125" r="5.5" fill="#C9A84C"/>
-  <line x1="162" y1="148" x2="134" y2="125" stroke="#4BBFB8" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="3 2"/>
-  <!-- Tension line radiating from anchor -->
-  <line x1="134" y1="125" x2="120" y2="112" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.4"/>
-  <line x1="134" y1="125" x2="124" y2="138" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.4"/>
-  <line x1="134" y1="125" x2="118" y2="128" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.4"/>
+  <!-- Left prostate lobe (compressing urethra inward — but now held open by implants) -->
+  <path d="M 184 168
+           C 145 170, 122 200, 122 245
+           C 122 285, 145 320, 184 326
+           C 192 320, 196 295, 196 245
+           C 196 200, 192 175, 184 168 Z"
+        fill="url(#ul-lobe-left)" stroke="#0B3D6B" stroke-width="1.5"/>
+  <!-- Left lobe highlight -->
+  <path d="M 145 195 Q 130 230, 145 280" fill="none" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.3"/>
 
-  <!-- UroLift implant 2 (right) — upper area -->
-  <path d="M238 148 L260 130" fill="none" stroke="#4BBFB8" stroke-width="1.5"/>
-  <circle cx="266" cy="125" r="5.5" fill="#C9A84C"/>
-  <line x1="238" y1="148" x2="266" y2="125" stroke="#4BBFB8" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="3 2"/>
-  <line x1="266" y1="125" x2="280" y2="112" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.4"/>
-  <line x1="266" y1="125" x2="276" y2="138" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.4"/>
-  <line x1="266" y1="125" x2="282" y2="128" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.4"/>
+  <!-- Right prostate lobe -->
+  <path d="M 216 168
+           C 255 170, 278 200, 278 245
+           C 278 285, 255 320, 216 326
+           C 208 320, 204 295, 204 245
+           C 204 200, 208 175, 216 168 Z"
+        fill="url(#ul-lobe-right)" stroke="#0B3D6B" stroke-width="1.5"/>
+  <!-- Right lobe highlight -->
+  <path d="M 255 195 Q 270 230, 255 280" fill="none" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.3"/>
 
-  <!-- UroLift implant 3 (left) — lower area -->
-  <path d="M158 220 L134 202" fill="none" stroke="#4BBFB8" stroke-width="1.5"/>
-  <circle cx="128" cy="197" r="5.5" fill="#C9A84C"/>
-  <line x1="158" y1="220" x2="128" y2="197" stroke="#4BBFB8" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="3 2"/>
+  <!-- Urethra channel (held open by implants) -->
+  <rect x="194" y="150" width="12" height="180" rx="6" fill="#FFFFFF" fill-opacity="0.35"/>
+  <line x1="200" y1="148" x2="200" y2="332" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.85"/>
 
-  <!-- UroLift implant 4 (right) — lower area -->
-  <path d="M242 220 L266 202" fill="none" stroke="#4BBFB8" stroke-width="1.5"/>
-  <circle cx="272" cy="197" r="5.5" fill="#C9A84C"/>
-  <line x1="242" y1="220" x2="272" y2="197" stroke="#4BBFB8" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="3 2"/>
+  <!-- UroLift implants — 4 total, pairs at upper and lower portions -->
 
-  <!-- Downward flow arrows at the bottom of channel -->
-  <polyline points="196,308 200,320 204,308" fill="none" stroke="#4BBFB8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-  <polyline points="190,296 200,310 210,296" fill="none" stroke="#4BBFB8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.6"/>
+  <!-- Upper left implant -->
+  <line x1="196" y1="200" x2="138" y2="195" stroke="url(#ul-suture)" stroke-width="1.4"/>
+  <circle cx="196" cy="200" r="3" fill="url(#ul-anchor)" stroke="#0B3D6B" stroke-width="0.6"/>
+  <ellipse cx="138" cy="195" rx="6.5" ry="3" fill="url(#ul-anchor)" stroke="#0B3D6B" stroke-width="0.8" transform="rotate(-5 138 195)"/>
+
+  <!-- Upper right implant -->
+  <line x1="204" y1="200" x2="262" y2="195" stroke="url(#ul-suture)" stroke-width="1.4"/>
+  <circle cx="204" cy="200" r="3" fill="url(#ul-anchor)" stroke="#0B3D6B" stroke-width="0.6"/>
+  <ellipse cx="262" cy="195" rx="6.5" ry="3" fill="url(#ul-anchor)" stroke="#0B3D6B" stroke-width="0.8" transform="rotate(5 262 195)"/>
+
+  <!-- Lower left implant -->
+  <line x1="196" y1="270" x2="140" y2="278" stroke="url(#ul-suture)" stroke-width="1.4"/>
+  <circle cx="196" cy="270" r="3" fill="url(#ul-anchor)" stroke="#0B3D6B" stroke-width="0.6"/>
+  <ellipse cx="140" cy="278" rx="6.5" ry="3" fill="url(#ul-anchor)" stroke="#0B3D6B" stroke-width="0.8" transform="rotate(8 140 278)"/>
+
+  <!-- Lower right implant -->
+  <line x1="204" y1="270" x2="260" y2="278" stroke="url(#ul-suture)" stroke-width="1.4"/>
+  <circle cx="204" cy="270" r="3" fill="url(#ul-anchor)" stroke="#0B3D6B" stroke-width="0.6"/>
+  <ellipse cx="260" cy="278" rx="6.5" ry="3" fill="url(#ul-anchor)" stroke="#0B3D6B" stroke-width="0.8" transform="rotate(-8 260 278)"/>
+
+  <!-- Subtle "tension lines" indicating the lifting force -->
+  <g stroke="#FFFFFF" stroke-width="0.4" stroke-opacity="0.35">
+    <line x1="138" y1="195" x2="125" y2="190"/>
+    <line x1="138" y1="195" x2="128" y2="200"/>
+    <line x1="262" y1="195" x2="275" y2="190"/>
+    <line x1="262" y1="195" x2="272" y2="200"/>
+    <line x1="140" y1="278" x2="127" y2="282"/>
+    <line x1="140" y1="278" x2="130" y2="272"/>
+    <line x1="260" y1="278" x2="273" y2="282"/>
+    <line x1="260" y1="278" x2="270" y2="272"/>
+  </g>
+
+  <!-- Flow arrow at urethra base — restored flow -->
+  <path d="M 194 348 L 200 360 L 206 348" fill="none" stroke="#4BBFB8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
