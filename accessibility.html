@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility | Dr. Hari Sawkar, MD</title>
+  <meta name="description" content="Accessibility statement for drsawkar.com, the practice website of Dr. Hari Sawkar, MD.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230D1218'/%3E%3Cpath d='M10 22 V10 M10 16 H22 M22 22 V10' stroke='%23A9CBE8' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+  <link rel="canonical" href="https://www.drsawkar.com/accessibility.html">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <span id="top-sentinel" aria-hidden="true"></span>
+
+  <header class="nav" id="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html"><span class="b-name">Dr. Hari Sawkar</span><span class="b-sub"><span>MD</span><i aria-hidden="true"></i><span>Urology</span></span></a>
+      <ul class="nav-links">
+        <li><a href="services.html">Treatments</a></li>
+        <li><a href="surgeon.html">Surgeon</a></li>
+        <li><a href="contact.html">Visit</a></li>
+      </ul>
+      <div class="nav-right">
+        <a class="nav-tel" href="tel:+17149198143">(714) 919-8143</a>
+        <a class="btn ink" href="contact.html">Request an appointment</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="sec">
+      <div class="wrap" style="max-width:820px">
+        <span class="kicker" style="color:var(--cobalt)">Practice policies</span>
+        <h1 class="disp d-lg" style="margin:14px 0 22px">Accessibility</h1>
+        <div class="hw-body">
+          <p class="lede">This site is built to be usable by everyone: semantic headings, keyboard-reachable controls, a skip-to-content link, alternative text on meaningful images, and reduced-motion support for visitors who prefer less animation.</p>
+          <p class="lede">If any part of the site is difficult for you to use, or you need this information in another format, call the office at (714) 919-8143 and the team will help directly. Feedback about accessibility is genuinely welcome and gets fixed.</p>
+          <p class="lede">The office itself is wheelchair accessible, with free parking throughout the medical building complex.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <a class="brand" href="index.html"><span class="b-name">Dr. Hari Sawkar</span><span class="b-sub"><span>MD</span><i aria-hidden="true"></i><span>Urology</span></span></a>
+          <p>Orange County's minimally invasive urology, serving Tustin and Santa Ana.</p>
+        </div>
+        <div class="fcol"><h5>Treatments</h5><a href="bph.html">Enlarged prostate</a><a href="pae.html">PAE</a><a href="prostate-cancer.html">Prostate cancer</a><a href="kidney-stones.html">Kidney stones</a><a href="kidney-cancer.html">Kidney cancer</a><a href="mens-health.html">Men's health</a><a href="no-scalpel-vasectomy.html">Vasectomy</a></div>
+        <div class="fcol"><h5>Practice</h5><a href="surgeon.html">About Dr. Sawkar</a><a href="services.html">All services</a><a href="referring-providers.html">Referring providers</a><a href="contact.html">Appointments</a><a href="contact.html">Telehealth</a></div>
+        <div class="fcol"><h5>Visit</h5><p><a href="contact.html#request">Send a message</a></p><p><a href="tel:+17149198143">Call: (714) 919-8143</a></p><p>720 N Tustin Ave, Ste 104<br>Santa Ana, CA 92705</p></div>
+      </div>
+      <div class="foot-bottom"><span>&copy; 2026 Hari Sawkar, MD</span><span><a href="privacy.html">Privacy</a> &middot; <a href="accessibility.html">Accessibility</a></span></div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    new IntersectionObserver(([e]) => nav.classList.toggle('scrolled', !e.isIntersecting))
+      .observe(document.getElementById('top-sentinel'));
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce) {
+      const io = new IntersectionObserver(es => es.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      }), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+      document.querySelectorAll('.reveal:not(.in)').forEach(el => io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+    }
+  </script>
+  <div class="callbar"><a class="cb primary" href="contact.html#request">Message the office</a><a class="cb" href="tel:+17149198143">Call</a></div>
+</body>
+</html>
