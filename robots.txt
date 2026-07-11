@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /wireframe.html
-Disallow: /shafer-mockup.html
-Disallow: /logo-options.html
-Disallow: /_compare.html
 
 Sitemap: https://www.drsawkar.com/sitemap.xml
