@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPSS Score Calculator: Rate Your Prostate Symptoms</title>
+  <meta name="description" content="Calculate your International Prostate Symptom Score in two minutes, the same 7-question scale urologists use, and learn what your number actually means.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230D1218'/%3E%3Cpath d='M10 22 V10 M10 16 H22 M22 22 V10' stroke='%23A9CBE8' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>.quiz .opts.num{flex-wrap:nowrap}.quiz .opts.num .opt{flex:1;text-align:center;padding:10px 0;font-size:15px;font-weight:600}</style>
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+  <!-- seo:begin -->
+  <link rel="canonical" href="https://www.drsawkar.com/ipss-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dr. Hari Sawkar, MD - Urology">
+  <meta property="og:title" content="IPSS Score Calculator: Rate Your Prostate Symptoms">
+  <meta property="og:description" content="Calculate your International Prostate Symptom Score in two minutes, the same 7-question scale urologists use, and learn what your number actually means.">
+  <meta property="og:url" content="https://www.drsawkar.com/ipss-calculator.html">
+  <meta property="og:image" content="https://www.drsawkar.com/assets/img/ink-bladder.webp">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IPSS Score Calculator: Rate Your Prostate Symptoms">
+  <meta name="twitter:description" content="Calculate your International Prostate Symptom Score in two minutes, the same 7-question scale urologists use, and learn what your number actually means.">
+  <meta name="twitter:image" content="https://www.drsawkar.com/assets/img/ink-bladder.webp">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.drsawkar.com/"}, {"@type": "ListItem", "position": 2, "name": "Enlarged prostate", "item": "https://www.drsawkar.com/bph.html"}, {"@type": "ListItem", "position": 3, "name": "IPSS calculator", "item": "https://www.drsawkar.com/ipss-calculator.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a normal IPSS score", "acceptedAnswer": {"@type": "Answer", "text": "0 to 7 counts as mild, 8 to 19 moderate, and 20 to 35 severe. Most men with no prostate trouble score in the low single digits. The score measures bother as much as biology: a 10 that ruins your sleep matters more than a 12 you barely notice."}}, {"@type": "Question", "name": "At what IPSS score should I see a urologist", "acceptedAnswer": {"@type": "Answer", "text": "Eight or higher is the conventional threshold for an evaluation, and any score is worth a visit if symptoms disrupt sleep, work, or travel. Sudden inability to urinate, blood in the urine, or fever should be seen promptly regardless of score."}}, {"@type": "Question", "name": "Is the IPSS a diagnosis", "acceptedAnswer": {"@type": "Answer", "text": "No. It quantifies symptoms, not causes. An enlarged prostate is the most common driver in men over 50, but the same score can come from bladder or other issues, which is why the evaluation includes a prostate measurement and a check of how well the bladder empties."}}, {"@type": "Question", "name": "How is the score used in treatment decisions", "acceptedAnswer": {"@type": "Answer", "text": "It sets the baseline and measures the win. Treatments for BPH typically cut the score by half or more; your urologist rechecks it after treatment to confirm the fix worked, which is exactly how the practice tracks PAE, UroLift, Rezum, and Aquablation outcomes."}}]}]}</script>
+  <!-- seo:end -->
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <span id="top-sentinel" aria-hidden="true"></span>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav-in">
+      <a class="brand" href="index.html"><span class="b-name">Dr. Hari Sawkar</span><span class="b-sub"><span>MD</span><i aria-hidden="true"></i><span>Urology</span></span></a>
+      <ul class="nav-links">
+        <li><a href="services.html">Treatments</a></li>
+        <li><a href="surgeon.html">Surgeon</a></li>
+        <li><a href="contact.html">Visit</a></li>
+      </ul>
+      <div class="nav-right">
+        <a class="nav-tel" href="tel:+17149198143">(714) 919-8143</a>
+        <a class="btn ink" href="contact.html">Request an appointment</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-panel sub reveal in">
+          <div class="hero-copy">
+            <div class="crumb"><a href="index.html#treatments">Treatments</a><span>/</span><a href="bph.html">Enlarged prostate</a><span>/</span>IPSS calculator</div>
+            <h1 class="disp d-hero">Score your symptoms<br><span class="co">in two minutes</span></h1>
+            <p class="lede">The International Prostate Symptom Score is the seven-question scale urologists use worldwide to measure how much an enlarged prostate is actually costing you. Answer for the past month on a 0 to 5 scale, where 0 means not at all and 5 means almost always; for the nighttime question, 0 means no trips and 5 means five or more.</p>
+            <div class="hero-cta">
+              <a class="btn bone" href="#quiz">Start the calculator <span class="arr">&#8595;</span></a>
+              <a class="btn ghost-d" href="#meaning">What scores mean</a>
+            </div>
+          </div>
+          <div class="hero-art">
+            <img src="assets/img/ink-bladder.webp" alt="A contour-line rendering of the bladder in cobalt light" fetchpriority="high" width="928" height="1117">
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="wrap reveal"><p class="tblnote" style="margin:0">Medically reviewed by <a href="surgeon.html">Hari Sawkar, MD</a>, board-certified urologist &middot; Updated August 2026</p></div>
+
+
+    <!-- QUIZ -->
+    <section class="sec" id="quiz">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <h2 class="disp d-lg">The calculator</h2>
+        </div>
+        <form class="quiz reveal" id="ipss" novalidate>
+          <fieldset>
+            <legend>Over the past month, how often have you had the feeling of not emptying your bladder completely?</legend>
+            <div class="opts num"><label class="opt"><input type="radio" name="q1" value="0" aria-label="Not at all"><span>0</span></label><label class="opt"><input type="radio" name="q1" value="1" aria-label="Less than 1 in 5 times"><span>1</span></label><label class="opt"><input type="radio" name="q1" value="2" aria-label="Less than half the time"><span>2</span></label><label class="opt"><input type="radio" name="q1" value="3" aria-label="About half the time"><span>3</span></label><label class="opt"><input type="radio" name="q1" value="4" aria-label="More than half the time"><span>4</span></label><label class="opt"><input type="radio" name="q1" value="5" aria-label="Almost always"><span>5</span></label></div>
+          </fieldset>
+          <fieldset>
+            <legend>How often have you had to urinate again less than two hours after you finished?</legend>
+            <div class="opts num"><label class="opt"><input type="radio" name="q2" value="0" aria-label="Not at all"><span>0</span></label><label class="opt"><input type="radio" name="q2" value="1" aria-label="Less than 1 in 5 times"><span>1</span></label><label class="opt"><input type="radio" name="q2" value="2" aria-label="Less than half the time"><span>2</span></label><label class="opt"><input type="radio" name="q2" value="3" aria-label="About half the time"><span>3</span></label><label class="opt"><input type="radio" name="q2" value="4" aria-label="More than half the time"><span>4</span></label><label class="opt"><input type="radio" name="q2" value="5" aria-label="Almost always"><span>5</span></label></div>
+          </fieldset>
+          <fieldset>
+            <legend>How often have you stopped and started again several times while urinating?</legend>
+            <div class="opts num"><label class="opt"><input type="radio" name="q3" value="0" aria-label="Not at all"><span>0</span></label><label class="opt"><input type="radio" name="q3" value="1" aria-label="Less than 1 in 5 times"><span>1</span></label><label class="opt"><input type="radio" name="q3" value="2" aria-label="Less than half the time"><span>2</span></label><label class="opt"><input type="radio" name="q3" value="3" aria-label="About half the time"><span>3</span></label><label class="opt"><input type="radio" name="q3" value="4" aria-label="More than half the time"><span>4</span></label><label class="opt"><input type="radio" name="q3" value="5" aria-label="Almost always"><span>5</span></label></div>
+          </fieldset>
+          <fieldset>
+            <legend>How often have you found it difficult to postpone urination?</legend>
+            <div class="opts num"><label class="opt"><input type="radio" name="q4" value="0" aria-label="Not at all"><span>0</span></label><label class="opt"><input type="radio" name="q4" value="1" aria-label="Less than 1 in 5 times"><span>1</span></label><label class="opt"><input type="radio" name="q4" value="2" aria-label="Less than half the time"><span>2</span></label><label class="opt"><input type="radio" name="q4" value="3" aria-label="About half the time"><span>3</span></label><label class="opt"><input type="radio" name="q4" value="4" aria-label="More than half the time"><span>4</span></label><label class="opt"><input type="radio" name="q4" value="5" aria-label="Almost always"><span>5</span></label></div>
+          </fieldset>
+          <fieldset>
+            <legend>How often have you had a weak urinary stream?</legend>
+            <div class="opts num"><label class="opt"><input type="radio" name="q5" value="0" aria-label="Not at all"><span>0</span></label><label class="opt"><input type="radio" name="q5" value="1" aria-label="Less than 1 in 5 times"><span>1</span></label><label class="opt"><input type="radio" name="q5" value="2" aria-label="Less than half the time"><span>2</span></label><label class="opt"><input type="radio" name="q5" value="3" aria-label="About half the time"><span>3</span></label><label class="opt"><input type="radio" name="q5" value="4" aria-label="More than half the time"><span>4</span></label><label class="opt"><input type="radio" name="q5" value="5" aria-label="Almost always"><span>5</span></label></div>
+          </fieldset>
+          <fieldset>
+            <legend>How often have you had to push or strain to begin urination?</legend>
+            <div class="opts num"><label class="opt"><input type="radio" name="q6" value="0" aria-label="Not at all"><span>0</span></label><label class="opt"><input type="radio" name="q6" value="1" aria-label="Less than 1 in 5 times"><span>1</span></label><label class="opt"><input type="radio" name="q6" value="2" aria-label="Less than half the time"><span>2</span></label><label class="opt"><input type="radio" name="q6" value="3" aria-label="About half the time"><span>3</span></label><label class="opt"><input type="radio" name="q6" value="4" aria-label="More than half the time"><span>4</span></label><label class="opt"><input type="radio" name="q6" value="5" aria-label="Almost always"><span>5</span></label></div>
+          </fieldset>
+          <fieldset>
+            <legend>How many times do you typically get up to urinate between going to bed and getting up in the morning?</legend>
+            <div class="opts num"><label class="opt"><input type="radio" name="q7" value="0" aria-label="None"><span>0</span></label><label class="opt"><input type="radio" name="q7" value="1" aria-label="1 time"><span>1</span></label><label class="opt"><input type="radio" name="q7" value="2" aria-label="2 times"><span>2</span></label><label class="opt"><input type="radio" name="q7" value="3" aria-label="3 times"><span>3</span></label><label class="opt"><input type="radio" name="q7" value="4" aria-label="4 times"><span>4</span></label><label class="opt"><input type="radio" name="q7" value="5" aria-label="5 or more"><span>5</span></label></div>
+          </fieldset>
+          <div class="quiz-act">
+            <button type="button" class="btn cobalt" id="ipss-go">Calculate my score</button>
+            <span class="tblnote" id="ipss-hint" hidden>Answer all seven questions to see your score.</span>
+          </div>
+          <div class="quiz-res" id="ipss-res" role="status">
+            <b id="ipss-head"></b>
+            <p id="ipss-body"></p>
+            <div class="hero-cta">
+              <a class="btn ink" href="contact.html">Request an appointment</a>
+              <a class="btn ghost" href="bph.html">Compare the treatments</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- MEANING -->
+    <section class="sec" id="meaning" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <h2 class="disp d-lg">What the score means</h2>
+        </div>
+        <div class="tblwrap reveal">
+          <table class="cmp">
+            <thead>
+              <tr><th scope="col">Score</th><th scope="col">Category</th><th scope="col">What it usually means</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">0 - 7</th><td>Mild</td><td>Often watched or managed with habits; worth a baseline visit if it bothers you or is trending worse</td></tr>
+              <tr><th scope="row">8 - 19</th><td class="hl">Moderate</td><td>The range where treatment usually changes daily life; evaluation recommended</td></tr>
+              <tr><th scope="row">20 - 35</th><td>Severe</td><td>Prompt evaluation; effective options exist across every prostate size, and waiting risks the bladder</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="tblnote reveal">Treatments for BPH typically cut the score by half or more. See <a href="bph.html">the four modern options compared</a>, or how your prostate's measurements fit in on <a href="prostate-size-chart.html">the prostate size chart</a>.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="sec" id="faq" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <h2 class="disp d-lg">Common questions about the IPSS</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>What is a normal IPSS score</summary>
+            <p>0 to 7 counts as mild, 8 to 19 moderate, and 20 to 35 severe. Most men with no prostate trouble score in the low single digits. The score measures bother as much as biology: a 10 that ruins your sleep matters more than a 12 you barely notice.</p>
+          </details>
+          <details>
+            <summary>At what IPSS score should I see a urologist</summary>
+            <p>Eight or higher is the conventional threshold for an evaluation, and any score is worth a visit if symptoms disrupt sleep, work, or travel. Sudden inability to urinate, blood in the urine, or fever should be seen promptly regardless of score.</p>
+          </details>
+          <details>
+            <summary>Is the IPSS a diagnosis</summary>
+            <p>No. It quantifies symptoms, not causes. An enlarged prostate is the most common driver in men over 50, but the same score can come from bladder or other issues, which is why the evaluation includes a prostate measurement and a check of how well the bladder empties.</p>
+          </details>
+          <details>
+            <summary>How is the score used in treatment decisions</summary>
+            <p>It sets the baseline and measures the win. Treatments for BPH typically cut the score by half or more; your urologist rechecks it after treatment to confirm the fix worked, which is exactly how the practice tracks PAE, UroLift, Rez&#363;m, and Aquablation outcomes.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="sec" id="visit" style="padding-top:0">
+      <div class="wrap">
+        <div class="cta reveal">
+          <div class="bg"><img src="assets/img/photo-dusk.webp" alt=""></div>
+          <div class="cta-in">
+            <span class="kicker" style="color:#cdd6e4">Enlarged prostate</span>
+            <h2 class="disp d-lg">Bring your score to a real answer</h2>
+            <p>A score plus a ten-minute prostate measurement equals an actual plan. Same-day and next-day appointments, telehealth available, Medicare and most PPO plans accepted.</p>
+            <p class="cta-proof">Chief of Urology, Providence St. Joseph Hospital &middot; UroLift Center of Excellence &middot; 250+ Aquablation procedures</p>
+            <div class="hero-cta">
+              <a class="btn bone" href="contact.html">Request an appointment</a>
+              <a class="btn ghost-d" href="tel:+17149198143">Call (714) 919-8143</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <a class="brand" href="index.html"><span class="b-name">Dr. Hari Sawkar</span><span class="b-sub"><span>MD</span><i aria-hidden="true"></i><span>Urology</span></span></a>
+          <p>Orange County's minimally invasive urology, serving Tustin and Santa Ana.</p>
+        </div>
+        <div class="fcol"><h5>Enlarged prostate</h5><a href="pae.html">PAE</a><a href="urolift.html">UroLift</a><a href="rezum.html">Rezum</a><a href="aquablation.html">Aquablation</a><a href="bph.html">All BPH options</a><a href="pae-vs-turp.html">PAE vs TURP</a><a href="pae-vs-urolift.html">PAE vs UroLift</a></div>
+        <div class="fcol"><h5>Practice</h5><a href="surgeon.html">About Dr. Sawkar</a><a href="services.html">All services</a><a href="referring-providers.html">Referring providers</a><a href="contact.html">Appointments</a><a href="contact.html">Telehealth</a></div>
+        <div class="fcol"><h5>Visit</h5><p><a href="contact.html#request">Send a message</a></p><p><a href="tel:+17149198143">Call: (714) 919-8143</a></p><p>720 N Tustin Ave, Ste 104<br>Santa Ana, CA 92705</p></div>
+      </div>
+      <div class="foot-bottom"><span>&copy; 2026 Hari Sawkar, MD</span><span><a href="privacy.html">Privacy</a> &middot; <a href="accessibility.html">Accessibility</a></span></div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var go = document.getElementById('ipss-go');
+      if (!go) return;
+      go.addEventListener('click', function () {
+        var total = 0, answered = 0;
+        for (var i = 1; i <= 7; i++) {
+          var el = document.querySelector('input[name="q' + i + '"]:checked');
+          if (el) { total += parseInt(el.value, 10); answered++; }
+        }
+        var hint = document.getElementById('ipss-hint');
+        if (answered < 7) { hint.hidden = false; return; }
+        hint.hidden = true;
+        var head, body;
+        if (total <= 7) {
+          head = 'Your score: ' + total + ' of 35. Mild symptoms';
+          body = 'Symptoms in this range are often monitored or managed with simple measures. If they bother you or are getting worse, an evaluation can establish a baseline and rule out other causes.';
+        } else if (total <= 19) {
+          head = 'Your score: ' + total + ' of 35. Moderate symptoms';
+          body = 'This is the range where treatment usually makes a real difference in daily life. A consultation can match your anatomy to the option, from PAE to office-based procedures, with the least disruption.';
+        } else {
+          head = 'Your score: ' + total + ' of 35. Severe symptoms';
+          body = 'Scores in this range deserve a prompt evaluation. Effective, minimally invasive treatment exists across the full range of prostate sizes, and same-day and next-day appointments are available.';
+        }
+        document.getElementById('ipss-head').textContent = head;
+        document.getElementById('ipss-body').textContent = body;
+        var res = document.getElementById('ipss-res');
+        res.classList.add('show');
+        res.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    })();
+  </script>
+  <script>
+    const nav = document.getElementById('nav');
+    new IntersectionObserver(([e]) => nav.classList.toggle('scrolled', !e.isIntersecting))
+      .observe(document.getElementById('top-sentinel'));
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce) {
+      const io = new IntersectionObserver(es => es.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      }), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+      document.querySelectorAll('.reveal:not(.in)').forEach(el => io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+    }
+  </script>
+  <div class="callbar"><a class="cb primary" href="contact.html#request">Message the office</a><a class="cb" href="tel:+17149198143">Call</a></div>
+</body>
+</html>
