@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>.quiz .opts.num{flex-wrap:nowrap}.quiz .opts.num .opt{flex:1;text-align:center;padding:10px 0;font-size:15px;font-weight:600}</style>
   <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
   <!-- seo:begin -->
   <link rel="canonical" href="https://www.drsawkar.com/bph.html">
@@ -83,77 +84,6 @@
           <div>Trouble starting, or straining to go</div>
           <div>A feeling that the bladder never fully empties</div>
           <div>Dribbling at the end of urination</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SYMPTOM QUIZ -->
-    <section class="sec" id="quiz" style="padding-top:0">
-      <div class="wrap">
-        <div class="sec-head reveal">
-          <h2 class="disp d-lg">Score your symptoms</h2>
-          <p class="lede">The International Prostate Symptom Score is the same seven-question measure urologists use in the clinic. Answer for the past month, and bring your score to your visit.</p>
-        </div>
-        <form class="quiz reveal" id="ipss" novalidate>
-          <fieldset>
-            <legend>Over the past month, how often have you had the feeling of not emptying your bladder completely?</legend>
-            <div class="opts"><label class="opt"><input type="radio" name="q1" value="0"><span>Not at all</span></label><label class="opt"><input type="radio" name="q1" value="1"><span>Less than 1 in 5 times</span></label><label class="opt"><input type="radio" name="q1" value="2"><span>Less than half the time</span></label><label class="opt"><input type="radio" name="q1" value="3"><span>About half the time</span></label><label class="opt"><input type="radio" name="q1" value="4"><span>More than half the time</span></label><label class="opt"><input type="radio" name="q1" value="5"><span>Almost always</span></label></div>
-          </fieldset>
-          <fieldset>
-            <legend>How often have you had to urinate again less than two hours after you finished?</legend>
-            <div class="opts"><label class="opt"><input type="radio" name="q2" value="0"><span>Not at all</span></label><label class="opt"><input type="radio" name="q2" value="1"><span>Less than 1 in 5 times</span></label><label class="opt"><input type="radio" name="q2" value="2"><span>Less than half the time</span></label><label class="opt"><input type="radio" name="q2" value="3"><span>About half the time</span></label><label class="opt"><input type="radio" name="q2" value="4"><span>More than half the time</span></label><label class="opt"><input type="radio" name="q2" value="5"><span>Almost always</span></label></div>
-          </fieldset>
-          <fieldset>
-            <legend>How often have you stopped and started again several times while urinating?</legend>
-            <div class="opts"><label class="opt"><input type="radio" name="q3" value="0"><span>Not at all</span></label><label class="opt"><input type="radio" name="q3" value="1"><span>Less than 1 in 5 times</span></label><label class="opt"><input type="radio" name="q3" value="2"><span>Less than half the time</span></label><label class="opt"><input type="radio" name="q3" value="3"><span>About half the time</span></label><label class="opt"><input type="radio" name="q3" value="4"><span>More than half the time</span></label><label class="opt"><input type="radio" name="q3" value="5"><span>Almost always</span></label></div>
-          </fieldset>
-          <fieldset>
-            <legend>How often have you found it difficult to postpone urination?</legend>
-            <div class="opts"><label class="opt"><input type="radio" name="q4" value="0"><span>Not at all</span></label><label class="opt"><input type="radio" name="q4" value="1"><span>Less than 1 in 5 times</span></label><label class="opt"><input type="radio" name="q4" value="2"><span>Less than half the time</span></label><label class="opt"><input type="radio" name="q4" value="3"><span>About half the time</span></label><label class="opt"><input type="radio" name="q4" value="4"><span>More than half the time</span></label><label class="opt"><input type="radio" name="q4" value="5"><span>Almost always</span></label></div>
-          </fieldset>
-          <fieldset>
-            <legend>How often have you had a weak urinary stream?</legend>
-            <div class="opts"><label class="opt"><input type="radio" name="q5" value="0"><span>Not at all</span></label><label class="opt"><input type="radio" name="q5" value="1"><span>Less than 1 in 5 times</span></label><label class="opt"><input type="radio" name="q5" value="2"><span>Less than half the time</span></label><label class="opt"><input type="radio" name="q5" value="3"><span>About half the time</span></label><label class="opt"><input type="radio" name="q5" value="4"><span>More than half the time</span></label><label class="opt"><input type="radio" name="q5" value="5"><span>Almost always</span></label></div>
-          </fieldset>
-          <fieldset>
-            <legend>How often have you had to push or strain to begin urination?</legend>
-            <div class="opts"><label class="opt"><input type="radio" name="q6" value="0"><span>Not at all</span></label><label class="opt"><input type="radio" name="q6" value="1"><span>Less than 1 in 5 times</span></label><label class="opt"><input type="radio" name="q6" value="2"><span>Less than half the time</span></label><label class="opt"><input type="radio" name="q6" value="3"><span>About half the time</span></label><label class="opt"><input type="radio" name="q6" value="4"><span>More than half the time</span></label><label class="opt"><input type="radio" name="q6" value="5"><span>Almost always</span></label></div>
-          </fieldset>
-          <fieldset>
-            <legend>How many times do you typically get up to urinate between going to bed and getting up in the morning?</legend>
-            <div class="opts"><label class="opt"><input type="radio" name="q7" value="0"><span>None</span></label><label class="opt"><input type="radio" name="q7" value="1"><span>1 time</span></label><label class="opt"><input type="radio" name="q7" value="2"><span>2 times</span></label><label class="opt"><input type="radio" name="q7" value="3"><span>3 times</span></label><label class="opt"><input type="radio" name="q7" value="4"><span>4 times</span></label><label class="opt"><input type="radio" name="q7" value="5"><span>5 or more</span></label></div>
-          </fieldset>
-          <div class="quiz-act">
-            <button type="button" class="btn cobalt" id="ipss-go">Score my symptoms</button>
-            <span class="tblnote" id="ipss-hint" hidden>Answer all seven questions to see your score.</span>
-          </div>
-          <div class="quiz-res" id="ipss-res" role="status">
-            <b id="ipss-head"></b>
-            <p id="ipss-body"></p>
-            <div class="hero-cta">
-              <a class="btn ink" href="contact.html">Request an appointment</a>
-              <a class="btn ghost" href="#options">Compare the treatments</a>
-            </div>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- WHEN TO ACT -->
-    <section class="sec" style="padding-top:0">
-      <div class="wrap sp-intro reveal">
-        <div>
-          <h2 class="disp d-md" style="margin-bottom:18px">When it's more than a nuisance</h2>
-          <p class="lede">Many men start with medication. Alpha blockers relax the muscle around the urethra and can ease the stream within days, while 5-alpha-reductase inhibitors shrink the gland itself over several months. Both manage symptoms rather than fix the blockage, and dizziness, fatigue, and sexual side effects lead plenty of men to ask what else is possible. If that is where you are, see <a href="flomax-alternatives.html">the alternatives to Flomax</a>, from smarter pills to the four procedures below.</p>
-          <p class="lede">There is also a quieter reason not to wait indefinitely. A bladder that strains against a blocked urethra for years thickens, then weakens, and some of that change does not reverse. Treating the obstruction at the right time protects the bladder you will rely on for decades. A few signs mean the evaluation should happen promptly:</p>
-        </div>
-        <div class="sym">
-          <div>Suddenly unable to urinate at all</div>
-          <div>Urinary tract infections that keep coming back</div>
-          <div>Blood in the urine</div>
-          <div>Bladder stones or new bladder pain</div>
-          <div>Kidney function changes on lab work</div>
-          <div>Overflow leaking you cannot predict</div>
         </div>
       </div>
     </section>
@@ -262,6 +192,77 @@
           <div class="adv-item"><span class="ai"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span><div><h4>In retention or living with a catheter</h4><p>Getting off a catheter calls for decisive relief of the blockage. Aquablation and PAE both offer a path back to natural voiding; size and overall health decide between them.</p></div></div>
         </div>
         <div class="reveal" style="display:flex;gap:30px;flex-wrap:wrap;margin-top:30px"><a class="bph-more" href="pae-large-prostate.html">PAE for very large prostates <span aria-hidden="true">&#8594;</span></a><a class="bph-more" href="pae-recovery.html">PAE recovery, day by day <span aria-hidden="true">&#8594;</span></a></div>
+      </div>
+    </section>
+
+    <!-- SYMPTOM QUIZ -->
+    <section class="sec" id="quiz" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <h2 class="disp d-lg">Score your symptoms</h2>
+          <p class="lede">The International Prostate Symptom Score is the same seven-question measure urologists use in the clinic. Answer for the past month on a 0 to 5 scale, where 0 means not at all and 5 means almost always; for the nighttime question, 0 means no trips and 5 means five or more. Bring your score to your visit.</p>
+        </div>
+        <form class="quiz reveal" id="ipss" novalidate>
+          <fieldset>
+            <legend>Over the past month, how often have you had the feeling of not emptying your bladder completely?</legend>
+            <div class="opts num"><label class="opt"><input type="radio" name="q1" value="0" aria-label="Not at all"><span>0</span></label><label class="opt"><input type="radio" name="q1" value="1" aria-label="Less than 1 in 5 times"><span>1</span></label><label class="opt"><input type="radio" name="q1" value="2" aria-label="Less than half the time"><span>2</span></label><label class="opt"><input type="radio" name="q1" value="3" aria-label="About half the time"><span>3</span></label><label class="opt"><input type="radio" name="q1" value="4" aria-label="More than half the time"><span>4</span></label><label class="opt"><input type="radio" name="q1" value="5" aria-label="Almost always"><span>5</span></label></div>
+          </fieldset>
+          <fieldset>
+            <legend>How often have you had to urinate again less than two hours after you finished?</legend>
+            <div class="opts num"><label class="opt"><input type="radio" name="q2" value="0" aria-label="Not at all"><span>0</span></label><label class="opt"><input type="radio" name="q2" value="1" aria-label="Less than 1 in 5 times"><span>1</span></label><label class="opt"><input type="radio" name="q2" value="2" aria-label="Less than half the time"><span>2</span></label><label class="opt"><input type="radio" name="q2" value="3" aria-label="About half the time"><span>3</span></label><label class="opt"><input type="radio" name="q2" value="4" aria-label="More than half the time"><span>4</span></label><label class="opt"><input type="radio" name="q2" value="5" aria-label="Almost always"><span>5</span></label></div>
+          </fieldset>
+          <fieldset>
+            <legend>How often have you stopped and started again several times while urinating?</legend>
+            <div class="opts num"><label class="opt"><input type="radio" name="q3" value="0" aria-label="Not at all"><span>0</span></label><label class="opt"><input type="radio" name="q3" value="1" aria-label="Less than 1 in 5 times"><span>1</span></label><label class="opt"><input type="radio" name="q3" value="2" aria-label="Less than half the time"><span>2</span></label><label class="opt"><input type="radio" name="q3" value="3" aria-label="About half the time"><span>3</span></label><label class="opt"><input type="radio" name="q3" value="4" aria-label="More than half the time"><span>4</span></label><label class="opt"><input type="radio" name="q3" value="5" aria-label="Almost always"><span>5</span></label></div>
+          </fieldset>
+          <fieldset>
+            <legend>How often have you found it difficult to postpone urination?</legend>
+            <div class="opts num"><label class="opt"><input type="radio" name="q4" value="0" aria-label="Not at all"><span>0</span></label><label class="opt"><input type="radio" name="q4" value="1" aria-label="Less than 1 in 5 times"><span>1</span></label><label class="opt"><input type="radio" name="q4" value="2" aria-label="Less than half the time"><span>2</span></label><label class="opt"><input type="radio" name="q4" value="3" aria-label="About half the time"><span>3</span></label><label class="opt"><input type="radio" name="q4" value="4" aria-label="More than half the time"><span>4</span></label><label class="opt"><input type="radio" name="q4" value="5" aria-label="Almost always"><span>5</span></label></div>
+          </fieldset>
+          <fieldset>
+            <legend>How often have you had a weak urinary stream?</legend>
+            <div class="opts num"><label class="opt"><input type="radio" name="q5" value="0" aria-label="Not at all"><span>0</span></label><label class="opt"><input type="radio" name="q5" value="1" aria-label="Less than 1 in 5 times"><span>1</span></label><label class="opt"><input type="radio" name="q5" value="2" aria-label="Less than half the time"><span>2</span></label><label class="opt"><input type="radio" name="q5" value="3" aria-label="About half the time"><span>3</span></label><label class="opt"><input type="radio" name="q5" value="4" aria-label="More than half the time"><span>4</span></label><label class="opt"><input type="radio" name="q5" value="5" aria-label="Almost always"><span>5</span></label></div>
+          </fieldset>
+          <fieldset>
+            <legend>How often have you had to push or strain to begin urination?</legend>
+            <div class="opts num"><label class="opt"><input type="radio" name="q6" value="0" aria-label="Not at all"><span>0</span></label><label class="opt"><input type="radio" name="q6" value="1" aria-label="Less than 1 in 5 times"><span>1</span></label><label class="opt"><input type="radio" name="q6" value="2" aria-label="Less than half the time"><span>2</span></label><label class="opt"><input type="radio" name="q6" value="3" aria-label="About half the time"><span>3</span></label><label class="opt"><input type="radio" name="q6" value="4" aria-label="More than half the time"><span>4</span></label><label class="opt"><input type="radio" name="q6" value="5" aria-label="Almost always"><span>5</span></label></div>
+          </fieldset>
+          <fieldset>
+            <legend>How many times do you typically get up to urinate between going to bed and getting up in the morning?</legend>
+            <div class="opts num"><label class="opt"><input type="radio" name="q7" value="0" aria-label="None"><span>0</span></label><label class="opt"><input type="radio" name="q7" value="1" aria-label="1 time"><span>1</span></label><label class="opt"><input type="radio" name="q7" value="2" aria-label="2 times"><span>2</span></label><label class="opt"><input type="radio" name="q7" value="3" aria-label="3 times"><span>3</span></label><label class="opt"><input type="radio" name="q7" value="4" aria-label="4 times"><span>4</span></label><label class="opt"><input type="radio" name="q7" value="5" aria-label="5 or more"><span>5</span></label></div>
+          </fieldset>
+          <div class="quiz-act">
+            <button type="button" class="btn cobalt" id="ipss-go">Score my symptoms</button>
+            <span class="tblnote" id="ipss-hint" hidden>Answer all seven questions to see your score.</span>
+          </div>
+          <div class="quiz-res" id="ipss-res" role="status">
+            <b id="ipss-head"></b>
+            <p id="ipss-body"></p>
+            <div class="hero-cta">
+              <a class="btn ink" href="contact.html">Request an appointment</a>
+              <a class="btn ghost" href="#options">Compare the treatments</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- WHEN TO ACT -->
+    <section class="sec" style="padding-top:0">
+      <div class="wrap sp-intro reveal">
+        <div>
+          <h2 class="disp d-md" style="margin-bottom:18px">When it's more than a nuisance</h2>
+          <p class="lede">Many men start with medication. Alpha blockers relax the muscle around the urethra and can ease the stream within days, while 5-alpha-reductase inhibitors shrink the gland itself over several months. Both manage symptoms rather than fix the blockage, and dizziness, fatigue, and sexual side effects lead plenty of men to ask what else is possible. If that is where you are, see <a href="flomax-alternatives.html">the alternatives to Flomax</a>, from smarter pills to the four procedures below.</p>
+          <p class="lede">There is also a quieter reason not to wait indefinitely. A bladder that strains against a blocked urethra for years thickens, then weakens, and some of that change does not reverse. Treating the obstruction at the right time protects the bladder you will rely on for decades. A few signs mean the evaluation should happen promptly:</p>
+        </div>
+        <div class="sym">
+          <div>Suddenly unable to urinate at all</div>
+          <div>Urinary tract infections that keep coming back</div>
+          <div>Blood in the urine</div>
+          <div>Bladder stones or new bladder pain</div>
+          <div>Kidney function changes on lab work</div>
+          <div>Overflow leaking you cannot predict</div>
+        </div>
       </div>
     </section>
 
