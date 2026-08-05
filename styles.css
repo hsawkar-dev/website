@@ -302,8 +302,14 @@ img{display:block;max-width:100%}
 .form-note{grid-column:1/-1;font-size:13.5px;color:var(--ink-2)}
 .map{margin-top:36px;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
 .map iframe{display:block;width:100%;height:400px;border:0}
-.klara-embed{margin-top:44px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}
-.klara-embed iframe{display:block;width:100%;height:640px;border:0}
+.klara-embed{margin-top:44px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;position:relative}
+.klara-embed iframe{display:block;width:100%;height:640px;border:0;position:relative;z-index:1}
+.klara-load{display:none;position:absolute;inset:0;align-items:center;justify-content:center;font-size:14px;color:var(--ink-2);z-index:2;pointer-events:none;transition:opacity .35s}
+.klara-embed.has-embed .klara-load{display:flex}
+.klara-embed.loaded .klara-load{opacity:0}
+.klara-embed.has-embed .klara-direct{display:none}
+.klara-direct{display:flex;flex-direction:column;align-items:flex-start;gap:16px;padding:30px 28px}
+.klara-direct p{font-size:15.5px;color:var(--ink-2);max-width:52ch;margin:0}
 .klara-embed+.tblnote{margin-top:12px}
 
 /* ---------- faq ---------- */
@@ -351,6 +357,7 @@ img{display:block;max-width:100%}
   body{padding-bottom:78px}
   .form{grid-template-columns:1fr}
   .klara-embed iframe{height:560px}
+  .klara-direct .btn{width:100%;justify-content:center}
 
   .wrap{padding:0 20px}.nav-links,.nav-tel{display:none}
   .d-hero .nw{white-space:normal}

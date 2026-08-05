@@ -88,12 +88,38 @@
             <p class="tblnote" style="max-width:66ch">Please keep a first message to scheduling basics rather than detailed medical information. For a medical emergency, call 911 or go to the nearest emergency room.</p>
           </div>
         </div>
-        <!-- Klara secure messenger, embedded as an in-page panel on all screen sizes.
-             Renders only on allowed domains: drsawkar.com. -->
+        <!-- Klara secure messenger. Desktop gets the in-page panel (iframe injected below);
+             phones get a direct patient.klara.com link instead - the nested-iframe embed is
+             unreliable on mobile Safari and slow on cellular. Widget renders only on drsawkar.com. -->
         <div class="klara-embed" id="klara">
-          <iframe src="klara-embed.html" title="Send a secure message to the office through Klara"></iframe>
+          <div class="klara-load" aria-hidden="true">Loading the secure messenger&hellip;</div>
+          <div class="klara-direct">
+            <p>Send a secure message and the new patient coordinator replies to you by text, usually the same business day.</p>
+            <a class="btn cobalt" href="https://patient.klara.com/#/widget/10acdbe6-eddf-4a75-92f8-9c28e3fbfcf7" target="_blank" rel="noopener noreferrer">Open the secure messenger</a>
+            <a class="btn ghost" href="tel:+17149198143">Call (714) 919-8143</a>
+          </div>
         </div>
-        <p class="tblnote reveal">Your message goes straight to the new patient coordinator, and the reply comes to you by text at the number you enter.</p>
+        <script>
+          (function () {
+            var box = document.getElementById('klara');
+            var done = false;
+            function maybeEmbed() {
+              if (done) return;
+              var w = window.innerWidth || document.documentElement.clientWidth;
+              if (!w) { requestAnimationFrame(maybeEmbed); return; }
+              done = true;
+              if (w <= 768) return;
+              var f = document.createElement('iframe');
+              f.src = 'klara-embed.html';
+              f.title = 'Send a secure message to the office through Klara';
+              box.appendChild(f);
+              box.classList.add('has-embed');
+              setTimeout(function () { box.classList.add('loaded'); }, 9000);
+            }
+            maybeEmbed();
+          })();
+        </script>
+        <p class="tblnote reveal">Your message goes straight to the new patient coordinator, and the reply comes to you by text at the number you enter. If the message box doesn't load, <a href="https://patient.klara.com/#/widget/10acdbe6-eddf-4a75-92f8-9c28e3fbfcf7" target="_blank" rel="noopener noreferrer">open the messenger in its own tab</a> or call <a href="tel:+17149198143">(714) 919-8143</a>.</p>
       </div>
     </section>
 
