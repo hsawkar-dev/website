@@ -90,9 +90,11 @@
             <p class="tblnote" style="max-width:66ch">Please keep a first message to scheduling basics rather than detailed medical information. For a medical emergency, call 911 or go to the nearest emergency room.</p>
           </div>
         </div>
-        <!-- Klara secure messenger. Desktop gets the in-page panel (iframe injected below);
-             phones get a direct patient.klara.com link instead - the nested-iframe embed is
-             unreliable on mobile Safari and slow on cellular. Widget renders only on drsawkar.com. -->
+        <!-- Klara secure messenger. Desktop and Android get the in-page panel (iframe injected
+             below); iPhones get a direct patient.klara.com link instead - Klara's own app blocks
+             the inline composer under Safari's third-party-cookie rules and exits to a new tab,
+             so the direct link is the same destination with fewer taps. If the widget chain
+             fails to boot within 15s, the panel swaps back to the direct-link card. -->
         <div class="klara-embed" id="klara">
           <div class="klara-load" aria-hidden="true">Loading the secure messenger&hellip;</div>
           <div class="klara-direct">
@@ -110,7 +112,7 @@
                watch for the real app frame and fade the label when its document loads,
                instead of guessing with a timer. */
             function watchBoot(f) {
-              var t0 = Date.now(), warned = false;
+              var t0 = Date.now();
               var poll = setInterval(function () {
                 var app = null;
                 try {
@@ -121,12 +123,10 @@
                   clearInterval(poll);
                   app.addEventListener('load', function () { setTimeout(fade, 1200); }, { once: true });
                   setTimeout(fade, 8000);
-                } else if (!warned && Date.now() - t0 > 15000) {
-                  warned = true;
-                  var label = box.querySelector('.klara-load');
-                  if (label) label.textContent = 'Taking longer than usual - the links below work right away.';
-                } else if (Date.now() - t0 > 60000) {
+                } else if (Date.now() - t0 > 15000) {
                   clearInterval(poll);
+                  f.remove();
+                  box.classList.remove('has-embed');
                 }
               }, 250);
             }
@@ -135,7 +135,7 @@
               var w = window.innerWidth || document.documentElement.clientWidth;
               if (!w) { requestAnimationFrame(maybeEmbed); return; }
               done = true;
-              if (w <= 768) return;
+              if (w <= 768 && !/Android/i.test(navigator.userAgent)) return;
               var f = document.createElement('iframe');
               f.src = 'klara-embed.html';
               f.title = 'Send a secure message to the office through Klara';
