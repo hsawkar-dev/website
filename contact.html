@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://widget-fe.klara.com">
+  <link rel="preconnect" href="https://patient.klara.com">
   <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
   <!-- seo:begin -->
   <link rel="canonical" href="https://www.drsawkar.com/contact.html">
@@ -103,6 +105,31 @@
           (function () {
             var box = document.getElementById('klara');
             var done = false;
+            function fade() { box.classList.add('loaded'); }
+            /* The two layers above the patient.klara.com app are same-origin, so we can
+               watch for the real app frame and fade the label when its document loads,
+               instead of guessing with a timer. */
+            function watchBoot(f) {
+              var t0 = Date.now(), warned = false;
+              var poll = setInterval(function () {
+                var app = null;
+                try {
+                  var wrap = f.contentDocument && f.contentDocument.querySelector('iframe');
+                  app = wrap && wrap.contentDocument && wrap.contentDocument.querySelector('iframe');
+                } catch (e) { clearInterval(poll); setTimeout(fade, 9000); return; }
+                if (app) {
+                  clearInterval(poll);
+                  app.addEventListener('load', function () { setTimeout(fade, 1200); }, { once: true });
+                  setTimeout(fade, 8000);
+                } else if (!warned && Date.now() - t0 > 15000) {
+                  warned = true;
+                  var label = box.querySelector('.klara-load');
+                  if (label) label.textContent = 'Taking longer than usual - the links below work right away.';
+                } else if (Date.now() - t0 > 60000) {
+                  clearInterval(poll);
+                }
+              }, 250);
+            }
             function maybeEmbed() {
               if (done) return;
               var w = window.innerWidth || document.documentElement.clientWidth;
@@ -112,9 +139,10 @@
               var f = document.createElement('iframe');
               f.src = 'klara-embed.html';
               f.title = 'Send a secure message to the office through Klara';
+              if ('fetchPriority' in f) f.fetchPriority = 'high';
               box.appendChild(f);
               box.classList.add('has-embed');
-              setTimeout(function () { box.classList.add('loaded'); }, 9000);
+              watchBoot(f);
             }
             maybeEmbed();
           })();
