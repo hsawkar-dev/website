@@ -20,7 +20,7 @@
 
   <header class="nav" id="nav">
     <div class="nav-in">
-      <a class="brand" href="index.html"><span class="b-name">Dr. Hari Sawkar</span><span class="b-sub"><span>MD</span><i aria-hidden="true"></i><span>Urology</span></span></a>
+      <a class="brand" href="/"><span class="b-name">Dr. Hari Sawkar</span><span class="b-sub"><span>MD</span><i aria-hidden="true"></i><span>Urology</span></span></a>
       <ul class="nav-links">
         <li><a href="services.html">Treatments</a></li>
         <li><a href="surgeon.html">Surgeon</a></li>
@@ -38,27 +38,31 @@
       <div class="wrap" style="max-width:820px">
         <span class="kicker" style="color:var(--cobalt)">404</span>
         <h1 class="disp d-lg" style="margin:14px 0 22px">That page isn't here</h1>
-        <p class="lede">The address may have changed, or the link may be old. Everything on the site is one click away below.</p>
+        <p class="lede" id="nf-lede">The address may have changed, or the link may be old. Everything on the site is one click away below.</p>
+        <div class="sugg" id="sugg" hidden>
+          <p class="tblnote" style="margin:0 0 12px">Did you mean</p>
+          <div class="hero-cta" id="sugg-links" style="margin-top:0"></div>
+        </div>
         <div class="hero-cta" style="margin-top:26px">
-          <a class="btn ink" href="index.html">Go to the homepage</a>
+          <a class="btn ink" href="/">Go to the homepage</a>
           <a class="btn ghost" href="services.html">Browse all services</a>
           <a class="btn ghost" href="contact.html">Contact the office</a>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">
     <div class="wrap">
       <div class="foot-top">
         <div class="foot-brand">
-          <a class="brand" href="index.html"><span class="b-name">Dr. Hari Sawkar</span><span class="b-sub"><span>MD</span><i aria-hidden="true"></i><span>Urology</span></span></a>
+          <a class="brand" href="/"><span class="b-name">Dr. Hari Sawkar</span><span class="b-sub"><span>MD</span><i aria-hidden="true"></i><span>Urology</span></span></a>
           <p>Orange County's minimally invasive urology, serving Tustin and Santa Ana.</p>
         </div>
-        <div class="fcol"><h5>Treatments</h5><a href="bph.html">Enlarged prostate</a><a href="pae.html">PAE</a><a href="prostate-cancer.html">Prostate cancer</a><a href="kidney-stones.html">Kidney stones</a><a href="kidney-cancer.html">Kidney cancer</a><a href="mens-health.html">Men's health</a><a href="no-scalpel-vasectomy.html">Vasectomy</a><a href="pae-vs-turp.html">PAE vs TURP</a><a href="pae-vs-urolift.html">PAE vs UroLift</a></div>
-        <div class="fcol"><h5>Practice</h5><a href="surgeon.html">About Dr. Sawkar</a><a href="services.html">All services</a><a href="referring-providers.html">Referring providers</a><a href="contact.html">Appointments</a><a href="contact.html">Telehealth</a></div>
-        <div class="fcol"><h5>Visit</h5><p><a href="contact.html#request">Send a message</a></p><p><a href="tel:+17149198143">Call: (714) 919-8143</a></p><p>720 N Tustin Ave, Ste 104<br>Santa Ana, CA 92705</p></div>
+        <div class="fcol"><div class="fh">Treatments</div><a href="bph.html">Enlarged prostate</a><a href="pae.html">PAE</a><a href="prostate-cancer.html">Prostate cancer</a><a href="kidney-stones.html">Kidney stones</a><a href="kidney-cancer.html">Kidney cancer</a><a href="mens-health.html">Men's health</a><a href="no-scalpel-vasectomy.html">Vasectomy</a><a href="pae-vs-turp.html">PAE vs TURP</a><a href="pae-vs-urolift.html">PAE vs UroLift</a></div>
+        <div class="fcol"><div class="fh">Guides</div><a href="prostate-size-chart.html">Prostate size chart</a><a href="kidney-stone-size-chart.html">Kidney stone size chart</a><a href="ipss-calculator.html">IPSS calculator</a><a href="flomax-alternatives.html">Flomax alternatives</a><a href="aquablation-cost.html">Aquablation cost</a><a href="aquablation-recovery.html">Aquablation recovery</a></div>
+        <div class="fcol"><div class="fh">Practice</div><a href="surgeon.html">About Dr. Sawkar</a><a href="services.html">All services</a><a href="referring-providers.html">Referring providers</a><a href="contact.html">Appointments</a><a href="contact.html">Telehealth</a></div>
+        <div class="fcol"><div class="fh">Visit</div><p><a href="contact.html#request">Send a message</a></p><p><a href="tel:+17149198143">Call: (714) 919-8143</a></p><p>720 N Tustin Ave, Ste 104<br>Santa Ana, CA 92705</p></div>
       </div>
       <div class="foot-bottom"><span>&copy; 2026 Hari Sawkar, MD</span><span><a href="privacy.html">Privacy</a> &middot; <a href="accessibility.html">Accessibility</a></span></div>
     </div>
@@ -77,6 +81,42 @@
     } else {
       document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
     }
+  </script>
+  <script>
+    (function () {
+      var PAGES = {"bph": "BPH Treatment in Orange County, CA", "pae": "Prostate Artery Embolization (PAE)", "pae-cost-insurance": "PAE Cost & Insurance in Orange County", "pae-large-prostate": "PAE for Very Large Prostates (80-200+ cc)", "pae-recovery": "PAE Recovery Timeline: Day by Day", "nocturia": "Waking Up at Night to Pee? Nocturia Causes", "flomax-alternatives": "Flomax (Tamsulosin) Alternatives: Pills vs 4 Procedures", "prostate-size-chart": "Prostate Size Chart by Age: Normal, Enlarged or Dangerous?", "urolift": "UroLift for BPH in Orange County", "rezum": "Rezum for BPH in Orange County", "aquablation": "Aquablation for BPH in Orange County", "prostate-cancer": "Prostate Cancer Treatment in Orange County", "kidney-cancer": "Kidney Cancer Surgery in Orange County", "kidney-stones": "Kidney Stone Treatment in Orange County", "mens-health": "ED & Low T Treatment in Orange County", "no-scalpel-vasectomy": "No-Scalpel Vasectomy in Orange County", "surgeon": "Dr. Hari Sawkar, MD", "contact": "Contact & Appointments", "services": "Urology Services in Orange County", "shockwave-therapy": "Shockwave Therapy for ED in Orange County", "prp-p-shot": "PRP & the P-Shot for ED in Orange County", "testosterone-replacement": "Testosterone Replacement (TRT) in Orange County", "peyronies-disease": "Peyronie's Disease Treatment in Orange County", "penile-implants": "Penile Implant Surgery in Orange County", "referring-providers": "Referring Providers", "pae-vs-turp": "PAE vs TURP: An Honest Comparison", "pae-vs-urolift": "PAE vs UroLift for BPH: Which Fits?", "pae-vs-aquablation": "PAE vs Aquablation: Which BPH Fix Fits You?", "aquablation-vs-turp": "Aquablation vs TURP: A Surgeon's Honest Comparison", "urolift-vs-rezum": "UroLift vs Rezūm: Recovery, Sex, Durability Compared", "aquablation-vs-holep": "Aquablation vs HoLEP for Large Prostates", "turp-alternatives": "TURP Alternatives: 4 Options Compared by a Urologist (2026)", "ipss-calculator": "IPSS Score Calculator: Rate Your Prostate Symptoms", "psa-levels-by-age": "PSA Levels by Age: Normal Ranges Chart", "post-void-residual": "Post-Void Residual (PVR) Chart: Normal vs High, in mL", "urolift-cost": "UroLift Cost & Insurance Coverage", "rezum-cost": "Rezum Cost & Insurance Coverage", "aquablation-cost": "Aquablation Cost in 2026: What Medicare & PPO Patients Pay", "urolift-recovery": "UroLift Recovery Time: What to Expect Day by Day", "rezum-recovery": "Rezum Recovery Time: The Honest Week-by-Week Guide", "aquablation-recovery": "Aquablation Recovery: Timeline From Hospital to Normal", "agrandamiento-de-prostata": "Agrandamiento de Próstata: Tratamientos en Orange County", "embolizacion-de-la-prostata": "Embolización de la Próstata (PAE) en Orange County", "aquablation-vs-urolift": "Aquablation vs UroLift", "pae-vs-rezum": "PAE vs Rezūm", "kidney-stone-size-chart": "Kidney stone size chart"};
+      var ALIAS = {"chart": "prostate-size-chart", "size-chart": "prostate-size-chart", "prostate-chart": "prostate-size-chart", "sizechart": "prostate-size-chart", "ellipsoid": "prostate-size-chart", "volume": "prostate-size-chart", "flomax": "flomax-alternatives", "tamsulosin": "flomax-alternatives", "turp": "turp-alternatives", "calc": "ipss-calculator", "calculator": "ipss-calculator", "ipss": "ipss-calculator", "pvr": "post-void-residual", "residual": "post-void-residual", "psa": "psa-levels-by-age", "stone": "kidney-stone-size-chart", "stones": "kidney-stones", "vasectomy": "no-scalpel-vasectomy", "ed": "mens-health", "erectile": "mens-health", "embolization": "pae", "doctor": "surgeon", "about": "surgeon", "bio": "surgeon", "appointment": "contact", "appointments": "contact", "location": "contact", "directions": "contact", "insurance": "contact", "billing": "contact", "cost": "aquablation-cost", "recovery": "aquablation-recovery", "holep": "aquablation-vs-holep", "urolift": "urolift", "rezum": "rezum", "resume": "rezum", "aquablation": "aquablation", "pae": "pae"};
+      var raw = decodeURIComponent(location.pathname).toLowerCase().replace(/\.html?$/, '').replace(/^\/+|\/+$/g, '');
+      raw = raw.replace(/^(www\.)?drsawkar\.com\//, '').replace(/^(dr-sawkar-blog|blog|post|posts|pages?)\//, '');
+      var last = raw.split('/').filter(Boolean).pop() || '';
+      var STOP = { vs: 1, and: 1, the: 1, for: 1, in: 1, of: 1, a: 1, to: 1, by: 1, de: 1, la: 1, del: 1, html: 1, www: 1, com: 1, drsawkar: 1, dr: 1, sawkar: 1 };
+      var rawTokens = last.split(/[^a-z0-9]+/).filter(function (t) { return t && !STOP[t]; });
+      var tokens = rawTokens.slice(); rawTokens.forEach(function (t) { if (ALIAS[t]) tokens.push(ALIAS[t]); });
+      var compact = rawTokens.join('');
+      function bigrams(s) { var o = {}; for (var i = 0; i < s.length - 1; i++) { o[s.substr(i, 2)] = (o[s.substr(i, 2)] || 0) + 1; } return o; }
+      function dice(a, b) { if (a.length < 2 || b.length < 2) return 0; var A = bigrams(a), B = bigrams(b), inter = 0, na = 0, nb = 0, k; for (k in A) { na += A[k]; if (B[k]) inter += Math.min(A[k], B[k]); } for (k in B) nb += B[k]; return 2 * inter / (na + nb); }
+      function score(slug) {
+        if (!compact) return 0;
+        var sc = slug.replace(/-/g, '');
+        if (sc === compact) return 1;
+        var st = slug.split('-').filter(function (t) { return !STOP[t]; }), hit = 0; st.forEach(function (t) { if (tokens.indexOf(t) >= 0) hit++; });
+        var jac = hit / (st.length + rawTokens.length - hit || 1);
+        var d = dice(compact, sc);
+        var alias = tokens.indexOf(slug) >= 0 ? 0.7 : 0;
+        var cont = (st.length && hit === st.length) ? 0.75 + 0.04 * st.length : 0;
+        return Math.max(jac, d, alias, cont);
+      }
+      var ranked = Object.keys(PAGES).map(function (s) { return [s, score(s)]; }).sort(function (a, b) { return b[1] - a[1]; });
+      var best = ranked[0], second = ranked[1];
+      if (best && best[1] >= 0.6 && (best[1] - (second ? second[1] : 0)) >= 0.15) { location.replace('/' + best[0] + '.html'); return; }
+      var picks = ranked.filter(function (r) { return r[1] >= 0.35; }).slice(0, 3);
+      if (picks.length) {
+        var box = document.getElementById('sugg'), links = document.getElementById('sugg-links');
+        picks.forEach(function (r) { var a = document.createElement('a'); a.className = 'btn ink'; a.href = '/' + r[0] + '.html'; a.textContent = PAGES[r[0]]; links.appendChild(a); });
+        box.hidden = false;
+        document.getElementById('nf-lede').textContent = 'The address may have changed, or the link may be old. The closest matches are below.';
+      }
+    })();
   </script>
   <div class="callbar"><a class="cb primary" href="contact.html#request">Message the office</a><a class="cb" href="tel:+17149198143">Call</a></div>
 </body>

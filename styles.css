@@ -97,7 +97,7 @@ img{display:block;max-width:100%}
 /* ---------- affiliations ---------- */
 .affil{padding:0 0 100px}
 .affil-lab{text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--ink-3);margin-bottom:30px}
+  color:#646A77;margin-bottom:30px}
 .affil-logos{display:flex;align-items:center;justify-content:center;gap:30px 52px;flex-wrap:wrap}
 .afl{display:block;height:30px;background:var(--ink-2);opacity:.62;transition:opacity .25s,background .25s;
   -webkit-mask:var(--u) center/contain no-repeat;mask:var(--u) center/contain no-repeat}
@@ -178,9 +178,9 @@ img{display:block;max-width:100%}
 
 /* ---------- footer ---------- */
 .footer{padding:84px 0 42px}
-.foot-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.1fr;gap:36px;padding-bottom:46px;border-bottom:1px solid var(--line)}
+.foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1.1fr;gap:36px;padding-bottom:46px;border-bottom:1px solid var(--line)}
 .foot-brand p{max-width:30ch;color:var(--ink-2);font-size:14.5px;line-height:1.6;margin-top:14px}
-.fcol h5{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:16px}
+.fcol h5,.fcol .fh{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#646A77;margin-bottom:16px}
 .fcol a,.fcol p{display:block;font-size:14.5px;color:var(--ink-2);margin-bottom:10px}
 .fcol a:hover{color:var(--cobalt)}
 .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:24px;
@@ -375,3 +375,14 @@ img{display:block;max-width:100%}
   .hero-art::before{animation:none}
   html{scroll-behavior:auto}
 }
+
+/* 2026-09-20 additions: calculator, guides, cover links, 404 suggestions */
+.calc{display:grid;grid-template-columns:repeat(3,1fr) auto;gap:16px;align-items:end;margin-top:8px}
+.calc label{display:flex;flex-direction:column;gap:8px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.calc input{font:500 17px/1.2 var(--body);color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;width:100%;min-width:0}
+.calc input:focus{outline:none;border-color:var(--cobalt)}
+.cover a{color:var(--cobalt);text-decoration:underline;text-underline-offset:3px}
+.adv-item h4 a{color:inherit}.adv-item h4 a:hover{color:var(--cobalt)}
+.adv-item p a{color:var(--cobalt)}
+.sugg{margin-top:22px;padding:22px 24px;border-radius:16px;background:color-mix(in srgb,var(--cobalt) 7%,#fff);border:1px solid color-mix(in srgb,var(--cobalt) 22%,#fff)}
+@media(max-width:620px){.calc{grid-template-columns:1fr 1fr}.calc .btn{grid-column:1/-1;justify-content:center}}
