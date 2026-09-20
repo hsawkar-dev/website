@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Homepage Wireframe — Dr. Sawkar</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --crimson-deep:#1d0410; --crimson:#7d0628; --rose:#ff285f; --orange:#ffae3b;
+  --ink:#15040a; --text:#fff; --text-soft:#f3d6dd; --text-faint:#ffc9d4; --maxw:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"Inter",system-ui,sans-serif;background:var(--ink);color:var(--text);-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px;}
+.section-tag{position:absolute;top:14px;right:18px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.32);}
+section{position:relative;}
+.eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-faint);opacity:.85;margin-bottom:14px;}
+h2{font-weight:800;font-size:clamp(30px,3.6vw,46px);line-height:1.02;letter-spacing:-.01em;margin-bottom:14px;}
+.lede{font-size:17px;line-height:1.6;color:var(--text-soft);max-width:60ch;}
+.btn{display:inline-block;font-weight:700;font-size:15px;padding:14px 34px;border-radius:40px;transition:.2s;}
+.btn--solid{background:var(--orange);color:#3a1500;box-shadow:0 8px 30px rgba(255,174,59,.4);}
+.btn--solid:hover{transform:translateY(-2px);}
+.btn--ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff;}
+.link{color:var(--orange);font-weight:600;font-size:14px;}
+
+/* glow-organ placeholder */
+.organ-ph{position:relative;border-radius:50%;background:
+  radial-gradient(circle at 42% 38%,rgba(0,225,255,.45),transparent 55%),
+  radial-gradient(circle at 56% 60%,rgba(255,55,95,.8),rgba(170,0,55,.4) 72%);
+  box-shadow:0 0 50px rgba(255,40,95,.5),inset 0 0 40px rgba(0,200,255,.22);
+  display:flex;align-items:center;justify-content:center;text-align:center;}
+.organ-ph span{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.9);
+  background:rgba(0,0,0,.35);padding:5px 9px;border-radius:6px;}
+
+/* ---- HERO (condensed recap) ---- */
+.hero{min-height:78vh;display:flex;flex-direction:column;
+  background:radial-gradient(1000px 600px at 33% 52%,rgba(255,40,95,.55),transparent 60%),
+   radial-gradient(700px 560px at 78% 64%,rgba(170,5,70,.5),transparent 65%),
+   linear-gradient(135deg,var(--crimson-deep),var(--crimson) 55%,var(--crimson-deep));}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:26px 0;}
+.logo b{font-weight:800;font-size:18px;} .logo b i{color:var(--orange);font-style:normal;}
+.logo small{display:block;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--text-faint);}
+.navlinks{display:flex;gap:16px;align-items:center;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;}
+.navlinks .dot{color:var(--orange);font-size:7px;}
+.navlinks .ph{color:#ffd6ac;font-weight:700;letter-spacing:.03em;}
+.hero-grid{flex:1;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:20px;}
+.hero-grid img{max-width:78%;max-height:54vh;height:auto;display:block;margin:0 auto;}
+.hero h1{font-weight:800;font-size:clamp(40px,5.2vw,68px);line-height:.9;text-transform:uppercase;margin-bottom:18px;}
+.hero h1 .thin{font-weight:300;}
+
+/* ---- 1 credentials ---- */
+.creds{background:#10030820;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);}
+.creds-grid{display:grid;grid-template-columns:repeat(4,1fr);}
+.cred{padding:34px 26px;text-align:center;border-left:1px solid rgba(255,255,255,.08);}
+.cred:first-child{border-left:none;}
+.cred .big{font-size:30px;font-weight:800;color:var(--orange);margin-bottom:6px;}
+.cred p{font-size:13.5px;color:var(--text-soft);line-height:1.4;}
+
+/* ---- 2 approach ---- */
+.approach{padding:110px 0;background:linear-gradient(180deg,var(--ink),#220612);}
+.approach-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center;}
+.points{display:flex;flex-direction:column;gap:22px;}
+.point{display:flex;gap:14px;align-items:flex-start;}
+.point .ic{width:34px;height:34px;border-radius:9px;flex:none;background:rgba(255,174,59,.14);
+  display:flex;align-items:center;justify-content:center;color:var(--orange);font-weight:800;}
+.point h4{font-size:15px;margin-bottom:3px;} .point p{font-size:13.5px;color:var(--text-soft);}
+
+/* ---- 3 treatments bento ---- */
+.treat{padding:100px 0;background:#1a0410;}
+.bento{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:200px;gap:18px;margin-top:34px;}
+.tile{position:relative;border-radius:16px;overflow:hidden;padding:22px;
+  border:1px solid rgba(255,255,255,.09);
+  background:radial-gradient(120% 120% at 80% 10%,rgba(255,40,95,.18),transparent 60%),#220714;
+  display:flex;flex-direction:column;justify-content:flex-end;transition:.2s;}
+.tile:hover{border-color:var(--orange);transform:translateY(-3px);}
+.tile .glow{position:absolute;top:-10%;right:-6%;width:55%;height:80%;opacity:.92;}
+.tile.feature{grid-column:span 2;grid-row:span 2;}
+.tile.feature .glow{width:46%;height:70%;top:8%;right:4%;}
+.tile h3{font-size:17px;font-weight:700;position:relative;z-index:2;}
+.tile.feature h3{font-size:26px;}
+.tile p{font-size:12.5px;color:var(--text-soft);margin-top:5px;position:relative;z-index:2;max-width:24ch;}
+.tile .subs{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px;position:relative;z-index:2;}
+.tile .subs a{font-size:11px;padding:5px 11px;border:1px solid rgba(255,255,255,.25);border-radius:30px;color:var(--text-soft);}
+.tile .subs a:hover{border-color:var(--orange);color:var(--orange);}
+.tile img{position:absolute;top:6%;right:2%;width:46%;height:auto;max-height:80%;object-fit:contain;z-index:1;
+  filter:drop-shadow(0 0 26px rgba(255,40,95,.4));}
+
+/* ---- 4 doctor ---- */
+.doc{padding:110px 0;background:linear-gradient(180deg,#1a0410,var(--ink));}
+.doc-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center;}
+.doc-photo{aspect-ratio:4/5;border-radius:18px;border:1px solid rgba(255,255,255,.12);
+  background:repeating-linear-gradient(45deg,#2a0a16,#2a0a16 12px,#240812 12px,#240812 24px);
+  display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:13px;letter-spacing:.1em;}
+.doc ul{list-style:none;margin:18px 0 26px;display:flex;flex-direction:column;gap:10px;}
+.doc li{font-size:14.5px;color:var(--text-soft);padding-left:20px;position:relative;}
+.doc li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;background:var(--orange);}
+
+/* ---- 5 testimonials ---- */
+.tests{padding:100px 0;background:#220612;}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px;}
+.quote{border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:26px;background:rgba(255,255,255,.02);}
+.quote p{font-size:15px;line-height:1.55;color:#fff;margin-bottom:16px;}
+.quote .who{font-size:12.5px;color:var(--text-faint);}
+.needs{margin-top:18px;font-size:12px;color:rgba(255,255,255,.45);}
+
+/* ---- 6 final cta ---- */
+.cta{padding:130px 0;text-align:center;position:relative;overflow:hidden;
+  background:radial-gradient(700px 360px at 50% 40%,rgba(255,40,95,.5),transparent 65%),var(--crimson-deep);}
+.cta h2{font-size:clamp(32px,4.4vw,56px);}
+.cta .row{display:flex;gap:16px;justify-content:center;align-items:center;margin-top:26px;flex-wrap:wrap;}
+.cta .phone{font-size:18px;font-weight:700;color:#ffd6ac;}
+
+/* ---- 7 footer ---- */
+footer{background:#0c0207;padding:64px 0 40px;border-top:1px solid rgba(255,255,255,.08);}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:32px;}
+.foot-grid h5{font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:var(--text-faint);margin-bottom:14px;}
+.foot-grid a,.foot-grid p{display:block;font-size:13.5px;color:var(--text-soft);margin-bottom:8px;}
+.foot-bottom{max-width:var(--maxw);margin:36px auto 0;padding:18px 40px 0;border-top:1px solid rgba(255,255,255,.07);
+  font-size:12px;color:rgba(255,255,255,.4);display:flex;justify-content:space-between;}
+
+@media(max-width:860px){
+  .hero-grid,.approach-grid,.doc-grid{grid-template-columns:1fr;}
+  .creds-grid{grid-template-columns:repeat(2,1fr);}
+  .bento{grid-template-columns:1fr;grid-auto-rows:auto;}
+  .tile{min-height:180px;}.tile.feature{grid-column:auto;grid-row:auto;}
+  .test-grid,.foot-grid{grid-template-columns:1fr;}
+  .navlinks{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO (recap of the approved hero) -->
+<section class="hero">
+  <span class="section-tag">Hero · done</span>
+  <div class="wrap">
+    <div class="nav">
+      <div class="logo"><b>DR. HARI SAWKAR <i>MD</i></b><small>Minimally Invasive Urology</small></div>
+      <div class="navlinks"><a>Home</a><span class="dot">◆</span><a>Treatments</a><span class="dot">◆</span><a>About</a><span class="dot">◆</span><a>Contact</a><span class="ph">(714) 919-8143</span></div>
+    </div>
+  </div>
+  <div class="wrap" style="flex:1;display:flex;">
+    <div class="hero-grid" style="flex:1;">
+      <img src="assets/images/kidney-glow.webp" alt="kidney">
+      <div>
+        <p class="eyebrow">Orange County · Tustin &amp; Santa Ana</p>
+        <h1>Precision<br><span class="thin">Urology</span></h1>
+        <p class="lede" style="margin-bottom:26px;">Minimally invasive first — robotic and office-based procedures that get you back to life faster.</p>
+        <a class="btn btn--solid" style="margin-right:10px;">Request Appointment</a>
+        <a class="btn btn--ghost">Explore Treatments</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 1 CREDENTIALS -->
+<section class="creds">
+  <span class="section-tag">1 · credentials</span>
+  <div class="wrap"><div class="creds-grid">
+    <div class="cred"><div class="big">#1</div><p>Aquablation surgeon in Orange County</p></div>
+    <div class="cred"><div class="big">CoE</div><p>UroLift Center of Excellence</p></div>
+    <div class="cred"><div class="big">Chief</div><p>of Urology, St. Joseph Hospital</p></div>
+    <div class="cred"><div class="big">da Vinci</div><p>Robotic surgery expert</p></div>
+  </div></div>
+</section>
+
+<!-- 2 APPROACH -->
+<section class="approach">
+  <span class="section-tag">2 · approach</span>
+  <div class="wrap"><div class="approach-grid">
+    <div>
+      <p class="eyebrow">The approach</p>
+      <h2>Minimally invasive,<br>first.</h2>
+      <p class="lede">The latest technology paired with precision training — so you get better with less pain and a faster recovery.</p>
+    </div>
+    <div class="points">
+      <div class="point"><div class="ic">+</div><div><h4>Same &amp; next-day appointments</h4><p>Urgent concerns seen promptly.</p></div></div>
+      <div class="point"><div class="ic">+</div><div><h4>Office-based &amp; robotic options</h4><p>Shorter recovery, often no catheter.</p></div></div>
+      <div class="point"><div class="ic">+</div><div><h4>Telehealth available</h4><p>Virtual consultations from anywhere.</p></div></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- 3 TREATMENTS BENTO -->
+<section class="treat">
+  <span class="section-tag">3 · treatments (every tile = glow organ)</span>
+  <div class="wrap">
+    <p class="eyebrow">Conditions &amp; Treatments</p>
+    <h2>Find your condition.</h2>
+    <div class="bento">
+      <div class="tile feature">
+        <div class="organ-ph glow"><span>Prostate</span></div>
+        <h3>Enlarged Prostate (BPH)</h3>
+        <p>No surgery, minimal downtime, often no catheter.</p>
+        <div class="subs"><a>PAE</a><a>UroLift</a><a>Aquablation</a><a>Rezūm</a></div>
+      </div>
+      <div class="tile">
+        <img src="assets/images/kidney-glow.webp" alt="kidney">
+        <h3>Kidney Stones</h3><p>Laser fragmentation, same-day.</p>
+      </div>
+      <div class="tile">
+        <div class="organ-ph glow"><span>Prostate</span></div>
+        <h3>Prostate Cancer</h3><p>da Vinci robotic, nerve-sparing.</p>
+      </div>
+      <div class="tile">
+        <div class="organ-ph glow"><span>Kidney</span></div>
+        <h3>Kidney Cancer</h3><p>Robotic partial nephrectomy.</p>
+      </div>
+      <div class="tile">
+        <div class="organ-ph glow"><span>Bladder</span></div>
+        <h3>Men's Health &amp; ED</h3><p>PRP, shockwave, implants.</p>
+      </div>
+      <div class="tile">
+        <div class="organ-ph glow"><span>Anatomy</span></div>
+        <h3>No-Scalpel Vasectomy</h3><p>In-office, no stitches.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 DOCTOR -->
+<section class="doc">
+  <span class="section-tag">4 · meet the doctor</span>
+  <div class="wrap"><div class="doc-grid">
+    <div class="doc-photo">Dr. Sawkar headshot (real photo)</div>
+    <div>
+      <h2>Meet Dr. Sawkar</h2>
+      <p class="lede">Board-certified urologist who brings biomedical-engineering rigor to modern urologic care.</p>
+      <ul>
+        <li>Board-certified, fellowship-trained at USC &amp; Northwestern</li>
+        <li>Chief of Urology, St. Joseph Hospital</li>
+        <li>Highest-volume Aquablation surgeon in Orange County</li>
+      </ul>
+      <a class="btn btn--ghost">About Dr. Sawkar</a>
+    </div>
+  </div></div>
+</section>
+
+<!-- 5 TESTIMONIALS -->
+<section class="tests">
+  <span class="section-tag">5 · outcomes (needs real quotes)</span>
+  <div class="wrap">
+    <h2>What patients say.</h2>
+    <div class="test-grid">
+      <div class="quote"><p>"Back to normal in days, not weeks. Couldn't believe how smooth it was."</p><div class="who">Verified patient · Tustin</div></div>
+      <div class="quote"><p>"He explained every option clearly. No pressure, just the right plan for me."</p><div class="who">Verified patient · Santa Ana</div></div>
+      <div class="quote"><p>"The most thorough urologist I've seen. Genuinely cared about recovery."</p><div class="who">Verified patient · Irvine</div></div>
+    </div>
+    <p class="needs">⚠ Placeholder quotes — to be replaced with real patient reviews, or this section swapped for an outcomes stat band.</p>
+  </div>
+</section>
+
+<!-- 6 FINAL CTA -->
+<section class="cta">
+  <span class="section-tag">6 · final cta</span>
+  <div class="wrap">
+    <h2>Talk through your options.</h2>
+    <div class="row">
+      <a class="btn btn--solid">Request Appointment</a>
+      <span class="phone">(714) 919-8143</span>
+    </div>
+  </div>
+</section>
+
+<!-- 7 FOOTER -->
+<footer>
+  <span class="section-tag">7 · footer</span>
+  <div class="wrap"><div class="foot-grid">
+    <div>
+      <div class="logo"><b>DR. HARI SAWKAR <i>MD</i></b><small>Minimally Invasive Urology</small></div>
+      <p style="margin-top:14px;">Precision care. Minimal downtime. Better outcomes.</p>
+    </div>
+    <div><h5>Explore</h5><a>Home</a><a>Treatments</a><a>About</a><a>Contact</a></div>
+    <div><h5>Treatments</h5><a>UroLift</a><a>Rezūm</a><a>Aquablation</a><a>PAE</a><a>Kidney Stones</a></div>
+    <div><h5>Visit</h5><p>Tustin, CA</p><p>Santa Ana, CA</p><p>(714) 919-8143</p><p>Mon–Fri · 8a–5p</p></div>
+  </div></div>
+  <div class="foot-bottom"><span>© 2026 Dr. Hari Sawkar MD</span><span>Privacy · Accessibility</span></div>
+</footer>
+
+</body>
+</html>
