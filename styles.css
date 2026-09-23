@@ -386,3 +386,27 @@ img{display:block;max-width:100%}
 .adv-item p a{color:var(--cobalt)}
 .sugg{margin-top:22px;padding:22px 24px;border-radius:16px;background:color-mix(in srgb,var(--cobalt) 7%,#fff);border:1px solid color-mix(in srgb,var(--cobalt) 22%,#fff)}
 @media(max-width:620px){.calc{grid-template-columns:1fr 1fr}.calc .btn{grid-column:1/-1;justify-content:center}}
+
+/* 2026-09-23 additions: office move bar and contact card (both come out in January 2027) */
+.move-bar a{display:block;padding:10px 20px;background:var(--ink);color:var(--paper);text-align:center;font-size:14px;line-height:1.45;transition:background .2s}
+.move-bar a:hover{background:var(--cobalt)}
+.mb-tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ice);margin-right:12px;white-space:nowrap}
+.mb-txt b{font-weight:600;white-space:nowrap}
+.mb-arr{display:inline-block;margin-left:8px;color:var(--ice);transition:transform .2s}
+.move-bar a:hover .mb-tag,.move-bar a:hover .mb-arr{color:#fff}
+.move-bar a:hover .mb-arr{transform:translateX(3px)}
+#moving{scroll-margin-top:84px}
+.move-card{display:grid;grid-template-columns:1fr 1.2fr;gap:34px;align-items:center;border:1px solid var(--line);border-radius:18px;background:#fff;padding:30px 34px}
+.move-head .kicker{color:var(--cobalt)}
+.move-head h2{margin-top:12px}
+.move-head p{margin-top:12px;font-size:15px;line-height:1.6;color:var(--ink-2);max-width:48ch}
+.move-addrs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.move-addr{border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:flex;flex-direction:column}
+.move-addr .bph-tag{margin-bottom:10px;color:var(--ink-2)}
+.move-addr p{font-size:15px;line-height:1.5;color:var(--ink)}
+.move-addr .bph-more{margin-top:12px;align-self:flex-start}
+.move-addr.is-new{border-color:var(--cobalt);background:color-mix(in srgb,var(--cobalt) 5%,#fff)}
+.move-addr.is-new .bph-tag{color:var(--cobalt)}
+.move-addr.is-old p{color:var(--ink-3)}
+@media(max-width:960px){.move-card{grid-template-columns:1fr;gap:22px}}
+@media(max-width:620px){.move-card{padding:24px 20px}.move-addrs{grid-template-columns:1fr}}
