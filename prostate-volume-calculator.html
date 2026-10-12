@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prostate Volume Calculator: Ellipsoid Formula, in cc</title>
+  <meta name="description" content="Enter the three prostate dimensions from your ultrasound or MRI report to get the volume in cc, your PSA density, and what the size means for treatment.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230D1218'/%3E%3Cpath d='M10 22 V10 M10 16 H22 M22 22 V10' stroke='%23A9CBE8' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>.calc select{font:500 17px/1.2 var(--body);color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;width:100%;min-width:0}.calc select:focus{outline:none;border-color:var(--cobalt)}.calc.row2{grid-template-columns:1fr auto;margin-top:16px}.calc .opt-tag{text-transform:none;letter-spacing:0;color:var(--ink-2);opacity:.75}.formula{font-family:var(--mono);font-size:17px;padding:18px 20px;border:1.5px solid var(--line);border-radius:12px;display:inline-block;margin:6px 0 4px}@media(max-width:620px){.calc.row2{grid-template-columns:1fr}}</style>
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+  <!-- seo:begin -->
+  <link rel="canonical" href="https://www.drsawkar.com/prostate-volume-calculator.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dr. Hari Sawkar, MD - Urology">
+  <meta property="og:title" content="Prostate Volume Calculator: Ellipsoid Formula, in cc">
+  <meta property="og:description" content="Enter the three prostate dimensions from your ultrasound or MRI report to get the volume in cc, your PSA density, and what the size means for treatment.">
+  <meta property="og:url" content="https://www.drsawkar.com/prostate-volume-calculator.html">
+  <meta property="og:image" content="https://www.drsawkar.com/assets/img/ink-bph.webp">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Prostate Volume Calculator: Ellipsoid Formula, in cc">
+  <meta name="twitter:description" content="Enter the three prostate dimensions from your ultrasound or MRI report to get the volume in cc, your PSA density, and what the size means for treatment.">
+  <meta name="twitter:image" content="https://www.drsawkar.com/assets/img/ink-bph.webp">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.drsawkar.com/"}, {"@type": "ListItem", "position": 2, "name": "Enlarged prostate", "item": "https://www.drsawkar.com/bph.html"}, {"@type": "ListItem", "position": 3, "name": "Prostate volume calculator", "item": "https://www.drsawkar.com/prostate-volume-calculator.html"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the formula for prostate volume", "acceptedAnswer": {"@type": "Answer", "text": "Length times width times height times 0.52. It is the formula for the volume of an ellipsoid, and 0.52 is pi divided by 6, rounded. Ultrasound machines and MRI software use the same formula, so entering the three dimensions from your report reproduces the volume they would print."}}, {"@type": "Question", "name": "Is prostate volume in cc the same as grams", "acceptedAnswer": {"@type": "Answer", "text": "For practical purposes, yes. Prostate tissue is almost exactly the density of water, so a 60 cc prostate weighs about 60 grams. Ultrasound and MRI reports usually say cc or mL; pathology reports say grams."}}, {"@type": "Question", "name": "What is a normal prostate volume", "acceptedAnswer": {"@type": "Answer", "text": "About 20 to 30 cc for a healthy adult, roughly walnut-sized. Reports often call anything over 30 cc enlarged and over 40 cc clearly enlarged, but those are conventions. A 45 cc prostate at 70 is ordinary; whether it blocks flow is the real question."}}, {"@type": "Question", "name": "Why do my ultrasound and MRI give different volumes", "acceptedAnswer": {"@type": "Answer", "text": "The gland is not a perfect ellipsoid, and each scan measures its edges slightly differently, so two scans of the same prostate routinely differ by a few cc. Ultrasound through the belly is the least precise; transrectal ultrasound and MRI measure more closely. A small difference does not change the treatment conversation."}}, {"@type": "Question", "name": "How do I calculate PSA density", "acceptedAnswer": {"@type": "Answer", "text": "Divide your PSA in ng/mL by your prostate volume in cc. A PSA of 6 with a 60 cc prostate gives a density of 0.10. Many urologists use 0.15 as the level above which a closer look, usually an MRI, is considered. Density is one input alongside your exam, PSA trend, and MRI, not a diagnosis."}}]}, {"@type": "MedicalWebPage", "@id": "https://www.drsawkar.com/prostate-volume-calculator.html#webpage", "url": "https://www.drsawkar.com/prostate-volume-calculator.html", "name": "Prostate Volume Calculator: Ellipsoid Formula, in cc", "description": "Enter the three prostate dimensions from your ultrasound or MRI report to get the volume in cc, your PSA density, and what the size means for treatment.", "inLanguage": "en", "reviewedBy": {"@type": "Physician", "name": "Hari Sawkar, MD", "url": "https://www.drsawkar.com/surgeon.html"}, "lastReviewed": "2026-10-11", "dateModified": "2026-10-11", "isPartOf": {"@type": "WebSite", "name": "Dr. Hari Sawkar, MD - Urology", "url": "https://www.drsawkar.com/"}}]}</script>
+  <!-- seo:end -->
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <span id="top-sentinel" aria-hidden="true"></span>
+
+  <!-- OFFICE MOVE: bar comes out in January 2027 -->
+  <aside class="move-bar" aria-label="Office move"><a href="contact.html#moving"><span class="mb-tag">We've moved</span><span class="mb-txt">New office: <b>18302 Irvine Blvd, Suite 200, Tustin</b></span><span class="mb-arr" aria-hidden="true">&#8594;</span></a></aside>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav-in">
+      <a class="brand" href="/"><span class="b-name">Dr. Hari Sawkar</span><span class="b-sub"><span>MD</span><i aria-hidden="true"></i><span>Urology</span></span></a>
+      <ul class="nav-links">
+        <li><a href="services.html">Treatments</a></li>
+        <li><a href="surgeon.html">Surgeon</a></li>
+        <li><a href="contact.html">Visit</a></li>
+      </ul>
+      <div class="nav-right">
+        <a class="nav-tel" href="tel:+17149198143">(714) 919-8143</a>
+        <a class="btn ink" href="contact.html">Request an appointment</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-panel sub reveal in">
+          <div class="hero-copy">
+            <div class="crumb"><a href="/#treatments">Treatments</a><span>/</span><a href="bph.html">Enlarged prostate</a><span>/</span>Volume calculator</div>
+            <h1 class="disp d-hero">Prostate volume calculator<br><span class="co">from three numbers on your report</span></h1>
+            <p class="lede">Ultrasound and MRI reports often list the prostate's length, width, and height without the volume, or bury the volume in a line nobody explains. Enter the three dimensions here and the calculator applies the same ellipsoid formula the imaging software uses, then tells you what the size means. Add your PSA and it calculates your PSA density too.</p>
+            <div class="hero-cta">
+              <a class="btn bone" href="#calc">Calculate your volume <span class="arr">&#8595;</span></a>
+              <a class="btn ghost-d" href="#formula">How the formula works</a>
+            </div>
+          </div>
+          <div class="hero-art">
+            <img src="assets/img/ink-bph.webp" alt="A contour-line rendering of the bladder and prostate in cobalt light" fetchpriority="high" width="928" height="1117">
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="wrap reveal"><p class="tblnote" style="margin:0">Medically reviewed by <a href="surgeon.html">Hari Sawkar, MD</a>, board-certified urologist &middot; Updated October 2026</p></div>
+
+    <!-- CALCULATOR -->
+    <section class="sec" id="calc">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <h2 class="disp d-lg">The calculator</h2>
+          <p class="lede">Enter the three dimensions in any order. Most reports list them in centimeters; if yours shows millimeters (numbers like 45 &times; 40 &times; 35), switch the units.</p>
+        </div>
+        <form class="calc reveal" id="pvcalc" onsubmit="return false" aria-label="Prostate volume calculator">
+          <label for="pv-l">Length<input type="number" inputmode="decimal" step="0.1" min="0.5" max="150" id="pv-l" placeholder="4.5"></label>
+          <label for="pv-w">Width<input type="number" inputmode="decimal" step="0.1" min="0.5" max="150" id="pv-w" placeholder="4.0"></label>
+          <label for="pv-h">Height<input type="number" inputmode="decimal" step="0.1" min="0.5" max="150" id="pv-h" placeholder="3.5"></label>
+          <label for="pv-u">Units<select id="pv-u"><option value="cm">cm</option><option value="mm">mm</option></select></label>
+        </form>
+        <div class="calc row2 reveal">
+          <label for="pv-psa">PSA, ng/mL <span class="opt-tag">(optional)</span><input type="number" inputmode="decimal" step="0.01" min="0" max="1000" id="pv-psa" placeholder="e.g. 4.2"></label>
+          <button class="btn ink" type="button" id="pv-go">Calculate volume</button>
+        </div>
+        <div class="quiz-res" id="pv-res" role="status" aria-live="polite"></div>
+        <p class="tblnote reveal">The result is an estimate. Imaging software rounds the same way, and two scans of the same gland routinely differ by a few cc. Nothing here replaces an evaluation.</p>
+      </div>
+    </section>
+
+    <!-- FORMULA -->
+    <section class="sec" id="formula" style="padding-top:0">
+      <div class="wrap">
+        <div class="hw-head reveal">
+          <h2 class="disp d-lg">How the formula works</h2>
+          <div class="hw-body">
+            <p class="lede">Imaging treats the prostate as an ellipsoid, a slightly flattened egg, and measures it along three axes. Volume is the product of the three, times a constant:</p>
+            <p class="formula">Volume (cc) = length &times; width &times; height &times; 0.52</p>
+            <p class="lede">The 0.52 is &pi; divided by 6, rounded. Some software uses 0.523 or 0.5236; the difference is a fraction of a cc. Because the gland is not a perfect ellipsoid, the formula is a close estimate rather than an exact measurement.</p>
+            <p class="lede"><b>A worked example:</b> a report reading 4.5 &times; 4.0 &times; 3.5 cm gives 4.5 &times; 4.0 &times; 3.5 &times; 0.52 = 32.8, so about 33 cc, mild enlargement.</p>
+          </div>
+        </div>
+        <div class="tblwrap reveal">
+          <table class="cmp">
+            <thead>
+              <tr><th scope="col">Dimension</th><th scope="col">Also called on reports</th><th scope="col">Direction</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Length</th><td>Craniocaudal, sagittal, longitudinal</td><td>Top to bottom, from the bladder toward the base of the penis</td></tr>
+              <tr><th scope="row">Width</th><td>Transverse</td><td>Side to side; usually the largest of the three</td></tr>
+              <tr><th scope="row">Height</th><td>Anteroposterior (AP)</td><td>Front to back</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="tblnote reveal">The order does not change the answer; multiplication works the same either way. Transrectal ultrasound and MRI measure more precisely than ultrasound through the belly.</p>
+      </div>
+    </section>
+
+    <!-- WHAT THE NUMBER MEANS -->
+    <section class="sec" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <h2 class="disp d-lg">What your volume means</h2>
+          <p class="lede">cc and grams are interchangeable here, because prostate tissue weighs almost exactly what water does. Size decides which treatments fit; symptoms decide whether to treat at all.</p>
+        </div>
+        <div class="tblwrap reveal">
+          <table class="cmp">
+            <thead>
+              <tr><th scope="col">Volume</th><th scope="col">Everyday size</th><th scope="col">Treatments that fit, if symptoms warrant</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Under 25 cc</th><td>A walnut</td><td>The typical baseline; symptoms at this size are usually not about volume</td></tr>
+              <tr><th scope="row">25&ndash;40 cc</th><td>A golf ball to an apricot</td><td>Medication, UroLift, or Rez&#363;m; watchful waiting is often fine</td></tr>
+              <tr><th scope="row">40&ndash;80 cc</th><td>A lemon</td><td class="hl">The full menu: UroLift, Rez&#363;m, PAE, and Aquablation</td></tr>
+              <tr><th scope="row">80&ndash;150 cc</th><td>An orange</td><td class="hl">PAE and Aquablation; HoLEP for some anatomies</td></tr>
+              <tr><th scope="row">150+ cc</th><td>A grapefruit</td><td class="hl">PAE has no practical size ceiling; HoLEP when surgery is needed</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="tblnote reveal">Normal volume by age, what size is dangerous, and why shape matters as much as size are all on <a href="prostate-size-chart.html">the prostate size chart</a>. To see how much your symptoms cost you, take the <a href="ipss-calculator.html">two-minute IPSS score</a>.</p>
+      </div>
+    </section>
+
+    <!-- PSA DENSITY -->
+    <section class="sec" id="psa-density" style="padding-top:0">
+      <div class="wrap sp-intro reveal">
+        <div>
+          <h2 class="disp d-md" style="margin-bottom:18px">PSA density: why volume changes what PSA means</h2>
+          <p class="lede">PSA comes from all prostate tissue, benign or not, so a large gland can produce an elevated PSA with no cancer anywhere. Dividing PSA by volume, a figure called PSA density, adjusts for that. A PSA of 6 means something different in a 30 cc prostate (density 0.20) than in a 90 cc prostate (density 0.07).</p>
+          <p class="lede">Many urologists use 0.15 ng/mL per cc as the level above which a closer look, usually an MRI, is considered. Density is one input alongside your exam, your PSA trend over time, and imaging; it is not a diagnosis. Typical PSA values by age are on <a href="psa-levels-by-age.html">the PSA levels by age chart</a>.</p>
+        </div>
+        <div class="sym">
+          <div>PSA density = PSA &divide; volume</div>
+          <div>PSA 6, 60 cc &rarr; 0.10</div>
+          <div>PSA 6, 30 cc &rarr; 0.20</div>
+          <div>Often a reason for MRI above 0.15</div>
+          <div>One input, never the whole picture</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="sec" id="faq" style="padding-top:0">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <h2 class="disp d-lg">Common questions about prostate volume</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>What is the formula for prostate volume</summary>
+            <p>Length times width times height times 0.52. It is the formula for the volume of an ellipsoid, and 0.52 is pi divided by 6, rounded. Ultrasound machines and MRI software use the same formula, so entering the three dimensions from your report reproduces the volume they would print.</p>
+          </details>
+          <details>
+            <summary>Is prostate volume in cc the same as grams</summary>
+            <p>For practical purposes, yes. Prostate tissue is almost exactly the density of water, so a 60 cc prostate weighs about 60 grams. Ultrasound and MRI reports usually say cc or mL; pathology reports say grams.</p>
+          </details>
+          <details>
+            <summary>What is a normal prostate volume</summary>
+            <p>About 20 to 30 cc for a healthy adult, roughly walnut-sized. Reports often call anything over 30 cc enlarged and over 40 cc clearly enlarged, but those are conventions. A 45 cc prostate at 70 is ordinary; whether it blocks flow is the real question.</p>
+          </details>
+          <details>
+            <summary>Why do my ultrasound and MRI give different volumes</summary>
+            <p>The gland is not a perfect ellipsoid, and each scan measures its edges slightly differently, so two scans of the same prostate routinely differ by a few cc. Ultrasound through the belly is the least precise; transrectal ultrasound and MRI measure more closely. A small difference does not change the treatment conversation.</p>
+          </details>
+          <details>
+            <summary>How do I calculate PSA density</summary>
+            <p>Divide your PSA in ng/mL by your prostate volume in cc. A PSA of 6 with a 60 cc prostate gives a density of 0.10. Many urologists use 0.15 as the level above which a closer look, usually an MRI, is considered. Density is one input alongside your exam, PSA trend, and MRI, not a diagnosis.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="sec" id="visit" style="padding-top:0">
+      <div class="wrap">
+        <div class="cta reveal">
+          <div class="bg"><img src="assets/img/photo-dusk.webp" alt=""></div>
+          <div class="cta-in">
+            <span class="kicker" style="color:#cdd6e4">Enlarged prostate</span>
+            <h2 class="disp d-lg">Turn your number into a plan</h2>
+            <p>Bring your report, or get measured with a quick in-office ultrasound at the consultation. Same-day and next-day appointments for urgent concerns, telehealth available, Medicare and most PPO plans accepted.</p>
+            <p class="cta-proof">Chief of Urology, Providence St. Joseph Hospital &middot; UroLift Center of Excellence &middot; 250+ Aquablation procedures</p>
+            <div class="hero-cta">
+              <a class="btn bone" href="contact.html">Request an appointment</a>
+              <a class="btn ghost-d" href="tel:+17149198143">Call (714) 919-8143</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <a class="brand" href="/"><span class="b-name">Dr. Hari Sawkar</span><span class="b-sub"><span>MD</span><i aria-hidden="true"></i><span>Urology</span></span></a>
+          <p>Orange County's minimally invasive urology, serving Tustin and Santa Ana.</p>
+        </div>
+        <div class="fcol"><div class="fh">Enlarged prostate</div><a href="pae.html">PAE</a><a href="urolift.html">UroLift</a><a href="rezum.html">Rezum</a><a href="aquablation.html">Aquablation</a><a href="bph.html">All BPH options</a><a href="pae-vs-turp.html">PAE vs TURP</a><a href="pae-vs-urolift.html">PAE vs UroLift</a></div>
+        <div class="fcol"><div class="fh">Guides</div><a href="prostate-size-chart.html">Prostate size chart</a><a href="prostate-volume-calculator.html">Prostate volume calculator</a><a href="kidney-stone-size-chart.html">Kidney stone size chart</a><a href="ipss-calculator.html">IPSS calculator</a><a href="flomax-alternatives.html">Flomax alternatives</a><a href="aquablation-cost.html">Aquablation cost</a><a href="aquablation-recovery.html">Aquablation recovery</a></div>
+        <div class="fcol"><div class="fh">Practice</div><a href="surgeon.html">About Dr. Sawkar</a><a href="services.html">All services</a><a href="referring-providers.html">Referring providers</a><a href="contact.html">Appointments</a><a href="contact.html">Telehealth</a></div>
+        <div class="fcol"><div class="fh">Visit</div><p><a href="contact.html#request">Send a message</a></p><p><a href="tel:+17149198143">Call: (714) 919-8143</a></p><p>18302 Irvine Blvd, Suite 200<br>Tustin, CA 92780</p></div>
+      </div>
+      <div class="foot-bottom"><span>&copy; 2026 Hari Sawkar, MD</span><span><a href="privacy.html">Privacy</a> &middot; <a href="accessibility.html">Accessibility</a></span></div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var go = document.getElementById('pv-go'); if (!go) return;
+      var res = document.getElementById('pv-res');
+      function band(v) {
+        if (v < 25) return ['Within the typical range', 'Under 25 cc is the walnut-sized baseline. Urinary symptoms at this size are usually not about volume; the bladder and bladder neck get the attention first.', 'bph.html', 'See the treatment options'];
+        if (v < 40) return ['Mild enlargement', '25 to 40 cc is extremely common from the fifties on. If symptoms bother you, medication, UroLift, or Rezūm fit this size; watchful waiting is often fine.', 'urolift-vs-rezum.html', 'UroLift vs Rezūm'];
+        if (v < 80) return ['Moderate enlargement', '40 to 80 cc is the range where most men act. Every modern option fits: UroLift, Rezūm, PAE, and Aquablation. Anatomy and recovery preferences break the tie.', 'bph.html', 'Compare all four treatments'];
+        if (v < 150) return ['Large', '80 to 150 cc sits beyond the design range of the office procedures. PAE and Aquablation are the realistic fixes, and a post-void residual check is worth doing even if symptoms feel manageable.', 'pae-large-prostate.html', 'Options at 80 cc and up'];
+        return ['Very large', '150 cc and up. PAE has no practical size ceiling and HoLEP remains the surgical answer when needed. A gland this size deserves evaluation even without bothersome symptoms.', 'pae-large-prostate.html', 'Options for very large prostates'];
+      }
+      function num(id) { return parseFloat(document.getElementById(id).value); }
+      go.addEventListener('click', function () {
+        var mm = document.getElementById('pv-u').value === 'mm';
+        var f = mm ? 0.1 : 1, l = num('pv-l') * f, w = num('pv-w') * f, h = num('pv-h') * f;
+        res.className = 'quiz-res show';
+        if (!(l > 0 && w > 0 && h > 0)) {
+          res.innerHTML = '<b>Enter all three dimensions</b><p>Length, width, and height from your report. Check the units: numbers above 15 are almost always millimeters.</p>';
+          return;
+        }
+        if (!mm && (l > 15 || w > 15 || h > 15)) {
+          res.innerHTML = '<b>Those look like millimeters</b><p>A prostate dimension over 15 cm is not realistic. Switch the units to mm, or divide each number by 10.</p>';
+          return;
+        }
+        var v = Math.round(l * w * h * 0.52), b = band(v);
+        var out = '<b>About ' + v + ' cc (' + v + ' grams): ' + b[0] + '</b><p>' + b[1] + '</p>';
+        var psa = num('pv-psa');
+        if (psa > 0 && v > 0) {
+          var d = psa / v, ds = d.toFixed(2);
+          out += '<p><b>PSA density: ' + ds + ' ng/mL per cc.</b> ' + (d > 0.15
+            ? 'That is above 0.15, the level at which many urologists consider an MRI or a closer look. It is a reason for an evaluation, not a diagnosis.'
+            : 'That is at or below 0.15, so the gland’s size may explain much of the PSA. Your PSA trend and exam still matter.') + '</p>';
+        }
+        out += '<div class="hero-cta"><a class="btn ink" href="' + b[2] + '">' + b[3] + ' <span class="arr">&#8594;</span></a><a class="btn ghost" href="contact.html">Get it measured in the office</a></div>';
+        res.innerHTML = out;
+        res.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    })();
+  </script>
+  <script>
+    const nav = document.getElementById('nav');
+    new IntersectionObserver(([e]) => nav.classList.toggle('scrolled', !e.isIntersecting))
+      .observe(document.getElementById('top-sentinel'));
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce) {
+      const io = new IntersectionObserver(es => es.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      }), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+      document.querySelectorAll('.reveal:not(.in)').forEach(el => io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+    }
+  </script>
+  <div class="callbar"><a class="cb primary" href="contact.html#request">Message the office</a><a class="cb" href="tel:+17149198143">Call</a></div>
+</body>
+</html>
