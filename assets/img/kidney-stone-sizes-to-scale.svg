@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-labelledby="t d">
+  <title id="t">Kidney stone sizes drawn to scale, 2 mm to 10 mm</title>
+  <desc id="d">Seven kidney stones drawn to the same scale: 2 mm about a grain of coarse sand, 3 mm a sesame seed, 4 mm a small peppercorn, 5 mm a peppercorn, 6 mm the width of a pencil eraser, 8 mm a pea, and 10 mm a chickpea, with a 10 mm scale bar.</desc>
+  <rect width="1200" height="630" fill="#F4F4F1"/>
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" fill="#15181E" text-anchor="middle">
+    <text x="600" y="92" font-size="40" font-weight="700">Kidney stone sizes, drawn to scale</text>
+    <text x="600" y="134" font-size="22" fill="#575D68">Every stone below uses the same scale; the bar at the bottom is 10 mm</text>
+
+    <!-- 1 mm = 10 px; stones sit on a common baseline at y = 350 -->
+    <g fill="#C8B596" stroke="#7D6A4C" stroke-width="2">
+      <path d="M159.3,343.6 C157.7,348.8 152.5,351.2 147.3,349.7 C142.0,348.2 138.8,343.0 140.3,337.5 C141.7,332.1 147.0,328.8 152.5,330.3 C158.1,331.8 161.2,337.9 159.3,343.6 Z"/>
+      <path d="M312.5,326.6 C317.4,333.1 316.0,341.6 309.6,346.6 C303.2,351.8 294.0,351.3 288.6,344.8 C283.1,338.4 283.7,329.0 290.2,323.6 C296.9,318.0 307.1,319.4 312.5,326.6 Z"/>
+      <path d="M459.7,347.5 C450.5,353.3 439.4,350.4 433.5,341.4 C427.3,332.3 429.1,320.1 438.3,313.7 C447.5,307.2 459.9,309.1 466.3,318.3 C473.0,327.8 469.8,341.2 459.7,347.5 Z"/>
+      <path d="M624.7,321.2 C627.5,334.4 619.5,346.2 606.3,349.3 C592.9,352.6 579.5,345.4 575.8,331.8 C572.2,318.2 579.6,304.5 593.2,300.8 C607.3,297.1 621.6,306.5 624.7,321.2 Z"/>
+      <path d="M770.8,341.6 C759.8,353.5 742.6,353.7 730.5,342.9 C718.0,332.1 715.8,313.8 726.7,300.9 C737.5,288.0 756.2,285.8 769.1,296.7 C782.5,307.9 783.1,328.5 770.8,341.6 Z"/>
+      <path d="M926.3,279.9 C943.4,293.1 945.7,315.9 932.7,333.3 C919.8,351.1 895.8,356.1 877.4,343.2 C858.9,330.3 853.9,305.8 866.8,287.4 C880.2,268.3 907.4,265.1 926.3,279.9 Z"/>
+      <path d="M1098.0,313.9 C1092.0,340.2 1067.4,354.9 1040.9,349.3 C1013.8,344.1 995.6,319.6 1000.4,291.9 C1005.2,264.2 1030.4,245.6 1058.1,250.4 C1086.8,255.5 1104.8,284.7 1098.0,313.9 Z"/>
+    </g>
+
+    <g font-size="30" font-weight="700">
+      <text x="150" y="410">2 mm</text>
+      <text x="300" y="410">3 mm</text>
+      <text x="450" y="410">4 mm</text>
+      <text x="600" y="410">5 mm</text>
+      <text x="750" y="410">6 mm</text>
+      <text x="900" y="410">8 mm</text>
+      <text x="1050" y="410">10 mm</text>
+    </g>
+    <g font-size="19" fill="#575D68">
+      <text x="150" y="442">coarse sand</text>
+      <text x="300" y="442">sesame seed</text>
+      <text x="450" y="442">small peppercorn</text>
+      <text x="600" y="442">peppercorn</text>
+      <text x="750" y="442">pencil eraser</text>
+      <text x="900" y="442">pea</text>
+      <text x="1050" y="442">chickpea</text>
+    </g>
+
+    <!-- 10 mm scale bar -->
+    <g stroke="#15181E" stroke-width="2">
+      <line x1="550" y1="510" x2="650" y2="510"/>
+      <line x1="550" y1="500" x2="550" y2="520"/>
+      <line x1="560" y1="505" x2="560" y2="515"/><line x1="570" y1="505" x2="570" y2="515"/>
+      <line x1="580" y1="505" x2="580" y2="515"/><line x1="590" y1="505" x2="590" y2="515"/>
+      <line x1="600" y1="502" x2="600" y2="518"/>
+      <line x1="610" y1="505" x2="610" y2="515"/><line x1="620" y1="505" x2="620" y2="515"/>
+      <line x1="630" y1="505" x2="630" y2="515"/><line x1="640" y1="505" x2="640" y2="515"/>
+      <line x1="650" y1="500" x2="650" y2="520"/>
+    </g>
+    <text x="600" y="548" font-size="19" fill="#575D68">10 mm</text>
+
+    <text x="600" y="600" font-size="17" fill="#6E7480">Comparisons are approximate; your CT report gives the true size. drsawkar.com/kidney-stone-size-chart.html</text>
+  </g>
+</svg>

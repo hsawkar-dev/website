@@ -43,10 +43,38 @@ Orange County, California, including Tustin, Santa Ana, Orange, Irvine, Anaheim,
 - UroLift: https://www.drsawkar.com/urolift.html
 - Rezūm: https://www.drsawkar.com/rezum.html
 - TURP alternatives compared: https://www.drsawkar.com/turp-alternatives.html
+- PAE for very large prostates (80 to 200+ cc): https://www.drsawkar.com/pae-large-prostate.html
 - Kidney stones: https://www.drsawkar.com/kidney-stones.html
 - Prostate cancer: https://www.drsawkar.com/prostate-cancer.html
+- Kidney cancer: https://www.drsawkar.com/kidney-cancer.html
 - All services: https://www.drsawkar.com/services.html
 - For referring providers: https://www.drsawkar.com/referring-providers.html
+
+## BPH treatments compared
+
+- Aquablation vs TURP: https://www.drsawkar.com/aquablation-vs-turp.html
+- Aquablation vs HoLEP: https://www.drsawkar.com/aquablation-vs-holep.html
+- Aquablation vs UroLift: https://www.drsawkar.com/aquablation-vs-urolift.html
+- PAE vs Aquablation: https://www.drsawkar.com/pae-vs-aquablation.html
+- PAE vs TURP: https://www.drsawkar.com/pae-vs-turp.html
+- PAE vs UroLift: https://www.drsawkar.com/pae-vs-urolift.html
+- PAE vs Rezūm: https://www.drsawkar.com/pae-vs-rezum.html
+- UroLift vs Rezūm: https://www.drsawkar.com/urolift-vs-rezum.html
+- Flomax (tamsulosin) alternatives: https://www.drsawkar.com/flomax-alternatives.html
+
+## Recovery
+
+- Aquablation recovery: https://www.drsawkar.com/aquablation-recovery.html
+- PAE recovery: https://www.drsawkar.com/pae-recovery.html
+- UroLift recovery: https://www.drsawkar.com/urolift-recovery.html
+- Rezūm recovery: https://www.drsawkar.com/rezum-recovery.html
+
+## Costs and insurance
+
+- Aquablation cost: https://www.drsawkar.com/aquablation-cost.html
+- UroLift cost: https://www.drsawkar.com/urolift-cost.html
+- Rezūm cost: https://www.drsawkar.com/rezum-cost.html
+- PAE cost and insurance: https://www.drsawkar.com/pae-cost-insurance.html
 
 ## Patient guides
 
@@ -55,9 +83,19 @@ Orange County, California, including Tustin, Santa Ana, Orange, Irvine, Anaheim,
 - PSA levels by age: https://www.drsawkar.com/psa-levels-by-age.html
 - IPSS symptom score calculator: https://www.drsawkar.com/ipss-calculator.html
 - Prostate volume calculator and PSA density: https://www.drsawkar.com/prostate-volume-calculator.html
-- Aquablation cost: https://www.drsawkar.com/aquablation-cost.html
+- Post-void residual (PVR), normal vs high: https://www.drsawkar.com/post-void-residual.html
+- Waking up at night to urinate (nocturia): https://www.drsawkar.com/nocturia.html
 - Aquablation side effects and success rate: https://www.drsawkar.com/aquablation-side-effects.html
-- PAE cost and insurance: https://www.drsawkar.com/pae-cost-insurance.html
+
+## Men's health
+
+- ED and low testosterone: https://www.drsawkar.com/mens-health.html
+- Testosterone replacement (TRT): https://www.drsawkar.com/testosterone-replacement.html
+- Shockwave therapy for ED: https://www.drsawkar.com/shockwave-therapy.html
+- PRP and the P-Shot: https://www.drsawkar.com/prp-p-shot.html
+- Penile implants: https://www.drsawkar.com/penile-implants.html
+- Peyronie's disease: https://www.drsawkar.com/peyronies-disease.html
+- No-scalpel vasectomy: https://www.drsawkar.com/no-scalpel-vasectomy.html
 
 ## En español
 
