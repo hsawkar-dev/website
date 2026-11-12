@@ -812,7 +812,8 @@ dialog.sheet[open]::backdrop,dialog.menu[open]::backdrop{animation:fadeIn .3s ea
   .hero-short .hero-art::after{background:linear-gradient(90deg,var(--panel) 12%,rgba(13,18,24,.2) 100%)}
   .hero-short .hero-art::before{display:none}
   .hero-short .hero-copy{padding:24px 22px 26px;gap:14px}
-  .hero-short .crumb{margin-bottom:0;font-size:13px}
+  .hero-short .crumb{margin-bottom:0;font-size:12.5px;flex-wrap:wrap;gap:2px 8px}
+  .hero-short .crumb a{white-space:nowrap}
   .hero-short h1{font-size:30px;line-height:1.1}
   .hero-short .lede{font-size:17px;line-height:1.5;color:#D5D9DE}
   .hero-short .hero-cta{margin-top:4px}
@@ -825,7 +826,19 @@ dialog.sheet[open]::backdrop,dialog.menu[open]::backdrop{animation:fadeIn .3s ea
 
   .m-flow>section{scroll-margin-top:72px}
   .m-flow{display:flex;flex-direction:column}
-  .m-flow>.hero,.m-flow>.wrap,.m-flow>.onpage{order:-2}
+  .m-flow>.hero,.m-flow>.wrap,.m-flow>.onpage,.m-flow>.m-top{order:-2}
+  .m-flow>.m-top{padding-top:16px!important}
+  .m-flow>.m-top .cover{padding:14px 16px;font-size:16px;text-align:left;justify-content:flex-start}
+  .m-flow>.m-open{order:-1;padding:34px 0 30px!important}
+  .m-open .sec-head,.m-open .hw-head{margin-bottom:0}
+  .m-open h2{font-size:27px}
+  .m-open .hw-body .lede:not(:first-child){display:none}
+  .swipe-m.flow>.flow-step{background:#fff;border:1px solid var(--line);border-radius:18px;text-align:left}
+  .swipe-m.flow .flow-ic{width:56px;height:56px;margin:0 0 14px}
+  .swipe-m.flow .flow-ic svg{width:28px;height:28px}
+  .swipe-m.flow .flow-n{font-size:13px}
+  .swipe-m.flow h4{font-size:20px}
+  .swipe-m.flow p{max-width:none;margin:0;font-size:16px}
   .m-flow>#options{order:-1;padding:34px 0 30px!important}
   .m-flow>#options .sec-head{margin-bottom:0}
   .m-flow>#options .sec-head .lede{display:none}

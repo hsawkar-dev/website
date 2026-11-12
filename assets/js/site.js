@@ -279,26 +279,45 @@
     if (location.hash.length > 1) openFoldFor(location.hash.slice(1), true);
   }
 
-  /* ---------- phone: a comparison table becomes one swipe card per column ----------
-     Add class "cmp-cards-m" to a table.cmp whose columns are the things compared. */
-  d.querySelectorAll('table.cmp.cmp-cards-m').forEach(function (tb) {
+  /* ---------- phone: a comparison table becomes swipe cards ----------
+     On a table.cmp add "cmp-cards-m" when the columns are the things compared (one card
+     per column), or "cmp-rows-m" when the rows are (one card per row). */
+  d.querySelectorAll('table.cmp.cmp-cards-m, table.cmp.cmp-rows-m').forEach(function (tb) {
     var wrap = tb.closest('.tblwrap');
     var heads = tb.querySelectorAll('thead th');
     var rows = tb.querySelectorAll('tbody tr');
-    if (!wrap || heads.length < 3 || !rows.length) return;
+    if (!wrap || heads.length < 2 || !rows.length) return;
+    var byRow = tb.classList.contains('cmp-rows-m');
     var box = d.createElement('div');
     box.className = 'cmp-cards';
-    for (var j = 1; j < heads.length; j++) {
-      var html = '<h3>' + heads[j].innerHTML + '</h3><dl>';
-      for (var i = 0; i < rows.length; i++) {
-        var th = rows[i].querySelector('th'), td = rows[i].querySelectorAll('td')[j - 1];
-        if (th && td) html += '<div><dt>' + th.innerHTML + '</dt><dd>' + td.innerHTML + '</dd></div>';
-      }
+    function add(html) {
       var card = d.createElement('article');
       card.className = 'bph-card';
       card.innerHTML = html + '</dl>';
       box.appendChild(card);
     }
+    var i, j, cells, html;
+    if (byRow) {
+      for (i = 0; i < rows.length; i++) {
+        cells = rows[i].children;
+        if (!cells.length) continue;
+        html = '<div class="bph-tag">' + heads[0].innerHTML + '</div><h3>' + cells[0].innerHTML + '</h3><dl>';
+        for (j = 1; j < cells.length && j < heads.length; j++) {
+          html += '<div><dt>' + heads[j].innerHTML + '</dt><dd>' + cells[j].innerHTML + '</dd></div>';
+        }
+        add(html);
+      }
+    } else {
+      for (j = 1; j < heads.length; j++) {
+        html = '<h3>' + heads[j].innerHTML + '</h3><dl>';
+        for (i = 0; i < rows.length; i++) {
+          cells = rows[i].children;
+          if (cells.length > j) html += '<div><dt>' + cells[0].innerHTML + '</dt><dd>' + cells[j].innerHTML + '</dd></div>';
+        }
+        add(html);
+      }
+    }
+    if (!box.children.length) return;
     wrap.classList.add('has-cards');
     wrap.parentNode.insertBefore(box, wrap.nextSibling);
   });
