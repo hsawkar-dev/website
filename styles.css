@@ -794,6 +794,81 @@ dialog.sheet[open]::backdrop,dialog.menu[open]::backdrop{animation:fadeIn .3s ea
   .sheet-in{padding:18px 20px calc(22px + env(safe-area-inset-bottom))}
   .sh-grab{display:block}
 }
+/* ---------- inner pages on phones: compact top, swipe cards, sections fold to headings ----------
+   Opt in per page: .hero-short on the hero section, .m-flow on <main>, .fold-sec on each
+   section that should fold, .swipe-m on a card grid, .cmp-cards-m on a comparison table whose
+   columns are the things being compared. assets/js/site.js adds .fold-h2 / .fold-keep / .cmp-cards. */
+.cmp-cards{display:none}
+.cmp-cards dl{margin-top:12px;border-top:1px solid var(--line)}
+.cmp-cards dl div{padding:10px 0;border-bottom:1px solid var(--line)}
+.cmp-cards dl div:last-child{border-bottom:0;padding-bottom:0}
+.cmp-cards dt{font-family:var(--mono);font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2)}
+.cmp-cards dd{margin-top:3px;font-size:16px;line-height:1.4;color:var(--ink)}
+@media(max-width:620px){
+  .hero-short{padding-top:4px}
+  .hero-short .wrap{padding:0 14px}
+  .hero-short .hero-panel,.hero-short .hero-panel.sub{display:block;border-radius:20px;min-height:0}
+  .hero-short .hero-art{position:absolute;top:0;right:-70px;bottom:0;width:280px;min-height:0;opacity:.45}
+  .hero-short .hero-art::after{background:linear-gradient(90deg,var(--panel) 12%,rgba(13,18,24,.2) 100%)}
+  .hero-short .hero-art::before{display:none}
+  .hero-short .hero-copy{padding:24px 22px 26px;gap:14px}
+  .hero-short .crumb{margin-bottom:0;font-size:13px}
+  .hero-short h1{font-size:30px;line-height:1.1}
+  .hero-short .lede{font-size:17px;line-height:1.5;color:#D5D9DE}
+  .hero-short .hero-cta{margin-top:4px}
+  .hero-short .hero-cta .btn{min-height:56px;font-size:17px}
+  .hero-short .hero-cta .btn.ghost-d{display:none}
+  .hero-short+.wrap .tblnote{margin-top:12px!important;font-size:14px}
+
+  .onpage{padding:14px 0 0}
+  .onpage .chiprow{margin:0 -20px;padding:0 20px 2px}
+
+  .m-flow>section{scroll-margin-top:72px}
+  .m-flow{display:flex;flex-direction:column}
+  .m-flow>.hero,.m-flow>.wrap,.m-flow>.onpage{order:-2}
+  .m-flow>#options{order:-1;padding:34px 0 30px!important}
+  .m-flow>#options .sec-head{margin-bottom:0}
+  .m-flow>#options .sec-head .lede{display:none}
+  .m-flow>#options h2{font-size:27px}
+
+  .swipe-m,.cmp-cards{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:20px;
+    margin:14px -20px 0;padding:0 20px 8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .swipe-m::-webkit-scrollbar,.cmp-cards::-webkit-scrollbar{display:none}
+  .swipe-m>*,.cmp-cards>*{flex:0 0 80%;max-width:310px;scroll-snap-align:start;padding:20px 20px 18px}
+  .swipe-m>*:hover,.cmp-cards>*:hover{transform:none}
+  .swipe-m .what{display:none}
+  .swipe-m .bph-tag{margin-bottom:8px;font-size:12px}
+  .swipe-m.bph-grid h3,.cmp-cards h3{font-size:24px;margin-bottom:0}
+  .swipe-m.bph-grid ul{margin-top:12px;padding-top:12px}
+  .swipe-m.bph-grid li{font-size:16px}
+  .swipe-m .bph-more{font-family:var(--body);font-weight:600;font-size:16px;margin-top:14px}
+  .js .tblwrap.has-cards{display:none}
+
+  .js .fold-sec{padding:0!important}
+  .js .fold-sec .reveal{opacity:1;transform:none;transition:none}
+  .js .fold-sec .fold-h2{display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:62px;margin:0!important;padding:13px 2px;
+    border-top:1px solid var(--line-2);font-size:21px;line-height:1.2;letter-spacing:-.02em;cursor:pointer}
+  .js .fold-sec .fold-h2::after{content:"";flex:none;width:11px;height:11px;margin:0 6px 4px 0;border-right:2px solid currentColor;border-bottom:2px solid currentColor;
+    transform:rotate(45deg);transition:transform .3s ease}
+  .js .fold-sec.open .fold-h2{color:var(--cobalt)}
+  .js .fold-sec.open .fold-h2::after{transform:rotate(225deg);margin-bottom:-4px}
+  .js .fold-sec.fold-end:not(.open) .fold-h2{border-bottom:1px solid var(--line-2)}
+  .js .fold-sec:not(.open) .fold-keep{display:block!important;margin-top:0!important;margin-bottom:0!important;padding-top:0!important;padding-bottom:0!important}
+  .js .fold-sec:not(.open) .fold-keep>:not(.fold-keep):not(.fold-h2){display:none!important}
+  .js .fold-sec.open{padding-bottom:26px!important}
+  .js .fold-sec.open .fold-h2{margin-bottom:12px!important}
+  .js .fold-sec.open .sp-intro{gap:18px}
+  .js .fold-sec.open .sec-head,.js .fold-sec.open .hw-head{margin-bottom:16px}
+  .js .fold-sec.open .bph-grid,.js .fold-sec.open .adv,.js .fold-sec.open .faq,.js .fold-sec.open .steps{margin-top:6px}
+  .js .fold-sec.open .adv-item{padding:18px 0}
+  .fold-sec :is(.sym div,.adv-item p,.step p,.faq details p,.cmp-cards dd){font-size:16.5px}
+  .fold-sec .tblnote{font-size:15px}
+  .fold-sec .bph-more{font-family:var(--body);font-weight:600;font-size:16px}
+  .fold-sec [style*="gap:30px"]{gap:12px 24px!important}
+  .fold-sec .faq summary{font-size:18px;padding:18px 2px}
+  .fold-sec .opt{font-size:15px;padding:10px 15px}
+  .fold-sec .bphcred{padding-top:34px}
+}
 @media(prefers-reduced-motion:reduce){
   @view-transition{navigation:none}
   .hero-home .hero-art img,.hero-home .hero-copy>*,dialog.sheet[open],dialog.menu[open],dialog.sheet[open]::backdrop,dialog.menu[open]::backdrop{animation:none}

@@ -9,8 +9,10 @@
 </head>
 <body>
   <script type="text/javascript">
-    /* Klara remembers a closed window in localStorage ("widget-state") and then renders
-       nothing in embedded mode, leaving a blank box. Clear it so the box always opens. */
+    /* Klara's bundle saves "widget-state" in localStorage. When that key exists, it opens the
+       widget only if the state is not "closed" AND this frame is wider than 768px (it treats
+       narrower frames as phones). Otherwise it renders nothing and the box is blank. Clearing
+       the key before the bundle loads makes embedded mode open every time. Do not remove. */
     try { localStorage.removeItem("widget-state"); } catch (e) {}
     window.klaraWidget = window.klaraWidget || [];
     window.klaraWidget.push(["setWidgetId", "10acdbe6-eddf-4a75-92f8-9c28e3fbfcf7"]);

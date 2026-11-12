@@ -226,6 +226,83 @@
     sync();
   });
 
+  /* ---------- phone: whole sections fold to their heading ----------
+     Add class "fold-sec" to a <section>. Its first h2 becomes the row; everything else
+     in the section is hidden until the row is tapped. A link to an id inside a folded
+     section (from this page or another) opens it first. Wide screens are untouched. */
+  var foldSecs = d.querySelectorAll('section.fold-sec');
+  foldSecs.forEach(function (sec) {
+    var h = sec.querySelector('h2');
+    if (!h) { sec.classList.remove('fold-sec'); return; }
+    h.classList.add('fold-h2');
+    for (var n = h.parentNode; n && n !== sec; n = n.parentNode) n.classList.add('fold-keep');
+    function sync() {
+      if (phone.matches) {
+        h.setAttribute('role', 'button');
+        h.setAttribute('tabindex', '0');
+        h.setAttribute('aria-expanded', sec.classList.contains('open') ? 'true' : 'false');
+      } else {
+        h.removeAttribute('role'); h.removeAttribute('tabindex'); h.removeAttribute('aria-expanded');
+      }
+    }
+    sec._foldSync = sync;
+    function toggle() {
+      if (!phone.matches) return;
+      var open = sec.classList.toggle('open');
+      sync();
+      if (open) track('Section opened: ' + (h.textContent || '').trim().slice(0, 48));
+    }
+    h.addEventListener('click', toggle);
+    h.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+    });
+    if (phone.addEventListener) phone.addEventListener('change', sync);
+    sync();
+  });
+  var liveFolds = d.querySelectorAll('section.fold-sec');
+  if (liveFolds.length) liveFolds[liveFolds.length - 1].classList.add('fold-end');
+  function openFoldFor(id, scroll) {
+    if (!id || !phone.matches) return;
+    var t = null;
+    try { t = d.getElementById(decodeURIComponent(id)); } catch (e) {}
+    var sec = t && t.closest && t.closest('section.fold-sec');
+    if (!sec) return;
+    if (!sec.classList.contains('open')) { sec.classList.add('open'); if (sec._foldSync) sec._foldSync(); }
+    if (scroll) t.scrollIntoView({ behavior: 'auto', block: 'start' });
+  }
+  if (liveFolds.length) {
+    d.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href^="#"]');
+      if (a && a.getAttribute('href').length > 1) openFoldFor(a.getAttribute('href').slice(1), false);
+    });
+    window.addEventListener('hashchange', function () { openFoldFor(location.hash.slice(1), true); });
+    if (location.hash.length > 1) openFoldFor(location.hash.slice(1), true);
+  }
+
+  /* ---------- phone: a comparison table becomes one swipe card per column ----------
+     Add class "cmp-cards-m" to a table.cmp whose columns are the things compared. */
+  d.querySelectorAll('table.cmp.cmp-cards-m').forEach(function (tb) {
+    var wrap = tb.closest('.tblwrap');
+    var heads = tb.querySelectorAll('thead th');
+    var rows = tb.querySelectorAll('tbody tr');
+    if (!wrap || heads.length < 3 || !rows.length) return;
+    var box = d.createElement('div');
+    box.className = 'cmp-cards';
+    for (var j = 1; j < heads.length; j++) {
+      var html = '<h3>' + heads[j].innerHTML + '</h3><dl>';
+      for (var i = 0; i < rows.length; i++) {
+        var th = rows[i].querySelector('th'), td = rows[i].querySelectorAll('td')[j - 1];
+        if (th && td) html += '<div><dt>' + th.innerHTML + '</dt><dd>' + td.innerHTML + '</dd></div>';
+      }
+      var card = d.createElement('article');
+      card.className = 'bph-card';
+      card.innerHTML = html + '</dl>';
+      box.appendChild(card);
+    }
+    wrap.classList.add('has-cards');
+    wrap.parentNode.insertBefore(box, wrap.nextSibling);
+  });
+
   /* ---------- numbers count up once, when first seen ---------- */
   var counters = d.querySelectorAll('[data-count]');
   if (counters.length && !reduce && 'IntersectionObserver' in window) {
