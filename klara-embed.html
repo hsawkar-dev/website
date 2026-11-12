@@ -9,6 +9,9 @@
 </head>
 <body>
   <script type="text/javascript">
+    /* Klara remembers a closed window in localStorage ("widget-state") and then renders
+       nothing in embedded mode, leaving a blank box. Clear it so the box always opens. */
+    try { localStorage.removeItem("widget-state"); } catch (e) {}
     window.klaraWidget = window.klaraWidget || [];
     window.klaraWidget.push(["setWidgetId", "10acdbe6-eddf-4a75-92f8-9c28e3fbfcf7"]);
     window.klaraWidget.push(["embeddedMode"]);
