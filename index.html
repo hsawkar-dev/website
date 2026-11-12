@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+  <noscript><style>.reveal,.reveal.stag>*{opacity:1;transform:none}</style></noscript>
   <!-- seo:begin -->
   <link rel="canonical" href="https://www.drsawkar.com/">
   <meta property="og:type" content="website">
@@ -40,7 +40,8 @@
       <a class="brand" href="/"><span class="b-name">Dr. Hari Sawkar</span><span class="b-sub"><span>MD</span><i aria-hidden="true"></i><span>Urology</span></span></a>
       <ul class="nav-links">
         <li><a href="services.html">Treatments</a></li>
-        <li><a href="surgeon.html">Surgeon</a></li>
+        <li><a href="surgeon.html">Dr. Sawkar</a></li>
+        <li><a href="/#guides">Patient guides</a></li>
         <li><a href="contact.html">Visit</a></li>
       </ul>
       <div class="nav-right">
@@ -53,17 +54,18 @@
   <main id="main">
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero hero-home">
       <div class="wrap">
-        <div class="hero-panel reveal in">
+        <div class="hero-panel">
           <div class="hero-copy">
-            <span class="kicker">Orange County's minimally invasive urology</span>
-            <h1 class="disp d-hero"><span class="nw">Precision care</span><br><span class="nw">Minimal downtime</span><br><span class="co nw">Better outcomes</span></h1>
-            <p class="lede">Board-certified urologist Dr. Hari Sawkar brings biomedical engineering expertise and advanced technology to men's and women's urologic health, from robotic surgery to office-based procedures that get you back to life faster.</p>
+            <span class="kicker">Urology in Tustin &middot; Orange County</span>
+            <h1 class="disp d-hero">Minimally invasive urology in Orange County.<span class="co"> From office procedures to robotic surgery.</span></h1>
+            <p class="lede">Dr. Hari Sawkar is a board-certified urologist in Tustin and Chief of Urology at Providence St. Joseph Hospital.<span class="hide-m"> He treats prostate, kidney, and men's health conditions in men and women, with the least invasive option that will do the job.</span></p>
             <div class="hero-cta">
               <a class="btn bone" href="contact.html">Request an appointment</a>
-              <a class="btn ghost-d" href="#treatments">Explore treatments <span class="arr">→</span></a>
+              <a class="btn ghost-d hide-m" href="#treatments">Explore treatments <span class="arr" aria-hidden="true">&#8595;</span></a>
             </div>
+            <p class="hero-note">Medicare and most PPO plans, no referral needed<span class="hide-m"> &middot; Same-day and next-day visits for urgent concerns</span> &middot; Telehealth available</p>
           </div>
           <div class="hero-art">
             <img src="assets/img/ink-kidney.webp" alt="A fine contour-line rendering of a human kidney in cobalt light" fetchpriority="high" width="1100" height="1335">
@@ -72,85 +74,137 @@
       </div>
     </section>
 
-    <!-- TREATMENTS INDEX -->
-    <section class="sec" id="treatments">
+    <!-- PROOF -->
+    <section class="proof" aria-label="By the numbers">
       <div class="wrap">
-        <div class="sec-head reveal">
-          <h2 class="disp d-lg">Minimally invasive urology solutions</h2>
-          <p class="lede">Dr. Sawkar pairs advanced technology with precision training from USC and Northwestern to get you better, with less pain and a faster recovery.</p>
+        <div class="proof-row">
+          <div class="proof-item"><div class="proof-n"><span data-count="250">250</span><i>+</i></div><p>Aquablation procedures, the highest volume of any surgeon in Orange County</p></div>
+          <div class="proof-item"><div class="proof-n"><i>~</i><span data-count="16">16</span></div><p>PAE procedures a month, in a urologist-led program</p></div>
+          <div class="proof-item hide-m"><div class="proof-n txt">Chief of Urology</div><p>Providence St. Joseph Hospital, Orange</p></div>
+          <div class="proof-item hide-m"><div class="proof-n txt">Board certified</div><p>American Board of Urology. Residency at USC, medical school at Northwestern.</p></div>
         </div>
-        <div class="tx reveal d1">
-          <div class="tx-rows" id="txRows">
-            <a class="tx-row on" href="bph.html" data-art="ink-bph">
-              <span class="tx-num">01</span>
-              <span><span class="tx-name">Enlarged prostate</span><span class="tx-desc">Four modern options for BPH treatment in Orange County: urologist-led PAE, UroLift, Rez&#363;m, and Aquablation. No incisions, minimal downtime, often no catheter.</span></span>
-              <span class="tx-arr">↗</span>
-            </a>
-            <a class="tx-row" href="prostate-cancer.html" data-art="ink-pca2">
-              <span class="tx-num">02</span>
-              <span><span class="tx-name">Prostate cancer</span><span class="tx-desc">Da Vinci robotic-assisted prostatectomy with a precise, nerve-sparing technique for optimal recovery of function.</span></span>
-              <span class="tx-arr">↗</span>
-            </a>
-            <a class="tx-row" href="kidney-stones.html" data-art="ink-stone">
-              <span class="tx-num">03</span>
-              <span><span class="tx-name">Kidney stones</span><span class="tx-desc">Lithotripsy, ureteroscopy, and laser stone fragmentation. Most procedures are outpatient with same-day discharge.</span></span>
-              <span class="tx-arr">↗</span>
-            </a>
-            <a class="tx-row" href="kidney-cancer.html" data-art="ink-kca">
-              <span class="tx-num">04</span>
-              <span><span class="tx-name">Kidney cancer</span><span class="tx-desc">Robotic partial nephrectomy that preserves kidney function while minimizing blood loss and recovery time.</span></span>
-              <span class="tx-arr">↗</span>
-            </a>
-            <a class="tx-row" href="mens-health.html" data-art="ink-mars">
-              <span class="tx-num">05</span>
-              <span><span class="tx-name">Men's health and ED</span><span class="tx-desc">Regenerative treatments including PRP and low-intensity shockwave therapy. Penile implants also available.</span></span>
-              <span class="tx-arr">↗</span>
-            </a>
-            <a class="tx-row" href="no-scalpel-vasectomy.html" data-art="ink-vas2">
-              <span class="tx-num">06</span>
-              <span><span class="tx-name">No-scalpel vasectomy</span><span class="tx-desc">An in-office procedure with no stitches, minimal discomfort, and a rapid return to normal activity. Simple all-in cash pricing.</span></span>
-              <span class="tx-arr">↗</span>
-            </a>
+      </div>
+    </section>
+
+    <!-- BPH OPTIONS (wide screens; on phones the first treatment row below carries these links) -->
+    <section class="sec-home hide-m" id="bph-options">
+      <div class="wrap">
+        <div class="h-head reveal">
+          <span class="h-eyebrow">Enlarged prostate</span>
+          <h2 class="h2 sm">Four BPH options, one urologist guiding the choice</h2>
+          <p class="h-lede">Dr. Sawkar offers all four, so the recommendation follows your anatomy and your priorities, not the one procedure a practice happens to offer.</p>
+        </div>
+        <div class="cards4 reveal stag">
+          <a class="card" href="pae.html"><b>PAE</b><span>Outpatient, light sedation. Back to routine in about a day.</span><em>Urologist-led PAE &#8594;</em></a>
+          <a class="card" href="aquablation.html"><b>Aquablation</b><span>Hospital, usually one night. A surgical-grade result at any size.</span><em>Aquablation &#8594;</em></a>
+          <a class="card" href="urolift.html"><b>UroLift</b><span>In the office, local anesthesia. Nothing removed, back within days.</span><em>UroLift &#8594;</em></a>
+          <a class="card" href="rezum.html"><b>Rez&#363;m</b><span>In the office, water vapor. No implants, back in a few days.</span><em>Rez&#363;m &#8594;</em></a>
+        </div>
+        <a class="more-link" href="bph.html">Compare all four side by side &#8594;</a>
+      </div>
+    </section>
+
+    <!-- WHAT DR. SAWKAR TREATS -->
+    <section class="sec-home" id="treatments">
+      <div class="wrap">
+        <div class="h-head reveal">
+          <h2 class="h2">What Dr. Sawkar treats</h2>
+          <p class="h-lede hide-m">Advanced technology and precision training, aimed at getting you better with less pain and a faster recovery.</p>
+        </div>
+        <div class="tx2 reveal">
+          <div class="tx2-rows">
+
+            <div class="tx2-item on" data-k="bph">
+              <a class="tx2-btn" href="bph.html"><span><span class="tx2-name">Enlarged prostate</span><span class="tx2-sub">PAE, Aquablation, UroLift, and Rez&#363;m</span></span><span class="tx2-ic" aria-hidden="true"><span>&#8594;</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></a>
+              <div class="tx2-panel"><div><div class="tx2-pin">
+                <p>Four modern options, with no incisions and minimal downtime.</p>
+                <div class="chiprow"><a href="pae.html">PAE</a><a href="aquablation.html">Aquablation</a><a href="urolift.html">UroLift</a><a href="rezum.html">Rez&#363;m</a></div>
+                <a href="bph.html">Compare all four &#8594;</a>
+              </div></div></div>
+            </div>
+
+            <div class="tx2-item" data-k="pca">
+              <a class="tx2-btn" href="prostate-cancer.html"><span><span class="tx2-name">Prostate cancer</span><span class="tx2-sub">Robotic prostatectomy</span></span><span class="tx2-ic" aria-hidden="true"><span>&#8594;</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></a>
+              <div class="tx2-panel"><div><div class="tx2-pin">
+                <p>Da Vinci robotic-assisted prostatectomy with a precise, nerve-sparing technique.</p>
+                <a href="prostate-cancer.html">Prostate cancer care &#8594;</a>
+              </div></div></div>
+            </div>
+
+            <div class="tx2-item" data-k="stone">
+              <a class="tx2-btn" href="kidney-stones.html"><span><span class="tx2-name">Kidney stones</span><span class="tx2-sub">Lithotripsy and laser ureteroscopy</span></span><span class="tx2-ic" aria-hidden="true"><span>&#8594;</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></a>
+              <div class="tx2-panel"><div><div class="tx2-pin">
+                <p>Lithotripsy, ureteroscopy, and laser fragmentation. Most are outpatient with same-day discharge.</p>
+                <a href="kidney-stones.html">Kidney stone treatment &#8594;</a>
+              </div></div></div>
+            </div>
+
+            <div class="tx2-item" data-k="kca">
+              <a class="tx2-btn" href="kidney-cancer.html"><span><span class="tx2-name">Kidney cancer</span><span class="tx2-sub">Robotic partial nephrectomy</span></span><span class="tx2-ic" aria-hidden="true"><span>&#8594;</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></a>
+              <div class="tx2-panel"><div><div class="tx2-pin">
+                <p>Robotic partial nephrectomy that preserves kidney function.</p>
+                <a href="kidney-cancer.html">Kidney cancer care &#8594;</a>
+              </div></div></div>
+            </div>
+
+            <div class="tx2-item" data-k="mens">
+              <a class="tx2-btn" href="mens-health.html"><span><span class="tx2-name">Men's health and ED</span><span class="tx2-sub">Regenerative and hormonal treatment, implants</span></span><span class="tx2-ic" aria-hidden="true"><span>&#8594;</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></a>
+              <div class="tx2-panel"><div><div class="tx2-pin">
+                <p>Regenerative treatments including PRP and shockwave therapy. Penile implants also available.</p>
+                <a href="mens-health.html">Men's health &#8594;</a>
+              </div></div></div>
+            </div>
+
+            <div class="tx2-item last" data-k="vas">
+              <a class="tx2-btn" href="no-scalpel-vasectomy.html"><span><span class="tx2-name">No-scalpel vasectomy</span><span class="tx2-sub">In the office, no stitches</span></span><span class="tx2-ic" aria-hidden="true"><span>&#8594;</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></a>
+              <div class="tx2-panel"><div><div class="tx2-pin">
+                <p>In the office, no stitches, with simple all-in cash pricing.</p>
+                <a href="no-scalpel-vasectomy.html">Vasectomy details &#8594;</a>
+              </div></div></div>
+            </div>
+
+            <a class="more-link" href="services.html">All services &#8594;</a>
           </div>
-          <div class="tx-stage" id="txStage" aria-hidden="true">
-            <img src="assets/img/ink-bph.webp" alt="" data-art="ink-bph" class="show">
-            <img src="assets/img/ink-pca2.webp" alt="" data-art="ink-pca2" loading="lazy">
-            <img src="assets/img/ink-stone.webp" alt="" data-art="ink-stone" loading="lazy">
-            <img src="assets/img/ink-kca.webp" alt="" data-art="ink-kca" loading="lazy">
-            <img src="assets/img/ink-mars.webp" alt="" data-art="ink-mars" loading="lazy">
-            <img src="assets/img/ink-vas2.webp" alt="" data-art="ink-vas2" loading="lazy">
+
+          <div class="tx2-stage">
+            <article class="tx2-art show" data-k="bph">
+              <img src="assets/img/ink-bph.webp" alt="">
+              <div class="tx2-cap"><h3>Enlarged prostate</h3><p>Four modern options for BPH: urologist-led PAE, UroLift, Rez&#363;m, and Aquablation. No incisions, minimal downtime, often no catheter.</p><a href="bph.html">Enlarged prostate treatment &#8594;</a></div>
+            </article>
+            <article class="tx2-art" data-k="pca">
+              <img src="assets/img/ink-pca2.webp" alt="" loading="lazy">
+              <div class="tx2-cap"><h3>Prostate cancer</h3><p>Da Vinci robotic-assisted prostatectomy with a precise, nerve-sparing technique for optimal recovery of function.</p><a href="prostate-cancer.html">Prostate cancer care &#8594;</a></div>
+            </article>
+            <article class="tx2-art" data-k="stone">
+              <img src="assets/img/ink-stone.webp" alt="" loading="lazy">
+              <div class="tx2-cap"><h3>Kidney stones</h3><p>Lithotripsy, ureteroscopy, and laser stone fragmentation. Most procedures are outpatient with same-day discharge.</p><a href="kidney-stones.html">Kidney stone treatment &#8594;</a></div>
+            </article>
+            <article class="tx2-art" data-k="kca">
+              <img src="assets/img/ink-kca.webp" alt="" loading="lazy">
+              <div class="tx2-cap"><h3>Kidney cancer</h3><p>Robotic partial nephrectomy that preserves kidney function while minimizing blood loss and recovery time.</p><a href="kidney-cancer.html">Kidney cancer care &#8594;</a></div>
+            </article>
+            <article class="tx2-art" data-k="mens">
+              <img src="assets/img/ink-mars.webp" alt="" loading="lazy">
+              <div class="tx2-cap"><h3>Men's health and ED</h3><p>Regenerative treatments including PRP and low-intensity shockwave therapy. Penile implants also available.</p><a href="mens-health.html">Men's health &#8594;</a></div>
+            </article>
+            <article class="tx2-art" data-k="vas">
+              <img src="assets/img/ink-vas2.webp" alt="" loading="lazy">
+              <div class="tx2-cap"><h3>No-scalpel vasectomy</h3><p>An in-office procedure with no stitches, minimal discomfort, and a rapid return to normal activity. Simple all-in cash pricing.</p><a href="no-scalpel-vasectomy.html">Vasectomy details &#8594;</a></div>
+            </article>
           </div>
         </div>
       </div>
     </section>
 
-
-    <!-- PATIENT GUIDES -->
-    <section class="sec" id="guides" style="padding-top:0">
+    <!-- DOCTOR -->
+    <section class="sec-home" id="surgeon">
       <div class="wrap">
-        <div class="sec-head reveal">
-          <h2 class="disp d-lg">Patient guides, written by the surgeon</h2>
-          <p class="lede">Plain-language reference pages that decode the numbers on your report and what each treatment really involves. No sign-up, no fluff.</p>
-        </div>
-        <div class="adv reveal">
-          <div class="adv-item"><span class="ai"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div><h4><a href="prostate-size-chart.html">Prostate size chart by age</a></h4><p>Normal volume by decade, what size is dangerous, cc and grams explained, plus a volume calculator.</p></div></div>
-          <div class="adv-item"><span class="ai"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div><h4><a href="ipss-calculator.html">IPSS symptom score calculator</a></h4><p>The seven-question score urologists use, scored instantly with what your number means.</p></div></div>
-          <div class="adv-item"><span class="ai"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div><h4><a href="post-void-residual.html">Post-void residual, decoded</a></h4><p>What a bladder-scan number from under 50 mL to over 200 mL means for BPH.</p></div></div>
-          <div class="adv-item"><span class="ai"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div><h4><a href="psa-levels-by-age.html">PSA levels by age</a></h4><p>Typical ranges by decade and when a number deserves a closer look.</p></div></div>
-          <div class="adv-item"><span class="ai"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div><h4><a href="flomax-alternatives.html">Flomax and tamsulosin alternatives</a></h4><p>The other pills, and the four one-time procedures that end the prescription.</p></div></div>
-          <div class="adv-item"><span class="ai"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div><h4><a href="turp-alternatives.html">Alternatives to TURP</a></h4><p>Told you need TURP? PAE, Aquablation, UroLift, and Rez&#363;m, compared honestly.</p></div></div>
-          <div class="adv-item"><span class="ai"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div><h4><a href="kidney-stone-size-chart.html">Kidney stone size chart</a></h4><p>The odds a stone passes on its own by millimeter, how long it takes, and when to treat.</p></div></div>
-          <div class="adv-item"><span class="ai"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><div><h4><a href="aquablation-recovery.html">Recovery timelines, week by week</a></h4><p>For <a href="aquablation-recovery.html">Aquablation</a>, <a href="pae-recovery.html">PAE</a>, <a href="urolift-recovery.html">UroLift</a>, and <a href="rezum-recovery.html">Rez&#363;m</a>, from the surgeon who does them.</p></div></div>
-        </div>
-      </div>
-    </section>
-    <!-- SURGEON -->
-    <section class="sec" id="surgeon" style="padding-top:0">
-      <div class="wrap">
-        <div class="dr reveal">
+        <div class="dr dr-home reveal">
           <div class="dr-photo"><img src="assets/img/dr-sawkar.webp" alt="Dr. Hari Sawkar, MD, urologist in Orange County" loading="lazy" width="960" height="1155"></div>
           <div class="dr-body">
-            <h2 class="disp d-md">Engineering precision, clinical excellence</h2>
+            <span class="h-eyebrow">Your urologist</span>
+            <h2 class="h2">Hari Sawkar, MD</h2>
+            <span class="dr-mini only-m">Board certified. Chief of Urology at Providence St. Joseph.</span>
             <p class="lede">Dr. Hari Sawkar's training began in biomedical engineering at George Washington University and was refined at Northwestern's Feinberg School of Medicine and USC urology residency. Today he is Chief of Urology at St. Joseph Hospital and, with more than 250 procedures, the <a href="aquablation.html">highest-volume Aquablation surgeon in Orange County</a>. He also runs a <a href="pae-urologist-vs-radiologist.html">urologist-led PAE program</a> that performs about 16 procedures a month, an approach that is uncommon in Orange County: he decides whether prostate artery embolization is right and manages everything before and after, while an interventional radiologist performs it in the practice&#39;s own lab, so men with an enlarged prostate have one urologist guiding every option.</p>
             <div class="dr-creds">
               <div><b>BS, Biomedical Engineering</b><small>George Washington University, magna cum laude</small></div>
@@ -164,8 +218,63 @@
       </div>
     </section>
 
+    <!-- PATIENT GUIDES -->
+    <section class="sec-home" id="guides">
+      <div class="wrap">
+        <div class="h-head reveal">
+          <h2 class="h2">Patient guides<span class="hide-m">, written by the surgeon</span></h2>
+          <p class="h-lede hide-m">Plain-language pages that decode the numbers on your report. No sign-up.</p>
+        </div>
+        <div class="cards4 tiles reveal stag">
+          <a class="card guide" href="prostate-size-chart.html"><b>Prostate size chart</b><span>Normal volume by decade, and which treatments fit which size.</span></a>
+          <a class="card guide" href="kidney-stone-size-chart.html"><b>Kidney stone size chart</b><span>The odds a stone passes on its own by millimeter, and when to treat.</span></a>
+          <a class="card guide" href="ipss-calculator.html"><b>Prostate symptom score</b><span>The seven-question score urologists use, scored instantly.</span></a>
+          <a class="card guide" href="psa-levels-by-age.html"><b>PSA levels by age</b><span>Typical ranges by decade, and when a number deserves a closer look.</span></a>
+        </div>
+        <p class="more-guides"><span class="lab">More guides: </span><a href="post-void-residual.html">Post-void residual</a><i>&middot;</i><a href="prostate-volume-calculator.html">Prostate volume calculator</a><i>&middot;</i><a href="flomax-alternatives.html">Flomax alternatives</a><i>&middot;</i><a href="turp-alternatives.html">Alternatives to TURP</a><i>&middot;</i><a href="aquablation-recovery.html">Aquablation recovery</a><i>&middot;</i><a href="pae-recovery.html">PAE recovery</a><i>&middot;</i><a href="urolift-recovery.html">UroLift recovery</a><i>&middot;</i><a href="rezum-recovery.html">Rez&#363;m recovery</a></p>
+      </div>
+    </section>
+
+    <!-- IN A PATIENT'S WORDS
+         One short excerpt from a public Google review (July 2023). Before this page goes
+         live, get the patient's written permission to reuse it, or remove this section.
+         To add more, repeat the <figure> block. Never publish invented testimonials. -->
+    <section class="sec-home" aria-label="In a patient's words">
+      <div class="wrap">
+        <figure class="quote reveal">
+          <span class="h-eyebrow">In a patient's words</span>
+          <blockquote>&ldquo;[I] sleep through the night and wake up well rested and energetic.&rdquo;</blockquote>
+          <figcaption>Aquablation patient &middot; Google review, July 2023<small>Individual results vary.</small></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="sec-home" id="visit">
+      <div class="wrap">
+        <div class="visit reveal">
+          <div class="map"><iframe src="https://maps.google.com/maps?q=18302%20Irvine%20Blvd%20Suite%20200%20Tustin%20CA%2092780&output=embed" loading="lazy" title="Map to 18302 Irvine Blvd, Suite 200, Tustin, CA 92780" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+          <div class="visit-body">
+            <h2 class="h2">Visit the Tustin office</h2>
+            <dl class="facts">
+              <div><dt>Address</dt><dd>18302 Irvine Blvd, Suite 200, Tustin, CA 92780</dd></div>
+              <div><dt>Hours</dt><dd>Monday to Friday, 9 AM to 5 PM<span class="only-mi">. Free parking.</span></dd></div>
+              <div class="hide-m"><dt>Parking</dt><dd>Free, on site</dd></div>
+              <div class="hide-m"><dt>Insurance</dt><dd>Medicare and most PPO plans</dd></div>
+              <div class="hide-m"><dt>Referral</dt><dd>Not needed with Medicare or a PPO plan</dd></div>
+              <div class="hide-m"><dt>Telehealth</dt><dd>Available for a first consultation</dd></div>
+            </dl>
+            <div class="hero-cta">
+              <a class="btn ink" href="https://maps.google.com/?q=18302+Irvine+Blvd+Suite+200+Tustin+CA+92780" target="_blank" rel="noopener">Get directions</a>
+              <a class="btn ghost hide-m" href="contact.html">Request an appointment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- AFFILIATIONS -->
-    <section class="affil">
+    <section class="affil home hide-m">
       <div class="wrap">
         <p class="affil-lab">Affiliations and certifications</p>
         <div class="affil-logos">
@@ -181,13 +290,13 @@
     </section>
 
     <!-- CTA -->
-    <section class="sec" id="visit" style="padding-top:0">
+    <section class="sec-home hide-m">
       <div class="wrap">
-        <div class="cta reveal">
-          <div class="bg"><img src="assets/img/photo-dusk.webp" alt=""></div>
+        <div class="cta home reveal">
+          <div class="bg"><img src="assets/img/photo-dusk.webp" alt="" loading="lazy"></div>
           <div class="cta-in">
             <h2 class="disp d-lg">Start with a conversation</h2>
-            <p>Same-day and next-day appointments for urgent concerns. Medicare and most PPO plans accepted, and telehealth consultations available. For the fastest response, send the office a secure message; it goes to the new patient coordinator through Klara, the practice's secure messaging platform, and the reply comes back to you by text.</p>
+            <p>Text the office and the new patient coordinator replies by text, usually the same business day. The phone is answered Monday to Friday, 9 to 5.</p>
             <p class="cta-proof">Chief of Urology, Providence St. Joseph Hospital &middot; UroLift Center of Excellence &middot; Orange County's highest-volume Aquablation surgeon</p>
             <div class="hero-cta">
               <a class="btn bone" href="contact.html">Request an appointment</a>
@@ -217,6 +326,9 @@
     </div>
   </footer>
 
+  <!-- PRESTIGE MEDICAL GROUP -->
+  <div class="pmg"><div class="wrap"><span>Dr. Sawkar practices as part of</span><a href="https://prestigemedigroup.com" target="_blank" rel="noopener"><img src="assets/img/prestige-medical-group.png" alt="Prestige Medical Group" width="416" height="62" loading="lazy"></a></div></div>
+
   <script>
     // Nav border via sentinel (no scroll listener)
     const nav = document.getElementById('nav');
@@ -234,16 +346,8 @@
     } else {
       document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
     }
-
-    // Treatments index: hover swaps the anatomy artwork
-    const rows = document.querySelectorAll('.tx-row');
-    const arts = document.querySelectorAll('#txStage img');
-    rows.forEach(row => row.addEventListener('mouseenter', () => {
-      rows.forEach(r => r.classList.remove('on'));
-      row.classList.add('on');
-      arts.forEach(img => img.classList.toggle('show', img.dataset.art === row.dataset.art));
-    }));
   </script>
-  <div class="callbar"><a class="cb primary" href="contact.html#request">Message the office</a><a class="cb" href="tel:+17149198143">Call</a></div>
+  <script src="assets/js/site.js" defer></script>
+  <div class="callbar"><a class="cb primary" href="contact.html#request">Request an appointment</a><a class="cb" href="tel:+17149198143">Call</a></div>
 </body>
 </html>

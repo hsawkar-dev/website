@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://widget-fe.klara.com">
   <link rel="preconnect" href="https://patient.klara.com">
-  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+  <noscript><style>.reveal,.reveal.stag>*{opacity:1;transform:none}</style></noscript>
   <!-- seo:begin -->
   <link rel="canonical" href="https://www.drsawkar.com/contact.html">
   <meta property="og:type" content="website">
@@ -42,7 +42,8 @@
       <a class="brand" href="/"><span class="b-name">Dr. Hari Sawkar</span><span class="b-sub"><span>MD</span><i aria-hidden="true"></i><span>Urology</span></span></a>
       <ul class="nav-links">
         <li><a href="services.html">Treatments</a></li>
-        <li><a href="surgeon.html">Surgeon</a></li>
+        <li><a href="surgeon.html">Dr. Sawkar</a></li>
+        <li><a href="/#guides">Patient guides</a></li>
         <li><a href="contact.html">Visit</a></li>
       </ul>
       <div class="nav-right">
@@ -55,7 +56,7 @@
   <main id="main">
 
     <!-- INTRO -->
-    <section class="sec" style="padding-bottom:64px">
+    <section class="sec contact-top">
       <div class="wrap">
         <div class="hw-head reveal in">
           <div>
@@ -63,8 +64,34 @@
             <h1 class="disp d-lg" style="margin-top:14px">Contact and appointments</h1>
           </div>
           <div class="hw-body">
-            <p class="lede">New patients are welcome. The easiest way to reach the office is to send a secure message right from this page, for scheduling and questions alike; the new patient coordinator replies to you by text. Same-day and next-day appointments are available for urgent concerns, and an initial consultation can also be done by telehealth.</p>
+            <p class="lede">New patients are welcome, and no referral is needed with Medicare or a PPO plan. Text the office from this page and the new patient coordinator replies by text, usually the same business day. Same-day and next-day appointments are available for urgent concerns, and a first consultation can be done by telehealth.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THREE WAYS TO REACH THE OFFICE -->
+    <section style="padding:0 0 18px">
+      <div class="wrap">
+        <div class="acts reveal stag">
+          <a class="act primary" href="#klara">
+            <span class="h-eyebrow">Fastest</span>
+            <b>Text the office</b>
+            <span class="s">Replies by text, usually the same business day</span>
+            <em>Open the message box &#8595;</em>
+          </a>
+          <a class="act" href="tel:+17149198143">
+            <span class="h-eyebrow">By phone</span>
+            <b>(714) 919-8143</b>
+            <span class="s"><i class="sh-dot" aria-hidden="true"></i><span data-office-status>Monday to Friday, 9 AM to 5 PM</span></span>
+            <em>Call the office &#8594;</em>
+          </a>
+          <a class="act" href="https://maps.google.com/?q=18302+Irvine+Blvd+Suite+200+Tustin+CA+92780" target="_blank" rel="noopener">
+            <span class="h-eyebrow">Tustin office</span>
+            <b>18302 Irvine Blvd, Suite 200</b>
+            <span class="s">Tustin, CA 92780. Free parking on site.</span>
+            <em>Get directions &#8594;</em>
+          </a>
         </div>
       </div>
     </section>
@@ -93,26 +120,22 @@
       </div>
     </section>
 
-    <!-- BAND -->
-    <section style="padding:0">
-      <div class="wrap">
-        <div class="cover reveal">
-          <span class="chk"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></span>
-          <span>Accepting new patients, with <b>same-day and next-day appointments</b> for urgent concerns.</span>
-        </div>
-      </div>
-    </section>
-
     <!-- CALL OR TEXT -->
     <section class="sec" id="request" style="padding:64px 0 0">
       <div class="wrap">
-        <div class="hw-head reveal">
-          <h2 class="disp d-lg">Message the office</h2>
+        <div class="hw-head reveal" style="margin-bottom:28px">
+          <h2 class="disp d-lg">Text the office</h2>
           <div class="hw-body">
-            <p class="lede">The message box below is the fastest way to reach the office. It goes straight to the new patient coordinator through Klara, the practice's secure messaging platform, and the reply comes back to you by text. Send one any time of day; the phone is answered Monday through Friday, 9 to 5, if you would rather talk.</p>
-            <p class="tblnote" style="max-width:66ch">Please keep a first message to scheduling basics rather than detailed medical information. For a medical emergency, call 911 or go to the nearest emergency room.</p>
+            <p class="lede">The message box is the fastest way to reach the office, any time of day. It goes straight to the new patient coordinator, and the reply comes back to you by text. The phone is answered Monday through Friday, 9 to 5, if you would rather talk.</p>
           </div>
         </div>
+        <div class="msg">
+          <ol class="msg-steps reveal">
+            <li><b>You will see &ldquo;Prestige Medical Group&rdquo;</b><p>That is the medical group Dr. Sawkar practices with. The message window carries its name, so you are in the right place.<img src="assets/img/prestige-medical-group.png" alt="Prestige Medical Group" width="416" height="62" loading="lazy"></p></li>
+            <li><b>Klara confirms your cell number</b><p>Klara is the group's secure messaging service. Enter your cell number, tap Login, and it texts you a code.</p></li>
+            <li><b>Write one line, get a reply by text</b><p>Say whether you are a new patient and what you need. Keep it to scheduling basics rather than detailed medical information.<span class="eg">New patient, kidney stone, mornings work best.</span></p></li>
+          </ol>
+          <div>
         <!-- Klara secure messenger. Desktop and Android get the in-page panel (iframe injected
              below); iPhones get a direct patient.klara.com link instead - Klara's own app blocks
              the inline composer under Safari's third-party-cookie rules and exits to a new tab,
@@ -169,14 +192,16 @@
             maybeEmbed();
           })();
         </script>
-        <p class="tblnote reveal">Your message goes straight to the new patient coordinator, and the reply comes to you by text at the number you enter. If the message box doesn't load, <a href="https://patient.klara.com/#/widget/10acdbe6-eddf-4a75-92f8-9c28e3fbfcf7" target="_blank" rel="noopener noreferrer">open the messenger in its own tab</a> or call <a href="tel:+17149198143">(714) 919-8143</a>.</p>
+        <p class="tblnote reveal">If the message box doesn't load, <a href="https://patient.klara.com/#/widget/10acdbe6-eddf-4a75-92f8-9c28e3fbfcf7" target="_blank" rel="noopener noreferrer">open the messenger in its own tab</a> or call <a href="tel:+17149198143">(714) 919-8143</a>. For a medical emergency, call 911 or go to the nearest emergency room.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- INFO CARDS -->
     <section class="sec" style="padding-top:64px">
       <div class="wrap">
-        <div class="bph-grid reveal">
+        <div class="bph-grid fold-m reveal">
 
           <article class="bph-card">
             <div class="bph-tag">Phone &middot; fax</div>
@@ -220,6 +245,7 @@
             <p class="what">Most major insurance plans are accepted, including Medicare and PPO plans. The staff verifies your coverage before your visit and explains any out-of-pocket cost, so there are no surprises.</p>
             <ul>
               <li>Medicare, PPO, and most major plans</li>
+              <li>No referral needed with Medicare or a PPO plan</li>
               <li>Coverage verified before your visit</li>
               <li>Cash pricing available for vasectomy</li>
             </ul>
@@ -244,7 +270,7 @@
         <div class="sec-head reveal">
           <h2 class="disp d-lg">Before your first visit</h2>
         </div>
-        <div class="steps reveal">
+        <div class="steps fold-m reveal">
           <div class="step">
             <div class="n">01</div>
             <h4>What to bring</h4>
@@ -271,7 +297,7 @@
           <h2 class="disp d-lg">Where procedures are performed</h2>
           <p class="lede">Office-based procedures are done on site. Surgical procedures are performed at Providence St. Joseph Hospital in Orange, Pavilion Surgery Center, and Surgicare of La Veta.</p>
         </div>
-        <div class="steps reveal">
+        <div class="steps fold-m reveal">
           <div class="step">
             <div class="n">01</div>
             <h4>In the office</h4>
@@ -292,7 +318,7 @@
     </section>
 
     <!-- CTA -->
-    <section class="sec" id="visit" style="padding-top:0">
+    <section class="sec hide-m" id="visit" style="padding-top:0">
       <div class="wrap">
         <div class="cta reveal">
           <div class="bg"><img src="assets/img/photo-dusk.webp" alt=""></div>
@@ -329,6 +355,9 @@
     </div>
   </footer>
 
+  <!-- PRESTIGE MEDICAL GROUP -->
+  <div class="pmg"><div class="wrap"><span>Dr. Sawkar practices as part of</span><a href="https://prestigemedigroup.com" target="_blank" rel="noopener"><img src="assets/img/prestige-medical-group.png" alt="Prestige Medical Group" width="416" height="62" loading="lazy"></a></div></div>
+
   <script>
     const nav = document.getElementById('nav');
     new IntersectionObserver(([e]) => nav.classList.toggle('scrolled', !e.isIntersecting))
@@ -343,6 +372,7 @@
       document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
     }
   </script>
-  <div class="callbar"><a class="cb primary" href="contact.html#request">Message the office</a><a class="cb" href="tel:+17149198143">Call</a></div>
+  <script src="assets/js/site.js" defer></script>
+  <div class="callbar"><a class="cb primary" href="contact.html#request">Request an appointment</a><a class="cb" href="tel:+17149198143">Call</a></div>
 </body>
 </html>
