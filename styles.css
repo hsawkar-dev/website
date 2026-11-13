@@ -827,6 +827,16 @@ a.xp-chip.on:hover{background:var(--cobalt-deep)}
   .px-on .flow-step::before{display:none}
 }
 
+/* ---------- Aquablation, UroLift and Rezum explainers (assets/js/explainers.js) ----------
+   They reuse the .px- stage above. Added here: labels the script switches on and off, and the counter in the corner. */
+.px-lab.px-t{opacity:0;color:#fff}
+.px-lab.px-t.on{opacity:1}
+.px-count{position:absolute;right:14px;bottom:14px;padding:8px 12px;border-radius:99px;background:rgba(6,12,36,.72);font-family:var(--mono);font-size:12.5px;line-height:1;
+  letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;color:var(--ice)}
+.px-count[hidden]{display:none}
+.px-count b{font-weight:500;color:#fff}
+@media(max-width:620px){.px-count{right:12px;bottom:10px;font-size:11.5px}}
+
 /* ---------- motion ---------- */
 @view-transition{navigation:auto}
 ::view-transition-old(root),::view-transition-new(root){animation-duration:.26s}
