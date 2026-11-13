@@ -633,6 +633,75 @@ dialog.menu{background:var(--panel);color:var(--paper);width:100%;max-width:100%
 .m-acts{display:flex;flex-direction:column;gap:10px;padding-top:12px}
 .m-acts .btn{min-height:56px;justify-content:center;font-size:17px}
 
+/* ---------- prostate size explorer (prostate-size-chart.html, assets/js/size-explorer.js) ---------- */
+.xp{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px 56px;align-items:center;margin-bottom:60px}
+.xp[hidden],.xp-more{display:none}
+.xp-stage{position:relative;aspect-ratio:1/1;background:var(--panel);border-radius:var(--r);overflow:hidden;container-type:size}
+.xp-stage svg{display:block;width:100%;height:100%}
+.xp-gland,.xp-bladder{transition:transform .22s cubic-bezier(.2,.8,.2,1)}
+.xp-still .xp-gland,.xp-still .xp-bladder{transition:none}
+.xp-cap,.xp-key{position:absolute;font-family:var(--mono);font-size:12.5px;line-height:1.4;letter-spacing:.05em;color:rgba(244,244,241,.7)}
+.xp-cap{top:16px;left:20px;text-transform:uppercase;letter-spacing:.1em;color:var(--ice)}
+.xp-key{left:20px;bottom:14px}
+/* the bar is 5 cm at the drawing's scale: 180 of the 400 units across the square artwork */
+.xp-key i{display:block;width:calc(min(100cqw,100cqh)*.45);height:7px;margin-bottom:7px;border:1.4px solid rgba(244,244,241,.75);border-top:0}
+.xp-lab{position:absolute;top:16px;right:20px;font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(244,244,241,.5)}
+.xp-read{display:flex;flex-direction:column;gap:12px}
+.xp-num{display:flex;align-items:baseline;gap:10px;margin-top:2px;font-family:var(--disp);font-weight:650;letter-spacing:-.03em;line-height:.95}
+.xp-num output{font-size:clamp(64px,7vw,92px);font-variant-numeric:tabular-nums}
+.xp-num span{font-size:28px;color:var(--ink-2)}
+.xp-like{font-family:var(--disp);font-weight:600;font-size:clamp(22px,2.2vw,28px);line-height:1.15;letter-spacing:-.02em;color:var(--cobalt)}
+.xp-sub{font-size:16px;color:var(--ink-2)}
+.xp-slide{position:relative;padding-bottom:28px;margin-top:4px}
+.xp-slide input{-webkit-appearance:none;appearance:none;display:block;width:100%;height:44px;margin:0;background:transparent;cursor:pointer;touch-action:pan-y}
+.xp-slide input::-webkit-slider-runnable-track{height:6px;border-radius:6px;
+  background:linear-gradient(90deg,var(--cobalt) calc(17px + (100% - 34px)*var(--pf,.4)),var(--line-2) 0)}
+.xp-slide input::-webkit-slider-thumb{-webkit-appearance:none;width:34px;height:34px;margin-top:-14px;border-radius:50%;background:#fff;
+  border:2px solid var(--cobalt);box-shadow:0 2px 10px rgba(13,18,24,.22)}
+.xp-slide input::-moz-range-track{height:6px;border-radius:6px;background:var(--line-2)}
+.xp-slide input::-moz-range-progress{height:6px;border-radius:6px;background:var(--cobalt)}
+.xp-slide input::-moz-range-thumb{width:30px;height:30px;border-radius:50%;background:#fff;border:2px solid var(--cobalt);box-shadow:0 2px 10px rgba(13,18,24,.22)}
+.xp-slide input:focus-visible{outline:2px solid var(--cobalt);outline-offset:4px;border-radius:8px}
+.xp-ticks{position:absolute;left:17px;right:17px;bottom:0;height:22px}
+.xp-ticks span{position:absolute;top:4px;transform:translateX(-50%);font-family:var(--mono);font-size:12.5px;line-height:1;color:var(--ink-2)}
+.xp-ticks span::before{content:"";position:absolute;left:50%;top:-8px;width:1px;height:6px;background:#9A9C94}
+.xp-type{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;font-size:16px;color:var(--ink-2)}
+.xp-type input{width:96px;padding:10px 12px;border:1.5px solid var(--line-2);border-radius:12px;background:#fff;color:var(--ink);font:600 18px/1.2 var(--body)}
+.xp-type input:focus{outline:none;border-color:var(--cobalt)}
+.xp-info{display:flex;flex-direction:column;gap:10px;margin-top:6px;padding-top:18px;border-top:1px solid var(--line-2)}
+.xp-band{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.xp-means{font-size:18px;line-height:1.5;color:var(--ink)}
+.xp-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.xp-chip{padding:9px 15px;border-radius:99px;border:1px solid var(--line-2);font-weight:600;font-size:16px;line-height:1.3;color:var(--ink-2);opacity:.55;
+  transition:background .2s,color .2s,border-color .2s,opacity .2s}
+.xp-chip.on{background:var(--cobalt);border-color:var(--cobalt);color:#fff;opacity:1}
+a.xp-chip.on:hover{background:var(--cobalt-deep)}
+.xp[data-row="0"] .xp-chips{display:none}
+.xp-fit{font-size:17px;line-height:1.55;color:var(--ink-2)}
+.xp-local{margin-top:4px;font-size:16px;line-height:1.5;color:var(--ink-2)}
+.xp-local a{color:var(--cobalt);font-weight:600;white-space:nowrap}
+@media(max-width:960px){.xp{grid-template-columns:1fr;gap:20px}.xp-stage{aspect-ratio:16/10}}
+@media(max-width:620px){
+  .xp{gap:14px;margin:16px 0 4px}
+  .xp-stage{aspect-ratio:16/11;border-radius:18px}
+  .xp-cap{top:12px;left:14px}
+  .xp-key{left:14px;bottom:8px;font-size:12px}
+  .xp-lab{top:12px;right:14px}
+  .xp-read{gap:8px}
+  .xp-read>.h-eyebrow{display:none}
+  .xp-num output{font-size:58px}
+  .xp-num span{font-size:24px}
+  .xp-like{font-size:22px}
+  .xp-info{margin-top:4px;padding-top:14px}
+  .xp-means{font-size:17px}
+  .xp-more{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:56px;margin-top:10px;padding:12px 2px;appearance:none;background:none;
+    border:0;border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);font:600 18px var(--body);color:var(--ink);cursor:pointer;text-align:left}
+  .xp-more span{font-weight:500;font-size:24px;line-height:1;color:var(--cobalt);transition:transform .2s}
+  .xp-table-open .xp-more span{transform:rotate(45deg)}
+  .xp-on:not(.xp-table-open) .tblwrap{display:none}
+  .xp-on .xp-more+.tblwrap{margin-top:0}
+}
+
 /* ---------- motion ---------- */
 @view-transition{navigation:auto}
 ::view-transition-old(root),::view-transition-new(root){animation-duration:.26s}
