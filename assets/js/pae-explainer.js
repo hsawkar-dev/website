@@ -21,7 +21,7 @@
   var again = stage.querySelector('.px-again');
   var twigs = { L: [].slice.call(svg.querySelectorAll('.px-tw.L')), R: [].slice.call(svg.querySelectorAll('.px-tw.R')) };
   var balls = { L: [].slice.call(svg.querySelectorAll('.px-ms.L')), R: [].slice.call(svg.querySelectorAll('.px-ms.R')) };
-  var HOLD = [0, 3400, 4200, 6400, 5600];        /* ms each step stays up while playing through */
+  var HOLD = [0, 3400, 4400, 7600, 5600];        /* ms each step stays up while playing through */
   var cur = 0, timers = [], raf = 0, auto = false, played = false;
 
   function track(n) { try { if (typeof window.plausible === 'function') window.plausible(n); } catch (e) {} }
@@ -50,7 +50,7 @@
         place(side, i, p <= 0 ? 0 : ease(Math.min(1, p)));
       }
       if (!done) raf = requestAnimationFrame(frame);
-      else if (side === 'L') flyBalls('R', 1500);       /* the right side follows once its catheter is in */
+      else if (side === 'L') flyBalls('R', 2300);       /* the other side follows once the catheter has crossed over */
     }
     raf = requestAnimationFrame(frame);
   }
