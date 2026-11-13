@@ -16,6 +16,39 @@
   var onContact = /(^|\/)contact(\.html)?$/.test(location.pathname);
   var canDialog = typeof HTMLDialogElement === 'function';
 
+  /* ---------- words for the request sheet and menu (English, and Spanish on the lang="es" pages) ---------- */
+  var L = spanish ? {
+    openUntil: 'Abierto ahora, hasta las 5 PM', closed: 'Cerrado ahora, abre ', today: 'hoy a las 9 AM', tomorrow: 'ma\u00f1ana a las 9 AM',
+    monday: 'el lunes a las 9 AM', hours: 'Lunes a viernes, de 9 AM a 5 PM',
+    title: 'Solicite una cita', close: 'Cerrar',
+    lede: 'Aceptamos pacientes nuevos, con citas el mismo d\u00eda o al d\u00eda siguiente para casos urgentes. No necesita referido con Medicare o un plan PPO.',
+    text: 'Env\u00ede un mensaje de texto', textSub: 'Respuesta por texto, normalmente el mismo d\u00eda h\u00e1bil',
+    call: 'Llame al (714) 919-8143', ifText: 'Si env\u00eda un mensaje',
+    s1: 'La ventana de mensajes dice <b>Prestige Medical Group</b>. Es el grupo m\u00e9dico del Dr. Sawkar; est\u00e1 en el lugar correcto.',
+    s2: 'Klara, su servicio de mensajes seguros, le env\u00eda un c\u00f3digo por texto para confirmar su n\u00famero de celular.',
+    s3: 'Escriba una l\u00ednea sobre lo que necesita. La oficina cuenta con personal que habla espa\u00f1ol.',
+    foot: 'Medicare y la mayor\u00eda de los planes PPO. Telemedicina disponible. En una emergencia, llame al 911.',
+    menu: 'Men\u00fa', openMenu: 'Abrir el men\u00fa', closeMenu: 'Cerrar el men\u00fa',
+    links: [['agrandamiento-de-prostata.html', 'Pr\u00f3stata agrandada'], ['embolizacion-de-la-prostata.html', 'Embolizaci\u00f3n (PAE)'],
+            ['services.html', 'Tratamientos'], ['surgeon.html', 'Dr. Sawkar'], ['contact.html', 'Visita y direcciones']],
+    request: 'Solicite una cita', callBtn: 'Llamar al (714) 919-8143'
+  } : {
+    openUntil: 'Open now, until 5 PM', closed: 'Closed now, opens ', today: 'today at 9 AM', tomorrow: 'tomorrow at 9 AM',
+    monday: 'Monday at 9 AM', hours: 'Monday to Friday, 9 AM to 5 PM',
+    title: 'Request an appointment', close: 'Close',
+    lede: 'New patients are welcome, with same-day and next-day visits for urgent concerns. No referral is needed with Medicare or a PPO plan.',
+    text: 'Text the office', textSub: 'Replies by text, usually the same business day',
+    call: 'Call (714) 919-8143', ifText: 'If you text',
+    s1: 'The message window says <b>Prestige Medical Group</b>. That is the group Dr. Sawkar practices with, so you are in the right place.',
+    s2: 'Klara, its secure messaging service, texts you a code to confirm your cell number.',
+    s3: 'Write one line about what you need. The new patient coordinator replies by text.',
+    foot: 'Medicare and most PPO plans. Telehealth available. For an emergency, call 911.',
+    menu: 'Menu', openMenu: 'Open the menu', closeMenu: 'Close the menu',
+    links: [['services.html', 'Treatments'], ['bph.html', 'Enlarged prostate'], ['surgeon.html', 'Dr. Sawkar'],
+            ['/#guides', 'Patient guides'], ['contact.html', 'Visit and directions']],
+    request: 'Request an appointment', callBtn: 'Call (714) 919-8143'
+  };
+
   /* ---------- visit counting ----------
      Counts named actions (no cookies, no personal data) once an analytics
      script is installed. Until then this does nothing. */
@@ -35,13 +68,13 @@
         if (p.type === 'hour') hr = parseInt(p.value, 10) % 24;
       });
       var weekday = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].indexOf(wd) !== -1;
-      if (weekday && hr >= 9 && hr < 17) return { open: true, text: 'Open now, until 5 PM' };
-      var next = 'tomorrow at 9 AM';
-      if (weekday && hr < 9) next = 'today at 9 AM';
-      else if (wd === 'Fri' || wd === 'Sat') next = 'Monday at 9 AM';
-      return { open: false, text: 'Closed now, opens ' + next };
+      if (weekday && hr >= 9 && hr < 17) return { open: true, text: L.openUntil };
+      var next = L.tomorrow;
+      if (weekday && hr < 9) next = L.today;
+      else if (wd === 'Fri' || wd === 'Sat') next = L.monday;
+      return { open: false, text: L.closed + next };
     } catch (e) {
-      return { open: false, text: 'Monday to Friday, 9 AM to 5 PM' };
+      return { open: false, text: L.hours };
     }
   }
   d.querySelectorAll('[data-office-status]').forEach(function (el) {
@@ -75,21 +108,21 @@
     sheet.innerHTML =
       '<div class="sheet-in">' +
         '<div class="sh-grab" aria-hidden="true"></div>' +
-        '<div class="sh-head"><h2 id="rs-title">Request an appointment</h2>' +
-          '<button type="button" class="sh-x" data-close aria-label="Close">' + X + '</button></div>' +
-        '<p class="sh-lede">New patients are welcome, with same-day and next-day visits for urgent concerns. No referral is needed with Medicare or a PPO plan.</p>' +
+        '<div class="sh-head"><h2 id="rs-title">' + L.title + '</h2>' +
+          '<button type="button" class="sh-x" data-close aria-label="' + L.close + '">' + X + '</button></div>' +
+        '<p class="sh-lede">' + L.lede + '</p>' +
         '<a class="sh-opt primary" data-act="text" href="' + textHref + '"' + textAttrs + '>' +
           '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5h16v11H9.500L5 20v-3.500H4z"/><path d="M8 9.500h8M8 12.500h5"/></svg>' +
-          '<span><b>Text the office</b><small>Replies by text, usually the same business day</small></span></a>' +
+          '<span><b>' + L.text + '</b><small>' + L.textSub + '</small></span></a>' +
         '<a class="sh-opt" data-act="call" href="tel:+17149198143">' +
           '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.500 3.500h3l1.500 4-2 1.500a12 12 0 0 0 6 6l1.500-2 4 1.500v3a2 2 0 0 1-2 2C10.500 19.500 4.500 13.500 4.500 5.500a2 2 0 0 1 2-2z"/></svg>' +
-          '<span><b>Call (714) 919-8143</b><small><i class="sh-dot' + (s.open ? ' open' : '') + '" aria-hidden="true"></i><span>' + s.text + '</span></small></span></a>' +
-        '<div class="sh-steps"><span class="h-eyebrow">If you text</span><ol>' +
-          '<li><span>The message window says <b>Prestige Medical Group</b>. That is the group Dr. Sawkar practices with, so you are in the right place.</span></li>' +
-          '<li><span>Klara, its secure messaging service, texts you a code to confirm your cell number.</span></li>' +
-          '<li><span>Write one line about what you need. The new patient coordinator replies by text.</span></li>' +
+          '<span><b>' + L.call + '</b><small><i class="sh-dot' + (s.open ? ' open' : '') + '" aria-hidden="true"></i><span>' + s.text + '</span></small></span></a>' +
+        '<div class="sh-steps"><span class="h-eyebrow">' + L.ifText + '</span><ol>' +
+          '<li><span>' + L.s1 + '</span></li>' +
+          '<li><span>' + L.s2 + '</span></li>' +
+          '<li><span>' + L.s3 + '</span></li>' +
         '</ol></div>' +
-        '<p class="sh-foot">Medicare and most PPO plans. Telehealth available. For an emergency, call 911.</p>' +
+        '<p class="sh-foot">' + L.foot + '</p>' +
       '</div>';
     d.body.appendChild(sheet);
     wireDialog(sheet);
@@ -114,14 +147,14 @@
     track('Request sheet opened' + (from ? ': ' + from : ''));
   }
 
-  var REQ = /^\s*request an? (appointment|consultation)\s*$/i;
+  var REQ = spanish ? /^\s*solicite una cita\s*$/i : /^\s*request an? (appointment|consultation)\s*$/i;
   function isRequestLink(a) {
     if (a.hasAttribute('data-request')) return true;
     if (a.closest('.callbar') && a.classList.contains('primary')) return true;
     var href = a.getAttribute('href') || '';
     return href === 'contact.html' && REQ.test(a.textContent || '');
   }
-  if (canDialog && !spanish) {
+  if (canDialog) {
     d.addEventListener('click', function (e) {
       if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       var a = e.target.closest && e.target.closest('a');
@@ -139,11 +172,11 @@
   /* ---------- phone menu ---------- */
   var menu = null;
   var navRight = d.querySelector('.nav .nav-right');
-  if (canDialog && navRight && !spanish) {
+  if (canDialog && navRight) {
     var mb = d.createElement('button');
     mb.type = 'button';
     mb.className = 'nav-menu';
-    mb.setAttribute('aria-label', 'Open the menu');
+    mb.setAttribute('aria-label', L.openMenu);
     mb.setAttribute('aria-haspopup', 'dialog');
     mb.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';
     navRight.appendChild(mb);
@@ -151,18 +184,19 @@
       if (!menu) {
         menu = d.createElement('dialog');
         menu.className = 'menu';
-        menu.setAttribute('aria-label', 'Menu');
+        menu.setAttribute('aria-label', L.menu);
+        var mlinks = '';
+        L.links.forEach(function (ln, i) {
+          mlinks += '<a class="m-link' + (i === L.links.length - 1 ? ' last' : '') + '" href="' + ln[0] + '"' +
+            (ln[0].indexOf('#') !== -1 ? ' data-close' : '') + '>' + ln[1] + '</a>';
+        });
         menu.innerHTML =
           '<div class="menu-in">' +
-            '<div class="menu-head"><span>Menu</span><button type="button" class="sh-x" data-close aria-label="Close the menu">' + X + '</button></div>' +
-            '<a class="m-link" href="services.html">Treatments</a>' +
-            '<a class="m-link" href="bph.html">Enlarged prostate</a>' +
-            '<a class="m-link" href="surgeon.html">Dr. Sawkar</a>' +
-            '<a class="m-link" href="/#guides" data-close>Patient guides</a>' +
-            '<a class="m-link last" href="contact.html">Visit and directions</a>' +
+            '<div class="menu-head"><span>' + L.menu + '</span><button type="button" class="sh-x" data-close aria-label="' + L.closeMenu + '">' + X + '</button></div>' +
+            mlinks +
             '<div class="m-acts">' +
-              '<a class="btn bone" href="contact.html" data-request>Request an appointment</a>' +
-              '<a class="btn ghost-d" href="tel:+17149198143">Call (714) 919-8143</a>' +
+              '<a class="btn bone" href="contact.html" data-request>' + L.request + '</a>' +
+              '<a class="btn ghost-d" href="tel:+17149198143">' + L.callBtn + '</a>' +
             '</div>' +
           '</div>';
         d.body.appendChild(menu);
@@ -337,6 +371,68 @@
     tb.classList.add('stacked');
     var w = tb.closest('.tblwrap');
     if (w) w.classList.add('has-stack');
+  });
+
+  /* ---------- symptom score: one question at a time, answers written out ----------
+     Works on any form.quiz whose questions are 0-5 radio rows (.opts.num). The words come
+     from each input's aria-label. A tap moves to the next question; keyboard users get a
+     Next button. The page's own script still does the scoring when its button is pressed. */
+  d.querySelectorAll('form.quiz').forEach(function (form) {
+    var sets = [].slice.call(form.querySelectorAll('fieldset')).filter(function (f) { return f.querySelector('.opts.num'); });
+    var act = form.querySelector('.quiz-act');
+    var go = act && act.querySelector('button');
+    var res = form.querySelector('.quiz-res');
+    if (sets.length < 3 || !go) return;
+    form.classList.add('qz');
+    sets.forEach(function (f) {
+      f.querySelectorAll('.opt').forEach(function (o) {
+        var inp = o.querySelector('input'), w = inp && inp.getAttribute('aria-label');
+        if (w && !o.querySelector('em')) { var em = d.createElement('em'); em.textContent = w; o.appendChild(em); }
+      });
+    });
+    var bar = d.createElement('div');
+    bar.className = 'qz-bar';
+    bar.innerHTML = '<span class="qz-count" aria-live="polite"></span><span class="qz-track" aria-hidden="true"><i></i></span>';
+    form.insertBefore(bar, sets[0]);
+    var nav = d.createElement('div');
+    nav.className = 'qz-nav';
+    nav.innerHTML = '<button type="button" class="qz-back">\u2190 ' + (spanish ? 'Anterior' : 'Previous question') + '</button>' +
+      '<button type="button" class="qz-next">' + (spanish ? 'Siguiente' : 'Next question') + ' \u2192</button>';
+    act.parentNode.insertBefore(nav, act);
+    var back = nav.firstChild, next = nav.lastChild, cur = 0;
+    function answered(i) { return !!sets[i].querySelector('input:checked'); }
+    function show(i) {
+      cur = Math.max(0, Math.min(sets.length - 1, i));
+      sets.forEach(function (f, k) { f.hidden = k !== cur; });
+      bar.firstChild.textContent = (spanish ? 'Pregunta ' : 'Question ') + (cur + 1) + (spanish ? ' de ' : ' of ') + sets.length;
+      bar.querySelector('i').style.width = ((cur + 1) / sets.length * 100) + '%';
+      back.hidden = cur === 0;
+      next.hidden = cur === sets.length - 1;
+      next.disabled = !answered(cur);
+      act.hidden = cur !== sets.length - 1;
+      nav.hidden = back.hidden && next.hidden;
+    }
+    form.addEventListener('change', function (e) {
+      if (e.target.closest && sets.indexOf(e.target.closest('fieldset')) !== -1) {
+        next.disabled = !answered(cur);
+        if (res) res.classList.remove('show');
+      }
+    });
+    form.addEventListener('click', function (e) {
+      /* a real tap lands on the label, never on the hidden input; arrow keys land on the input */
+      var o = e.target.closest && e.target.closest('.opt');
+      if (!o || e.target.tagName === 'INPUT') return;
+      var i = sets.indexOf(o.closest('fieldset'));
+      if (i !== cur) return;
+      setTimeout(function () {
+        if (!answered(i) || cur !== i) return;
+        if (i < sets.length - 1) show(i + 1); else go.click();
+      }, reduce ? 0 : 280);
+    });
+    back.addEventListener('click', function () { show(cur - 1); });
+    next.addEventListener('click', function () { if (answered(cur)) show(cur + 1); });
+    go.addEventListener('click', function () { track('Symptom score calculated'); });
+    show(0);
   });
 
   /* ---------- numbers count up once, when first seen ---------- */
