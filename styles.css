@@ -770,45 +770,37 @@ a.xp-chip.on:hover{background:var(--cobalt-deep)}
 }
 
 /* ---------- animated "How PAE works" explainer (pae.html, assets/js/pae-explainer.js) ----------
-   The stage carries data-step 0-4; each rule below is the end state of a step, and the
-   transition into it is the animation. .px-jump switches transitions off for jumps. */
+   .px-world is the 1024px art plate plus everything drawn on it; the script moves it like a
+   camera and sets --k (screen pixels per plate pixel) so lines and labels keep their size. */
 .px-stage[hidden]{display:none}
-.px-stage{position:relative;aspect-ratio:5/4;background:var(--panel);border-radius:var(--r);overflow:hidden}
-.px-stage svg{display:block;width:100%;height:100%}
-.px-lab,.px-note,.px-week{position:absolute;font-family:var(--mono);font-size:12.5px;line-height:1;letter-spacing:.1em;text-transform:uppercase;color:rgba(244,244,241,.62);white-space:nowrap}
-.px-lab{transform:translateX(-50%)}
-.px-lab.px-lw{transform:none}
-.px-note{left:18px;top:16px;letter-spacing:.05em;text-transform:none;color:rgba(244,244,241,.5)}
-.px-week{right:18px;bottom:16px;color:var(--ice);opacity:0;transition:opacity .5s}
+.px-stage{position:relative;aspect-ratio:5/4;background:#060C24;border-radius:var(--r);overflow:hidden}
+.px-world{position:absolute;left:0;top:0;width:1024px;height:1024px;transform-origin:0 0;will-change:transform;--k:1;--ks:1}
+.px-plate,.px-over{position:absolute;inset:0;display:block;width:1024px;height:1024px}
+.px-plate{-webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}
+.px-low,.px-tw{stroke:none}
+.px-r1,.px-r2{stroke-dasharray:1;stroke-dashoffset:1}
+.px-glow{stroke:#8FD6FF;stroke-opacity:.75;stroke-width:calc(7px/var(--ks));filter:url(#px-soft)}
+.px-core{stroke:#fff;stroke-width:calc(2px/var(--ks))}
+.px-tip{fill:#fff}
+.px-tipglow{fill:#9ADBFF;fill-opacity:.7;filter:url(#px-soft)}
+.px-ring{stroke:#fff;stroke-width:calc(1.6px/var(--ks));opacity:0}
+.px-dot{fill:#fff}
+.px-ms{fill:#F7C75A;stroke:#F7C75A;stroke-opacity:.35;stroke-width:calc(3px/var(--ks));opacity:0}
+.px-lab,.px-note,.px-week{position:absolute;font-family:var(--mono);line-height:1;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;color:rgba(244,244,241,.78)}
+.px-lab{font-size:calc(12.5px/var(--k));transform:translate(-50%,-50%);text-shadow:0 0 calc(6px/var(--k)) #060C24,0 0 calc(2px/var(--k)) #060C24;transition:opacity .6s}
+.px-lab.px-lw{transform:translate(0,-50%)}
+.px-lab.px-lr{transform:translate(-100%,-50%)}
+.px-l1,.px-l2,.px-l3{opacity:0;color:#fff}
+.px-stage:not([data-step="0"]):not([data-step="4"]) .px-l1,[data-step="2"] .px-l2,[data-step="3"] .px-l2,[data-step="3"] .px-l3{opacity:1}
+.px-note,.px-week{font-size:12.5px}
+.px-note{left:12px;top:12px;padding:7px 11px;border-radius:99px;background:rgba(6,12,36,.6);letter-spacing:.05em;text-transform:none;color:rgba(244,244,241,.7)}
+.px-week{right:14px;bottom:14px;padding:8px 12px;border-radius:99px;background:rgba(6,12,36,.72);color:var(--ice);opacity:0;transition:opacity .5s}
 .px-week b{display:inline-block;min-width:2ch;font-weight:500;text-align:right;color:#fff}
+[data-step="4"] .px-week{opacity:1}
 .px-again{position:absolute;right:14px;top:14px;appearance:none;cursor:pointer;min-height:40px;padding:8px 16px;border-radius:99px;border:1px solid rgba(244,244,241,.4);
-  background:rgba(13,18,24,.6);font:600 15px var(--body);color:var(--paper)}
+  background:rgba(6,12,36,.6);font:600 15px var(--body);color:var(--paper)}
 .px-again:hover{border-color:var(--paper)}
 .px-again[hidden]{display:none}
-.px-cath{stroke-dasharray:1;stroke-dashoffset:1;filter:drop-shadow(0 0 3px rgba(169,203,232,.8))}
-.px-cath.L{transition:stroke-dashoffset 2.8s cubic-bezier(.45,0,.3,1) .5s,opacity .7s}
-.px-cath.R{transition:stroke-dashoffset 2.4s cubic-bezier(.45,0,.3,1) 2s,opacity .7s}
-.px-l2,.px-l3{opacity:0;transition:opacity .6s}
-.px-ring{fill:none;stroke:#F4F4F1;stroke-width:1.4;opacity:0;transform-box:fill-box;transform-origin:center}
-.px-dot{opacity:.35;transition:opacity .4s}
-.px-ms{fill:#F4F4F1;opacity:0}
-.px-tw{stroke-opacity:.5;transition:stroke-opacity .9s}
-.px-gland{transform-origin:300px 280px;transition:transform 3.6s cubic-bezier(.4,0,.2,1)}
-.px-ur{transition:transform 3.6s cubic-bezier(.4,0,.2,1)}
-@keyframes pxRing{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(4.2)}}
-.px-stage:not([data-step="0"]) .px-dot{opacity:1}
-[data-step="1"] .px-ring{animation:pxRing 1.5s ease-out 2}
-[data-step="2"] .px-cath.L,[data-step="3"] .px-cath.L,[data-step="4"] .px-cath.L,[data-step="3"] .px-cath.R,[data-step="4"] .px-cath.R{stroke-dashoffset:0}
-[data-step="2"] .px-l2,[data-step="3"] .px-l2,[data-step="3"] .px-l3{opacity:1}
-[data-step="3"] .px-tw,[data-step="4"] .px-tw{stroke-opacity:.16}
-[data-step="3"] .px-tw.L{transition-delay:1.5s}
-[data-step="3"] .px-tw.R{transition-delay:5.8s}
-[data-step="4"] .px-cath{opacity:0}
-[data-step="4"] .px-gland{transform:scale(.76)}
-[data-step="4"] .px-ur.L{transform:translateX(-5px)}
-[data-step="4"] .px-ur.R{transform:translateX(5px)}
-[data-step="4"] .px-week{opacity:1}
-.px-jump *,.px-jump .px-week{transition:none!important;animation:none!important}
 /* with the explainer on, the four steps become its captions */
 .px-on{display:grid;grid-template-columns:1.12fr .88fr;gap:44px;align-items:center;margin-top:44px}
 .px-on .flow{display:flex;flex-direction:column;gap:0;margin-top:0}
@@ -824,8 +816,9 @@ a.xp-chip.on:hover{background:var(--cobalt-deep)}
 @media(max-width:620px){
   .px-on{display:block;margin-top:14px}
   .px-stage{border-radius:18px}
-  .px-lab,.px-week{font-size:11.5px}
-  .px-note{left:12px;top:10px;font-size:11.5px}
+  .px-lab{font-size:calc(11px/var(--k))}
+  .px-week{font-size:11.5px}
+  .px-note{left:8px;top:8px;font-size:11.5px}
   .px-week{right:12px;bottom:10px}
   .px-again{right:10px;top:10px}
   .px-on .flow.swipe-m{flex-direction:row;gap:12px;margin-top:12px}
@@ -1136,5 +1129,5 @@ dialog.sheet[open]::backdrop,dialog.menu[open]::backdrop{animation:fadeIn .3s ea
   .hero-home .hero-art img,.hero-home .hero-copy>*,dialog.sheet[open],dialog.menu[open],dialog.sheet[open]::backdrop,dialog.menu[open]::backdrop{animation:none}
   .reveal.stag>*{opacity:1;transform:none;transition:none}
   .tx2-btn,.tx2-ic,.tx2-art,.tx2-panel,.tx2-panel>div,.card,.qz-track i,.og-pill{transition:none}
-  .px-stage *{transition:none!important;animation:none!important}
+  .px-lab,.px-week{transition:none}
 }

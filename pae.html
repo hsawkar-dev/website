@@ -146,49 +146,27 @@
 
         <div class="px" id="pae-explainer">
           <div class="px-stage reveal" data-step="0" hidden>
-            <svg viewBox="0 0 600 480" fill="none" focusable="false" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round">
-              <defs><radialGradient id="px-glow" cx=".5" cy=".45" r=".6"><stop offset="0" stop-color="#4874D2" stop-opacity=".34"/><stop offset="1" stop-color="#4874D2" stop-opacity=".05"/></radialGradient></defs>
-              <!-- arteries: aorta, both iliacs, the prostatic branches -->
-              <g class="px-vessels" stroke="#7FA5E8">
-                <path d="M300-6V34" stroke-width="11" stroke-opacity=".22"/>
-                <path d="M300 34C245 62 150 120 134 214C126 268 156 304 196 322" stroke-width="9" stroke-opacity=".22"/>
-                <path d="M300 34C355 62 450 120 466 214C474 268 444 304 404 322" stroke-width="9" stroke-opacity=".22"/>
-                <path d="M134 214C126 300 108 392 92 486" stroke-width="7" stroke-opacity=".13"/>
-                <path d="M466 214C474 300 492 392 508 486" stroke-width="7" stroke-opacity=".13"/>
-                <path class="px-tw L" d="M196 322C215 318 232 312 262 316" stroke-width="3.6"/>
-                <path class="px-tw L" d="M196 322C215 326 236 334 268 342" stroke-width="3.6"/>
-                <path class="px-tw L" d="M196 322C212 336 232 356 262 368" stroke-width="3.6"/>
-                <path class="px-tw R" d="M404 322C385 318 368 312 338 316" stroke-width="3.6"/>
-                <path class="px-tw R" d="M404 322C385 326 364 334 332 342" stroke-width="3.6"/>
-                <path class="px-tw R" d="M404 322C388 336 368 356 338 368" stroke-width="3.6"/>
-              </g>
-              <!-- bladder -->
-              <path d="M300 82C362 82 400 124 400 176C400 226 356 262 300 262C244 262 200 226 200 176C200 124 238 82 300 82Z" stroke="#A9CBE8" stroke-opacity=".5" stroke-width="1.4"/>
-              <path d="M300 102C348 102 378 135 378 176C378 215 344 242 300 242C256 242 222 215 222 176C222 135 252 102 300 102Z" stroke="#A9CBE8" stroke-opacity=".2" stroke-width="1"/>
-              <!-- prostate: shrinks in step 4 -->
-              <g class="px-gland">
-                <g transform="translate(300 338) scale(140)">
-                  <path d="M0-.39C.1-.44.3-.43.4-.3C.52-.15.5.12.38.28C.28.41.12.46 0 .46C-.12.46-.28.41-.38.28C-.5.12-.52-.15-.4-.3C-.3-.43-.1-.44 0-.39Z" fill="url(#px-glow)" stroke="#A9CBE8" stroke-width="1.8" vector-effect="non-scaling-stroke"/>
-                  <path d="M0-.39C.1-.44.3-.43.4-.3C.52-.15.5.12.38.28C.28.41.12.46 0 .46C-.12.46-.28.41-.38.28C-.5.12-.52-.15-.4-.3C-.3-.43-.1-.44 0-.39Z" transform="scale(.76)" stroke="#A9CBE8" stroke-opacity=".4" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                  <path d="M0-.39C.1-.44.3-.43.4-.3C.52-.15.5.12.38.28C.28.41.12.46 0 .46C-.12.46-.28.41-.38.28C-.5.12-.52-.15-.4-.3C-.3-.43-.1-.44 0-.39Z" transform="scale(.52)" stroke="#A9CBE8" stroke-opacity=".24" stroke-width="1" vector-effect="non-scaling-stroke"/>
-                </g>
-                <path class="px-ur L" d="M297 262V402" stroke="#F4F4F1" stroke-opacity=".55" stroke-width="1.3"/>
-                <path class="px-ur R" d="M303 262V402" stroke="#F4F4F1" stroke-opacity=".55" stroke-width="1.3"/>
-                <circle class="px-ms L" r="2.9"/><circle class="px-ms L" r="2.9"/><circle class="px-ms L" r="2.9"/><circle class="px-ms L" r="2.9"/><circle class="px-ms L" r="2.9"/><circle class="px-ms L" r="2.9"/><circle class="px-ms L" r="2.9"/><circle class="px-ms R" r="2.9"/><circle class="px-ms R" r="2.9"/><circle class="px-ms R" r="2.9"/><circle class="px-ms R" r="2.9"/><circle class="px-ms R" r="2.9"/><circle class="px-ms R" r="2.9"/><circle class="px-ms R" r="2.9"/>
-              </g>
-              <!-- catheter: follows the artery to one side, then the other -->
-              <path class="px-cath L" pathLength="1" d="M92 486C108 392 126 300 134 214C126 268 156 304 196 322" stroke="#F4F4F1" stroke-width="2"/>
-              <path class="px-cath R" pathLength="1" d="M92 486C108 392 126 300 134 214C150 120 245 62 300 34C355 62 450 120 466 214C474 268 444 304 404 322" stroke="#F4F4F1" stroke-width="2"/>
-              <!-- access: one pinhole at the groin (femoral artery) -->
-              <circle class="px-ring" cx="98" cy="442" r="5"/>
-              <circle class="px-dot" cx="98" cy="442" r="4.2" fill="#F4F4F1"/>
-            </svg>
-            <span class="px-lab" aria-hidden="true" style="left:50%;top:35%">Bladder</span>
-            <span class="px-lab" aria-hidden="true" style="left:50%;top:86.5%">Prostate</span>
-            <span class="px-lab px-lw" aria-hidden="true" style="left:20%;top:91%">Groin</span>
-            <span class="px-lab px-l2 px-lw" aria-hidden="true" style="left:5%;top:52%">Catheter</span>
-            <span class="px-lab px-l3" aria-hidden="true" style="left:80%;top:71%">Microspheres</span>
-            <span class="px-note" aria-hidden="true">Illustration, not to scale</span>
+            <div class="px-world">
+              <canvas class="px-plate" width="1024" height="1024" data-src="assets/img/pae-plate.webp"></canvas>
+              <svg class="px-over" viewBox="0 0 1024 1024" fill="none" aria-hidden="true" focusable="false" stroke-linecap="round" stroke-linejoin="round">
+                <defs><filter id="px-soft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3.2"/></filter></defs>
+                <!-- artery routes traced on the plate: groin to the near side, and groin up and over to the far side -->
+                <path class="px-low" d="M262.0 917.2C260.9 914.2 259.1 910.8 255.6 899.5C252.1 888.2 245.1 866.4 240.9 849.7C236.7 833.1 232.7 816.2 230.4 799.6C228.1 783.0 226.6 766.6 227.3 750.2C228.0 733.8 230.6 717.6 234.5 701.2C238.4 684.8 246.0 667.6 250.8 651.6C255.7 635.6 261.3 619.1 263.6 605.5C265.9 591.9 264.8 579.6 264.7 569.8C264.6 560.0 263.2 550.6 262.9 546.7"/><path class="px-tw L" d="M377.9 570.0C381.6 572.0 393.4 579.2 400.4 582.2C407.4 585.2 413.4 587.6 420.0 588.0C426.6 588.4 434.6 586.2 440.0 584.5C445.4 582.8 447.5 579.6 452.1 577.6C456.8 575.6 465.3 573.2 467.9 572.3"/><path class="px-tw L" d="M377.9 570.0C381.5 572.3 394.2 579.3 399.3 583.9C404.4 588.5 405.6 592.9 408.6 597.8C411.6 602.7 412.0 610.6 417.1 613.5C422.2 616.4 433.4 616.5 439.0 615.2C444.6 613.9 447.1 607.7 450.9 605.5C454.7 603.3 460.0 602.6 461.8 602.0"/><path class="px-tw L" d="M377.9 570.0C381.8 572.5 396.0 579.4 401.4 584.8C406.8 590.2 407.1 596.5 410.1 602.6C413.1 608.7 415.3 614.5 419.4 621.5C423.4 628.5 428.3 639.8 434.4 644.5C440.5 649.2 450.0 651.2 456.0 650.0C462.0 648.8 466.6 640.6 470.6 637.3C474.6 634.0 478.6 631.5 480.2 630.3"/><path class="px-tw L" d="M377.9 570.0C380.9 566.9 391.0 557.1 396.1 551.5C401.2 545.9 405.3 539.8 408.4 536.5C411.5 533.2 413.8 532.6 414.9 531.8"/><path class="px-tw R" d="M645.2 569.8C641.8 571.9 630.5 578.9 624.7 582.3C618.9 585.7 617.0 589.8 610.4 590.1C603.8 590.4 591.6 586.0 585.1 583.9C578.6 581.8 576.1 579.0 571.3 577.7C566.5 576.4 559.0 576.2 556.5 575.9"/><path class="px-tw R" d="M645.2 569.8C641.9 572.0 630.2 578.7 625.2 583.3C620.2 587.9 618.4 592.8 615.2 597.4C612.0 602.0 610.8 607.9 606.2 610.9C601.7 613.9 593.4 616.4 587.9 615.5C582.4 614.6 577.6 607.6 573.1 605.5C568.6 603.4 562.8 603.2 560.8 602.8"/><path class="px-tw R" d="M645.2 569.8C641.5 572.3 628.5 579.5 623.1 584.9C617.7 590.3 616.3 596.3 613.0 602.4C609.7 608.5 607.1 615.0 603.3 621.6C599.4 628.2 594.5 636.6 589.9 642.2C585.3 647.9 581.7 655.8 575.5 655.5C569.3 655.2 558.4 644.7 552.7 640.3C547.0 635.9 543.4 631.1 541.5 629.2"/><path class="px-tw R" d="M645.2 569.8C642.2 566.9 632.2 557.9 627.2 552.4C622.2 546.9 618.5 540.1 615.4 536.7C612.3 533.3 609.8 532.6 608.7 531.8"/>
+                <path class="px-r1 px-glow" pathLength="1" d="M262.0 917.2C260.9 914.2 259.1 910.8 255.6 899.5C252.1 888.2 245.1 866.4 240.9 849.7C236.7 833.1 232.7 816.2 230.4 799.6C228.1 783.0 226.6 766.6 227.3 750.2C228.0 733.8 230.6 717.6 234.5 701.2C238.4 684.8 246.0 667.6 250.8 651.6C255.7 635.6 261.3 619.1 263.6 605.5C265.9 591.9 264.8 579.6 264.7 569.8C264.6 560.0 259.4 550.7 262.9 546.7C266.4 542.7 278.7 544.2 285.9 545.6C293.1 547.0 298.7 552.5 306.2 555.1C313.7 557.7 321.8 559.1 330.7 561.3C339.6 563.5 351.4 567.0 359.3 568.5C367.2 570.0 374.8 569.8 377.9 570.0"/>
+                <path class="px-r2 px-glow" pathLength="1" d="M262.0 917.2C260.9 914.2 259.1 910.8 255.6 899.5C252.1 888.2 245.1 866.4 240.9 849.7C236.7 833.1 232.7 816.2 230.4 799.6C228.1 783.0 226.6 766.6 227.3 750.2C228.0 733.8 230.6 717.6 234.5 701.2C238.4 684.8 246.0 667.6 250.8 651.6C255.7 635.6 261.3 619.1 263.6 605.5C265.9 591.9 264.8 579.6 264.7 569.8C264.6 560.0 264.3 554.7 262.9 546.7C261.4 538.7 258.6 529.7 256.0 521.8C253.4 513.9 250.6 509.0 247.6 499.5C244.6 490.0 240.2 476.3 238.2 464.7C236.2 453.1 235.0 441.9 235.6 430.1C236.2 418.3 238.6 405.9 241.7 394.0C244.8 382.1 248.5 370.0 254.1 358.4C259.6 346.8 267.5 335.4 275.0 324.2C282.5 313.0 290.1 301.8 299.2 291.3C308.2 280.8 318.3 270.8 329.3 261.2C340.3 251.6 354.3 242.9 365.4 233.8C376.4 224.7 385.4 214.5 395.6 206.5C405.8 198.5 417.1 193.2 426.7 185.6C436.2 178.0 444.4 169.7 452.9 161.0C461.4 152.3 470.7 141.6 477.8 133.4C484.9 125.2 489.8 116.2 495.5 111.6C501.2 107.0 506.5 105.9 512.0 106.0C517.5 106.1 522.9 107.3 528.5 112.0C534.1 116.7 538.9 125.8 545.9 134.0C552.9 142.2 562.0 152.7 570.6 161.4C579.2 170.1 588.1 178.7 597.7 186.3C607.3 194.0 618.3 199.5 628.4 207.3C638.5 215.1 647.4 224.0 658.5 232.9C669.6 241.8 684.0 251.3 695.1 260.9C706.2 270.5 715.7 280.3 725.0 290.7C734.3 301.1 743.5 311.9 750.9 323.3C758.3 334.7 764.1 347.2 769.2 359.0C774.3 370.8 778.7 382.5 781.7 394.3C784.7 406.1 786.8 418.1 787.3 429.8C787.8 441.5 786.4 452.7 784.5 464.3C782.6 475.9 778.9 489.6 776.0 499.2C773.1 508.8 769.8 513.8 767.1 521.6C764.5 529.4 764.8 541.9 760.1 545.8C755.5 549.7 746.3 543.5 739.2 545.0C732.1 546.5 725.4 552.4 717.7 555.1C710.1 557.8 702.1 559.1 693.3 561.3C684.5 563.5 672.7 567.1 664.7 568.5C656.7 569.9 648.5 569.6 645.2 569.8"/>
+                <path class="px-r1 px-core" pathLength="1" d="M262.0 917.2C260.9 914.2 259.1 910.8 255.6 899.5C252.1 888.2 245.1 866.4 240.9 849.7C236.7 833.1 232.7 816.2 230.4 799.6C228.1 783.0 226.6 766.6 227.3 750.2C228.0 733.8 230.6 717.6 234.5 701.2C238.4 684.8 246.0 667.6 250.8 651.6C255.7 635.6 261.3 619.1 263.6 605.5C265.9 591.9 264.8 579.6 264.7 569.8C264.6 560.0 259.4 550.7 262.9 546.7C266.4 542.7 278.7 544.2 285.9 545.6C293.1 547.0 298.7 552.5 306.2 555.1C313.7 557.7 321.8 559.1 330.7 561.3C339.6 563.5 351.4 567.0 359.3 568.5C367.2 570.0 374.8 569.8 377.9 570.0"/>
+                <path class="px-r2 px-core" pathLength="1" d="M262.0 917.2C260.9 914.2 259.1 910.8 255.6 899.5C252.1 888.2 245.1 866.4 240.9 849.7C236.7 833.1 232.7 816.2 230.4 799.6C228.1 783.0 226.6 766.6 227.3 750.2C228.0 733.8 230.6 717.6 234.5 701.2C238.4 684.8 246.0 667.6 250.8 651.6C255.7 635.6 261.3 619.1 263.6 605.5C265.9 591.9 264.8 579.6 264.7 569.8C264.6 560.0 264.3 554.7 262.9 546.7C261.4 538.7 258.6 529.7 256.0 521.8C253.4 513.9 250.6 509.0 247.6 499.5C244.6 490.0 240.2 476.3 238.2 464.7C236.2 453.1 235.0 441.9 235.6 430.1C236.2 418.3 238.6 405.9 241.7 394.0C244.8 382.1 248.5 370.0 254.1 358.4C259.6 346.8 267.5 335.4 275.0 324.2C282.5 313.0 290.1 301.8 299.2 291.3C308.2 280.8 318.3 270.8 329.3 261.2C340.3 251.6 354.3 242.9 365.4 233.8C376.4 224.7 385.4 214.5 395.6 206.5C405.8 198.5 417.1 193.2 426.7 185.6C436.2 178.0 444.4 169.7 452.9 161.0C461.4 152.3 470.7 141.6 477.8 133.4C484.9 125.2 489.8 116.2 495.5 111.6C501.2 107.0 506.5 105.9 512.0 106.0C517.5 106.1 522.9 107.3 528.5 112.0C534.1 116.7 538.9 125.8 545.9 134.0C552.9 142.2 562.0 152.7 570.6 161.4C579.2 170.1 588.1 178.7 597.7 186.3C607.3 194.0 618.3 199.5 628.4 207.3C638.5 215.1 647.4 224.0 658.5 232.9C669.6 241.8 684.0 251.3 695.1 260.9C706.2 270.5 715.7 280.3 725.0 290.7C734.3 301.1 743.5 311.9 750.9 323.3C758.3 334.7 764.1 347.2 769.2 359.0C774.3 370.8 778.7 382.5 781.7 394.3C784.7 406.1 786.8 418.1 787.3 429.8C787.8 441.5 786.4 452.7 784.5 464.3C782.6 475.9 778.9 489.6 776.0 499.2C773.1 508.8 769.8 513.8 767.1 521.6C764.5 529.4 764.8 541.9 760.1 545.8C755.5 549.7 746.3 543.5 739.2 545.0C732.1 546.5 725.4 552.4 717.7 555.1C710.1 557.8 702.1 559.1 693.3 561.3C684.5 563.5 672.7 567.1 664.7 568.5C656.7 569.9 648.5 569.6 645.2 569.8"/>
+                <circle class="px-tipglow"/><circle class="px-tip"/>
+                <circle class="px-ring" cx="262.0" cy="917.2"/><circle class="px-dot" cx="262.0" cy="917.2"/>
+                <circle class="px-ms L"/><circle class="px-ms L"/><circle class="px-ms L"/><circle class="px-ms L"/><circle class="px-ms L"/><circle class="px-ms L"/><circle class="px-ms L"/><circle class="px-ms R"/><circle class="px-ms R"/><circle class="px-ms R"/><circle class="px-ms R"/><circle class="px-ms R"/><circle class="px-ms R"/><circle class="px-ms R"/>
+              </svg>
+              <span class="px-lab" aria-hidden="true" style="left:512px;top:392px">Bladder</span>
+              <span class="px-lab" aria-hidden="true" style="left:512px;top:700px">Prostate</span>
+              <span class="px-lab px-l1 px-lw" aria-hidden="true" style="left:296px;top:906px">Groin: one pinhole</span>
+              <span class="px-lab px-l2 px-lr" aria-hidden="true" style="left:206px;top:742px">Catheter</span>
+              <span class="px-lab px-l3" aria-hidden="true" style="left:330px;top:650px">Microspheres</span>
+            </div>
+            <span class="px-note" aria-hidden="true">Illustration</span>
             <span class="px-week" aria-hidden="true">Week <b>0</b> of 12</span>
             <button type="button" class="px-again" hidden>Play again</button>
           </div>
