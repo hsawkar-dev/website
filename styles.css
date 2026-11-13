@@ -827,12 +827,15 @@ dialog.sheet[open]::backdrop,dialog.menu[open]::backdrop{animation:fadeIn .3s ea
   .m-flow>section{scroll-margin-top:72px}
   .m-flow{display:flex;flex-direction:column}
   .m-flow>.hero,.m-flow>.wrap,.m-flow>.onpage,.m-flow>.m-top{order:-2}
-  .m-flow>.m-top{padding-top:16px!important}
+  .m-flow>.m-top{padding-top:16px!important;padding-bottom:0!important}
   .m-flow>.m-top .cover{padding:14px 16px;font-size:16px;text-align:left;justify-content:flex-start}
   .m-flow>.m-open{order:-1;padding:34px 0 30px!important}
-  .m-open .sec-head,.m-open .hw-head{margin-bottom:0}
+  .m-open .sec-head,.m-open .hw-head{margin-bottom:16px}
+  .m-open:has(.swipe-m) .sec-head,.m-open:has(.swipe-m) .hw-head{margin-bottom:0}
   .m-open h2{font-size:27px}
-  .m-open .hw-body .lede:not(:first-child){display:none}
+  .m-open:has(.flow.swipe-m) .hw-body .lede:not(:first-child){display:none}
+  .m-open .sp-intro{gap:18px}
+  .swipe-m .bph-card:not(:has(ul)) .what{display:block;font-size:16px}
   .swipe-m.flow>.flow-step{background:#fff;border:1px solid var(--line);border-radius:18px;text-align:left}
   .swipe-m.flow .flow-ic{width:56px;height:56px;margin:0 0 14px}
   .swipe-m.flow .flow-ic svg{width:28px;height:28px}
@@ -874,10 +877,31 @@ dialog.sheet[open]::backdrop,dialog.menu[open]::backdrop{animation:fadeIn .3s ea
   .js .fold-sec.open .sec-head,.js .fold-sec.open .hw-head{margin-bottom:16px}
   .js .fold-sec.open .bph-grid,.js .fold-sec.open .adv,.js .fold-sec.open .faq,.js .fold-sec.open .steps{margin-top:6px}
   .js .fold-sec.open .adv-item{padding:18px 0}
-  .fold-sec :is(.sym div,.adv-item p,.step p,.faq details p,.cmp-cards dd){font-size:16.5px}
-  .fold-sec .tblnote{font-size:15px}
-  .fold-sec .bph-more{font-family:var(--body);font-weight:600;font-size:16px}
-  .fold-sec [style*="gap:30px"]{gap:12px 24px!important}
+  :is(.fold-sec,.m-open) :is(.sym div,.adv-item p,.step p,.faq details p,.cmp-cards dd){font-size:16.5px}
+  :is(.fold-sec,.m-open) .tblnote{font-size:15px}
+
+  /* tables on phones. duo-m: a two-way comparison, label on its own line above the two values.
+     stacked (set by site.js on .stack-m): one block per row, each value under its column name. */
+  .tblwrap:has(.duo-m),.tblwrap.has-stack{overflow:visible;margin-top:18px}
+  .cmp.duo-m,.cmp.stacked{display:block;min-width:0}
+  .cmp.duo-m thead,.cmp.duo-m tbody,.cmp.stacked tbody,.cmp.stacked tr{display:block}
+  .cmp.duo-m tr{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+  .cmp.duo-m thead tr{position:sticky;top:68px;z-index:3;padding:9px 0;background:var(--paper);border-bottom:1.5px solid var(--ink)}
+  .cmp.duo-m thead th{padding:0;font-size:17px;line-height:1.2}
+  .cmp.duo-m thead th:first-child{display:none}
+  .cmp.duo-m tbody th{grid-column:1/-1;padding:14px 0 4px;border-top:1px solid var(--line);white-space:normal;font-size:12px}
+  .cmp.duo-m tbody tr:first-child th{border-top:0}
+  .cmp.duo-m td{padding:0 0 14px;border:0;font-size:16px;line-height:1.45;color:var(--ink)}
+  .cmp.stacked thead{display:none}
+  .cmp.stacked tr{padding:15px 0 16px;border-top:1px solid var(--line-2)}
+  .cmp.stacked tr:last-child{border-bottom:1px solid var(--line-2)}
+  .cmp.stacked tbody th{display:block;padding:0;border:0;white-space:normal;font-family:var(--disp);font-weight:600;font-size:20px;
+    line-height:1.2;letter-spacing:-.015em;text-transform:none;color:var(--ink)}
+  .cmp.stacked td{display:block;padding:9px 0 0;border:0;font-size:16.5px;line-height:1.45;color:var(--ink)}
+  .cmp.stacked tbody th::before,.cmp.stacked td::before{content:attr(data-label);display:block;margin-bottom:1px;font-family:var(--mono);font-weight:500;
+    font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2)}
+  :is(.fold-sec,.m-open) .bph-more{font-family:var(--body);font-weight:600;font-size:16px}
+  :is(.fold-sec,.m-open) [style*="gap:30px"]{gap:12px 24px!important;margin-top:18px!important}
   .fold-sec .faq summary{font-size:18px;padding:18px 2px}
   .fold-sec .opt{font-size:15px;padding:10px 15px}
   .fold-sec .bphcred{padding-top:34px}

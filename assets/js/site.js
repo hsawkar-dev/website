@@ -322,6 +322,23 @@
     wrap.parentNode.insertBefore(box, wrap.nextSibling);
   });
 
+  /* ---------- phone: a table whose rows are the things described stacks into blocks ----------
+     Add class "stack-m" to a table.cmp. Each cell is labeled with its column name so the
+     stylesheet can show one block per row on phones. Wide screens keep the table. */
+  d.querySelectorAll('table.cmp.stack-m').forEach(function (tb) {
+    var heads = tb.querySelectorAll('thead th');
+    if (!heads.length) return;
+    tb.querySelectorAll('tbody tr').forEach(function (tr) {
+      for (var j = 0; j < tr.children.length && j < heads.length; j++) {
+        var label = (heads[j].textContent || '').replace(/\s+/g, ' ').trim();
+        if (label) tr.children[j].setAttribute('data-label', label);
+      }
+    });
+    tb.classList.add('stacked');
+    var w = tb.closest('.tblwrap');
+    if (w) w.classList.add('has-stack');
+  });
+
   /* ---------- numbers count up once, when first seen ---------- */
   var counters = d.querySelectorAll('[data-count]');
   if (counters.length && !reduce && 'IntersectionObserver' in window) {
