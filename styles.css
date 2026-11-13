@@ -714,7 +714,7 @@ a.xp-chip.on:hover{background:var(--cobalt-deep)}
 .og-pill.fit{background:var(--cobalt);border-color:var(--cobalt);color:#fff}
 .og-pill.ok{border-color:rgba(244,244,241,.55)}
 .og-pill.mid{border-style:dashed;border-color:rgba(244,244,241,.55);color:#D5D9DE}
-.og-pill.low{opacity:.42;text-decoration:line-through}
+.og-pill.low{opacity:.42}
 .og-body{padding:30px 34px 32px}
 .og-prog{display:flex;align-items:center;gap:16px;font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);white-space:nowrap}
 .og-track{flex:1;height:4px;border-radius:4px;background:var(--line);overflow:hidden}
